@@ -1,11 +1,12 @@
 const express = require('express')
-const {sendEmailRegister} = require('../controllers/Email/emailRegister')
+const {createEmail} = require('../controllers/Email/createEmail')
+const {deleteEmail} = require('../controllers/Email/deleteEmail')
 const { sendEmail } = require('../controllers/Email/emailSend')
-const { recoverPassword } = require('../controllers/Email/recoverPassWord')
 const router = express.Router()
 
-router.post("/register", sendEmailRegister)
-router.post("/recoverPass", recoverPassword)
-router.post('/', sendEmail)
+router.post('/all', sendEmail)
+router.post('/', createEmail)
+router.get('/', deleteEmail)
+router.delete('/:emailId', deleteEmail)
 
 module.exports = router
