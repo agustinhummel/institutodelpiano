@@ -1,35 +1,28 @@
 'use strict';
-const { uuid} = require("uuidv4")
 
 const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class User extends Model {
+  class Professional extends Model {
     static associate(models) {
-      User.hasMany(models.Transaction, {
-        foreignKey: 'userId'
-      })
-      User.hasMany(models.Review, {
-        foreignKey: 'userId'
-      })
+      Professional.belongsToMany(models.Service, {
+        through: "servicesProfessionals",
+        foreignKey : "professionalId",
+        constraints:false
+      });
     }
   };
-  User.init({
+  Professional.init({
     fullName: DataTypes.STRING,
     email: DataTypes.STRING,
-    avatar:DataTypes.TEXT,
-    password: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    isAdmin: DataTypes.BOOLEAN   
+    avatar:DataTypes.STRING,
+    phone: DataTypes.STRING  
   }, {
     sequelize,
     paranoid: true,
     timestamps: true,
-    modelName: 'User',
-  }),
-  User.addHook('beforeSave', async (user) => {
-    return user.id = uuid();
-  });
-  return User;
+    modelName: 'Professional',
+  })
+  return Professional;
 };

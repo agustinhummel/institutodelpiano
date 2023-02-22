@@ -4,34 +4,26 @@ const { DataTypes } = require('sequelize')
 
 module.exports = {
  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Products', {
+    await queryInterface.createTable('Professionals', {
       id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
+      fullName: {
        type: DataTypes.STRING,
        allowNull: false
       },
-      description: {
-        type: DataTypes.TEXT,
-        allowNull: false
-       },
-      image: {
-       type: DataTypes.ARRAY(DataTypes.STRING),
+      avatar: {
+       type: DataTypes.STRING,
        allowNull: false
       },
-      price: {
-       type: DataTypes.FLOAT,
-       allowNull: false
-      },
-      stock: {
-       type: DataTypes.INTEGER
-      }, 
-      sold: {
-        type: DataTypes.INTEGER
-      },
+      phone: {
+        type: DataTypes.STRING
+       }, 
+      email: {
+        type: DataTypes.STRING
+       }, 
       createdAt: {
          allowNull: false,
          type: Sequelize.DATE
@@ -47,7 +39,7 @@ module.exports = {
  },
 
  down: async (queryInterface, Sequelize) => { 
-    await queryInterface.dropTable('Products');
+    await queryInterface.dropTable('Professionals');
 
  }
 };

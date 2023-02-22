@@ -7,7 +7,7 @@ module.exports = {
     database: process.env.DEV_DB_NAME,
     host: process.env.DEV_DB_HOST,
     port: process.env.DEV_DB_PORT,
-    dialect: 'mysql',
+    dialect: 'postgres',
     migrationStorageTableName: 'migrations' // Override default migration storage table name by define here
   },
 
@@ -17,7 +17,7 @@ module.exports = {
     database: process.env.PRO_DB_NAME,
     host: process.env.PRO_DB_HOST,
     port: process.env.PRO_DB_PORT,
-    dialect: 'mysql',
+    dialect: 'postgres',
     migrationStorageTableName: 'migrations' // Override default migration storage table name by define here
   },
 }

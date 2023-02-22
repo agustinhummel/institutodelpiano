@@ -21,8 +21,7 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "nodemailer": "^6.8.0",
-    "pg": "^8.8.0",
-    "pg-hstore": "^2.3.4",
+    "pg": "^8.9.0",
     "sequelize": "^6.25.5",
     "sequelize-cli": "6.2.0",
     "uuidv4": "^6.2.13"

@@ -7,21 +7,12 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      User.hasMany(models.Transaction, {
-        foreignKey: 'userId'
-      })
-      User.hasMany(models.Review, {
-        foreignKey: 'userId'
-      })
     }
   };
   User.init({
-    fullName: DataTypes.STRING,
+    userName: DataTypes.STRING,
     email: DataTypes.STRING,
-    avatar:DataTypes.TEXT,
-    password: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    isAdmin: DataTypes.BOOLEAN   
+    password: DataTypes.STRING,  
   }, {
     sequelize,
     paranoid: true,
