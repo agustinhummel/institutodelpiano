@@ -42,7 +42,7 @@ export default function DropdownComponent() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="/services/kinesiologia"
+                                    href="/services"
                                     className={classNames(
                                         active
                                             ? "bg-sky-300 hover:text-yellow-300"
@@ -57,7 +57,7 @@ export default function DropdownComponent() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="/services/psicologia"
+                                    href="/services"
                                     className={classNames(
                                         active
                                             ? "bg-sky-300 hover:text-yellow-300"
@@ -87,7 +87,7 @@ export default function DropdownComponent() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="/services/pileta"
+                                    href="/services"
                                     className={classNames(
                                         active
                                             ? "bg-sky-300 hover:text-yellow-300"
@@ -102,7 +102,7 @@ export default function DropdownComponent() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="/services/pilates"
+                                    href="/services"
                                     className={classNames(
                                         active
                                             ? "bg-sky-300 hover:text-yellow-300"

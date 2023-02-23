@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='z-20 relative w-full bg-main-color text-gray-700 font-serif'>
+    <footer className='z-20 w-full bg-main-color text-gray-700 font-serif' >
       <div className='md:flex justify-around'>
       <div className='mt-4 ml-8'>
         <div className='flex items-center cursor-pointer hover:text-yellow-300'><ion-icon name="logo-facebook"></ion-icon>Facebook</div>
@@ -23,7 +23,7 @@ const Footer = () => {
         <li>Av. Mitre 1651, Posadas, Misiones</li>
       </ul>
       </div>
-      <div className='flex justify-around w-full mt-2 mb-2' >Copyright - All right reserved © 2023</div>
+      <div className='flex justify-around w-full bg-sky-400' >Copyright - All right reserved © 2023</div>
     </footer>
   )
 }
