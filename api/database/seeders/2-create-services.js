@@ -5,7 +5,6 @@ module.exports = {
     await queryInterface.bulkInsert(
       "Services",
       [{
-        id:1,
         name: "test1",
         description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
         image:["urltest"],
@@ -15,7 +14,6 @@ module.exports = {
         deletedAt: null
       },
       {
-        id:2,
         name: "test2",
         description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
         image:["urltest"],
