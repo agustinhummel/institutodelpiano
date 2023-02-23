@@ -5,8 +5,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class serviceProfessional extends Model {
-    static associate(models) {
-    }
   };
   serviceProfessional.init({
    serviceId: DataTypes.INTEGER,

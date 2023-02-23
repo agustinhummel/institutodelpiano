@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
   class Professional extends Model {
     static associate(models) {
       Professional.belongsToMany(models.Service, {
-        through: "servicesProfessionals",
+        through: "serviceProfessional",
         foreignKey : "professionalId",
         constraints:false
       });
