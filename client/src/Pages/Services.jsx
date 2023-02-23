@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Item from '../components/ItemService';
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <div>
+      {
+        <Item
+
+        />
+      }
+    </div>
   )
 }
 

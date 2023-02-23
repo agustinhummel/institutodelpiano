@@ -5,11 +5,15 @@ module.exports = {
   theme: {
     extend: { 
       colors: {
-      'main-color': '#4A7361',
-      'secondary-color': '#5e927b',
+      'main-color': '#7dd3fc',
+      'secondary-color': '#fcd34d',
       'light-color': '#F3F5F9',
       'dark-color': '#040C16',
-    }},
+    },
+    fontFamily: {
+      'serif': 'Noto Serif'
+    }
+  },
   },
   plugins: [],
 }
