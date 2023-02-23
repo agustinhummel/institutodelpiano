@@ -10,7 +10,7 @@ module.exports = {
             if (!emailFound) throw new Error("Email not found");
             await emailFound.destroy()
             
-                return res.status(200).json("email deleted")
+                return res.status(200).json("Email deleted")
             }catch(error){
 
                 return res.status(500).json(`[Error post mailer] - [email - POST]: ${error.message}`) 
