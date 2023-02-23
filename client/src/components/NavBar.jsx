@@ -5,17 +5,11 @@ import DropdownComponent from './Dropdown';
 
 const NavBar = () => {
 
-  let Links = [
-    {name: 'Home', link: '/'},
-    {name: 'Servicios', link: '/'},
-    {name: 'Nosotros', link: '/'},
-    {name: 'Blog', link: '/'},
-  ];
 
   let [open, setOpen] = useState(false)
 
   return (
-    <div className='shadow-md w-full fixed top-0 left-0 font-serif'>
+    <div className='z-40 shadow-md w-full fixed top-0 left-0 font-serif'>
       <div className='md:flex items-center justify-between bg-main-color py-4 md:px-10 px-7'>
           <div className='text-2xl select-none cursor-default flex items-center gap-3 text-gray-700'>
             <img className='h-16 w-16' src={logo} alt='logoEmpresa' />
@@ -41,6 +35,11 @@ const NavBar = () => {
               <li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500'>
                 <Link to='/blog'>
                   Blog
+                </Link>
+              </li>
+              <li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500'>
+                <Link to='/login'>
+                  Login
                 </Link>
               </li>
             </ul>

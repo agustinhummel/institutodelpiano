@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='absolute bottom-0 w-full bg-main-color text-gray-700 font-serif' >
+    <footer className='z-20 relative w-full bg-main-color text-gray-700 font-serif'>
       <div className='md:flex justify-around'>
       <div className='mt-4 ml-8'>
         <div className='flex items-center cursor-pointer hover:text-yellow-300'><ion-icon name="logo-facebook"></ion-icon>Facebook</div>

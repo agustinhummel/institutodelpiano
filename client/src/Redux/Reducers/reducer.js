@@ -1,13 +1,16 @@
-
-
 const initialState = {
-    test:[]
+    services: []
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "test":
-      return state
+    case "GET_ALL_SERVICE":
+      return {
+        ...state,
+        services: action.payload,
+
+      };
+    
     default:
       return state;
   }
