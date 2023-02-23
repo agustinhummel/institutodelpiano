@@ -13,7 +13,7 @@ module.exports = {
                 return res.status(200).json("Email deleted")
             }catch(error){
 
-                return res.status(500).json(`[Error post mailer] - [email - POST]: ${error.message}`) 
+                return res.status(500).json(`[Error delete mailer] - [email - Delete]: ${error.message}`) 
 
         }
     }

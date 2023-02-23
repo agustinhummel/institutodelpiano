@@ -21,7 +21,7 @@ module.exports = {
             return res.status(201).json(newProfessional)
 
         } catch (error) {
-            return res.status(404).json(`[Error post products] - [product - POST]: ${error.message}`)
+            return res.status(404).json(`[Error get professional] - [professional - GET]: ${error.message}`)
 
         }
     }

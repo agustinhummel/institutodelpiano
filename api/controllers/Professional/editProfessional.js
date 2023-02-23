@@ -28,7 +28,7 @@ module.exports = {
         }
         catch (error) {
             return res.status(500).json(
-                `[Error Edit products] - [EditProductProducts - GET]: ${error.message}`,
+                `[Error Edit professional] - [Editprofessional - PUT]: ${error.message}`,
             )
         }
     }

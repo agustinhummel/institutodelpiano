@@ -18,7 +18,7 @@ module.exports = {
                 return res.status(201).send('Email Enviado')
             }catch(error){
 
-                return res.status(500).json(`[Error post mailer] - [email - POST]: ${error.message}`) 
+                return res.status(500).json(`[Error send mailer] - [email - send]: ${error.message}`) 
 
         }
     }

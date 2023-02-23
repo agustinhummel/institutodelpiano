@@ -11,7 +11,7 @@ module.exports = {
         return res.status(200).json(allServices)
  
         } catch (error) {
-            return res.status(500).json(`[Error get all products] - [getAllProducts - GET]: ${error.message}`)
+            return res.status(500).json(`[Error get all service] - [getAllservice - GET]: ${error.message}`)
           }
     },
 };

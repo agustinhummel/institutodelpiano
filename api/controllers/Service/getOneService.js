@@ -13,7 +13,7 @@ module.exports = {
             return res.status(200).json(serviceFound)
         } catch (error) {
             return res.status(500).json(
-                `[Error get One product] - [getOneProduct - GET]: ${error.message}`,
+                `[Error get One service] - [getOneService - GET]: ${error.message}`,
             )
         }
     },

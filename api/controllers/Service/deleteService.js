@@ -12,7 +12,7 @@ module.exports = {
                 return res.status(200).json("Service deleted")
 
         } catch (error) {
-           return res.status(500).json( `[Error deleting products] - [deleteProducts - DELETE]: ${error.message}`)
+           return res.status(500).json( `[Error delete service] - [deleteService - DELETE]: ${error.message}`)
                
            
         }
