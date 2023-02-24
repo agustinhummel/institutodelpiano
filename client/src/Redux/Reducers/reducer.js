@@ -1,5 +1,6 @@
 const initialState = {
-    services: []
+    services: [],
+    blogs: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -8,9 +9,12 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         services: action.payload,
-
       };
-    
+    case "GET_ALL_BLOG":
+      return {
+        ...state,
+        blogs: action.payload,
+      };
     default:
       return state;
   }

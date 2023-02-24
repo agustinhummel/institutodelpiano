@@ -5,8 +5,44 @@ module.exports = {
     await queryInterface.bulkInsert(
       "Services",
       [{
-        name: "test1",
-        description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
+        name: "kinesiologia",
+        description:"Servicio de kinesiologia",
+        image:["urltest"],
+        price: 1500,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        name: "masaje",
+        description:" Reduce la tensión muscular. Disminuye dolores musculares. Estimula la circulación. Alivia el stress.  Mejora la calidad del sueño. Mejora la movilidad articular. Aumenta la función inmune.",
+        image:["urltest"],
+        price: 900,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        name: "hidroterapia",
+        description:"Piletas hambientas para tratamientos, por favor mayores de 60 años presentar certificado",
+        image:["urltest"],
+        price: 2000,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        name: "pilates",
+        description:"Nuevo espacio ambientado para hacer pilates",
+        image:["urltest"],
+        price: 3000,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        name: "gimnasio terapeutico",
+        description:"Gimanasio equipado con equipos para realizar actividades fisicas",
         image:["urltest"],
         price: 0.1,
         createdAt: new Date(),
@@ -14,8 +50,8 @@ module.exports = {
         deletedAt: null
       },
       {
-        name: "test2",
-        description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
+        name: "estimulasion temprana",
+        description:"Orientado a niños de 0 a 4 años",
         image:["urltest"],
         price: 0.1,
         createdAt: new Date(),
@@ -23,8 +59,8 @@ module.exports = {
         deletedAt: null
       },
       {
-        name: "test3",
-        description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
+        name: "fonoaudiologia",
+        description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
         createdAt: new Date(),
@@ -32,8 +68,8 @@ module.exports = {
         deletedAt: null
       },
       {
-        name: "test4",
-        description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
+        name: "psicopedagogia",
+        description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
         createdAt: new Date(),
@@ -41,8 +77,8 @@ module.exports = {
         deletedAt: null
       },
       {
-        name: "test5",
-        description:"es una descricion de prueba       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero minima quis recusandae officia culpa suscipit corporis fuga, eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repellat Lorem ipsum dolor sit amet consectetur adipisicing elit Vero minima quis recusandae officia culpa suscipit corporis fuga eveniet iusto eligendi voluptate necessitatibus facilis facere! Corporis quia error repella",
+        name: "medica pediatra",
+        description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
         createdAt: new Date(),

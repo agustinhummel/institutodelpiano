@@ -7,7 +7,7 @@ const Login = () => {
         <div className="flex flex-col justify-center flex-1 px-4  ">
             <div className="w-full max-w-xl mx-auto lg:w-96">
                 <div>
-                    <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">Instituto DelPiano</h2>
+                    <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">Instituto Delpiano</h2>
                 </div>
 
                 <div className="mt-8">
