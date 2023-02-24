@@ -18,6 +18,27 @@ module.exports = {
         updatedAt: new Date(),
         deletedAt: null
       },
+      {
+        serviceId:3,
+        professionalId:1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        serviceId:4,
+        professionalId:1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        serviceId:5,
+        professionalId:1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
       ],
       {}
     );
