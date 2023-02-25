@@ -17,7 +17,7 @@ const NavBar = () => {
       <div className='md:flex items-center justify-between bg-main-color min-h-[10vh] py-4 md:px-10 px-7'>
           <div className='text-2xl select-none cursor-default flex items-center gap-3 text-gray-700'>
             <img className='h-16 w-16' src={logo} alt='logoEmpresa' />
-            <h1 className='hidden md:flex'>Instituto Delpiano</h1>
+            <h1 className='hidden lg:flex'>Instituto Delpiano</h1>
           </div>
           <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-8 cursor-pointer md:hidden z-[11]'>
           <ion-icon name={open ? 'close': 'menu' }></ion-icon>

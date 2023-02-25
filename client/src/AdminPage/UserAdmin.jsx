@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteUser, getAllUsers } from './../Redux/Actions/actions';
 export default function AdminTestAntDesign() {
+  
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
@@ -29,8 +30,10 @@ export default function AdminTestAntDesign() {
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [modalText, setModalText] = useState(
     <Alert
-      message="Are you sure you want to access this data?"
+    
+      message="¿Seguro quieres eliminarlo?"
       type="error"
+      
     />
   );
 
@@ -121,18 +124,12 @@ export default function AdminTestAntDesign() {
   };
 
   const handleOk = () => {
-    setModalText(<Alert message="Wait a few seconds..." type="success" />);
+    setModalText(<Alert message="Espere unos segundos..." type="success" />);
     setConfirmLoading(true);
-    dispatch(deleteUser(userValue.id));
+    /* dispatch(deleteUser(userValue.id)); */
     setTimeout(() => {
       setOpen(false);
       setConfirmLoading(false);
-      setModalText(
-        <Alert
-          message="Are you sure you want to access this data?"
-          type="error"
-        />
-      );
     }, 2000);
   };
 
@@ -181,12 +178,12 @@ export default function AdminTestAntDesign() {
       render: (value) => {
         return (
           <div>
-            <Button onClick={() => editHandle(value)} className='bg-blue-500' type="primary">
-              Editar
+            <Button onClick={() => editHandle(value)} danger type="primary">
+              Edit Account
             </Button>
             &nbsp;&nbsp;&nbsp;
             <Button onClick={() => showModal(value)} danger type="primary">
-              Eliminar
+              Delete Account
             </Button>
           </div>
         );
