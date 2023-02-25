@@ -17,11 +17,7 @@ function App() {
           <Route exact path='/login' element={<Login/>} /> 
           <Route exact path='/about' element={<About/>} /> 
           <Route exact path='/blog' element={<Blog/>} /> 
-          <Route exact path='/admin' element={<ProteccionRoutes>
-                <AdminPage/>
-              </ProteccionRoutes> }>
-              
-          </Route>
+          <Route exact path='/admin' element={<ProteccionRoutes><AdminPage/></ProteccionRoutes> }/>
         </Routes>
      <Footer/> 
   </BrowserRouter>

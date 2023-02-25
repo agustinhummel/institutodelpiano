@@ -9,6 +9,6 @@ export default function ProteccionRoutes({children}){
         return children
     }else{
         navigate('/')
-        return<>NOT ALLOWED</>
+        return<>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique fugiat necessitatibus sunt excepturi quisquam. Eius quo, odit dolorum iste, minima eum consequatur nostrum sapiente commodi possimus placeat reiciendis praesentium aspernatur.</>
     }   
 }
