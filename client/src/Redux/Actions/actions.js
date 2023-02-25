@@ -5,8 +5,18 @@ export function getAllService() {
     return async function (dispatch) {
       var json = await axios.get(`${VITE_SERVER_BACK}/service`);
       return dispatch({
-        type: "GET_ALL_SERVICE",
+        type: "GET_ALL_SERVICES",
         payload: json.data,
+      });
+    };
+  }
+  export function getAllPost() {
+    return async function (dispatch) {
+      var json = await axios.get(`${VITE_SERVER_BACK}/post`);
+      return dispatch({
+        type: "GET_ALL_POSTS",
+        payload: json.data,
+        
       });
     };
   }

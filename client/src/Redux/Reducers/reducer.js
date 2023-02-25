@@ -9,11 +9,16 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_ALL_SERVICE":
+    case "GET_ALL_SERVICES":
       return {
         ...state,
         services: action.payload,
       };
+      case "GET_ALL_POSTS":
+        return {
+          ...state,
+          posts: action.payload,
+        };
     case "GET_ALL_USERS":
       return {
         ...state,
@@ -23,11 +28,6 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         users: [state.users.filter(user => user.id != action.payload)],
-      };
-    case "GET_ALL_POSTS":
-      return {
-        ...state,
-        posts: action.payload,
       };
     case "GET_ALL_PROFESSIONALS":
       return {

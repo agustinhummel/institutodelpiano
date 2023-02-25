@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
 import Carrusel from '../components/Carrusel';
-
+import Pricing from '../components/Pricing';
+import { getAllService } from '../Redux/Actions/actions';
 
 export default function Home (){
 
@@ -10,14 +12,19 @@ export default function Home (){
         '/image6.jpg',
     ]
 
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getAllService())
+    }, [])
 
     return (
         
-        <div className='container mx-auto mt-20 bg-light-color'>
+        <div className='mx-10 mt-20 bg-light-color'>
             <div>
                 <Carrusel urlsData={imagesCarrusel}  />
             </div>
-            <div className='w-full h-96'>HOLA MUNDO </div>
+            <div className='w-full'> <Pricing/> </div>
 
         </div>
     )
