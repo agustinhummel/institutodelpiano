@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <nav className='z-10 shadow-md w-full  fixed  top-0 left-0 font-serif' >
-      <div className='md:flex items-center justify-between bg-main-color py-4 md:px-10 px-7'>
+      <div className='md:flex items-center justify-between bg-main-color min-h-[10vh] py-4 md:px-10 px-7'>
           <div className='text-2xl select-none cursor-default flex items-center gap-3 text-gray-700'>
             <img className='h-16 w-16' src={logo} alt='logoEmpresa' />
             <h1 className='hidden md:flex'>Instituto Delpiano</h1>

@@ -6,6 +6,8 @@ import Login from './Pages/Login';
 import Services from './Pages/Services';
 import About from './Pages/About';
 import Blog from './Pages/Blog';
+import AdminPage from './AdminPage/Admin.jsx';
+import ProteccionRoutes from './components/proteccionRoutes';
 
 function App() {
   return (
@@ -17,6 +19,11 @@ function App() {
           <Route exact path='/services' element={<Services/>} /> 
           <Route exact path='/about' element={<About/>} /> 
           <Route exact path='/blog' element={<Blog/>} /> 
+          <Route exact path='/admin' element={<ProteccionRoutes>
+                <AdminPage/>
+              </ProteccionRoutes> }>
+              
+          </Route>
         </Routes>
      <Footer/> 
   </BrowserRouter>
