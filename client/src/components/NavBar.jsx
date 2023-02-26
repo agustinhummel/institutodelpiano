@@ -4,12 +4,12 @@ import logo from '../assets/logoDelpiano.jpg'
 import DropdownComponent from './Dropdown';
 import { useSelector, useDispatch } from 'react-redux';
 import { LogOut } from '../redux/actions';
+import {alert} from '../functions'
 
 const NavBar = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.user)
   let [open, setOpen] = useState(false)
-
 
 
   return (
@@ -49,14 +49,14 @@ const NavBar = () => {
                 :null}
               {user   
                 ?<li className='md:ml-8 text-xl md:my-0 my-7    text-gray-700 hover:text-yellow-300 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
-                  setOpen(!open); } }>
+                  setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")} }>
                 <Link to='/'>
-                  Log Out
+                  Cerrar Sesion
                 </Link>
                 </li>
                 :<li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/login'>
-                    Login
+                    Inicio de Sesion
                   </Link>
                 </li> }
             </ul>

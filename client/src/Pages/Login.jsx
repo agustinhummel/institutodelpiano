@@ -3,20 +3,13 @@
 import { loginUser } from "../redux/actions";
 import { useDispatch } from 'react-redux';  
 import { useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2'
+import {alert} from '../functions'
 import axios from 'axios';
 
 const Login = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate();
-    const alert = (messageTittle,message)=>Swal.fire({
-        title: messageTittle,
-        html: message,
-        timer: 3000,
-        timerProgressBar: true,
-        })
-
   return (
     <section>
       <div className="flex overflow-hidden min-h-[calc(100vh-13vh)]  ">
@@ -60,7 +53,7 @@ const Login = () => {
            
            if (response.data.accessToken) {
                localStorage.setItem("user",JSON.stringify(response.data.accessToken))
-               alert("Login Exitoso","Bienvenido")
+               alert("Inicion de Sesion Exitoso","Bienvenido")
                navigate('/')
                dispatch(loginUser())  
             

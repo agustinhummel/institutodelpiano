@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteProfessional, getAllProfessionals } from '../../redux/actions';
-import Swal from 'sweetalert2'
+import {alert} from '../functions'
 
 const ProfessionalAdmin= () =>  {
   
@@ -16,12 +16,7 @@ const ProfessionalAdmin= () =>  {
   const dispatch = useDispatch();
   const professionalsSelector = useSelector((state) => state.professionals);
 
-  const alert = (messageTittle,message)=>Swal.fire({
-    title: messageTittle,
-    html: message,
-    timer: 3000,
-    timerProgressBar: true,
-    })
+
 
   useEffect(() => {
     dispatch(getAllProfessionals());

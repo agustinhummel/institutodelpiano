@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteUser, getAllUsers } from '../../redux/actions';
-import Swal from 'sweetalert2'
+import {alert} from '../functions'
 
 const UserAdmin = () => {
   
@@ -16,13 +16,6 @@ const UserAdmin = () => {
   const dispatch = useDispatch();
   const userSelector = useSelector((state) => state.users);
   const data = userSelector;
-
-  const alert = (messageTittle,message)=>Swal.fire({
-    title: messageTittle,
-    html: message,
-    timer: 3000,
-    timerProgressBar: true,
-    })
 
   useEffect(() => {
     dispatch(getAllUsers());
