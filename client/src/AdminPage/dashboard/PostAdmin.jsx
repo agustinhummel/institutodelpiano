@@ -1,20 +1,20 @@
 import React, { useRef, useState } from "react";
-import { Table, Button, Modal, Alert, Typography, Input, Space } from "antd";
+import { Table, Button, Typography, Input, Space } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteService, getAllServices } from './../Redux/Actions/actions';
+import { deletePost, getAllPosts } from '../../redux/actions';
 import Swal from 'sweetalert2'
 
-const ServiceAdmin = () =>  {
+const PostAdmin = () => {
   
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const servicesSelector = useSelector((state) => state.services);
+  const postSelector = useSelector((state) => state.posts);
 
   const alert = (messageTittle,message)=>Swal.fire({
     title: messageTittle,
@@ -24,13 +24,13 @@ const ServiceAdmin = () =>  {
     })
 
   useEffect(() => {
-    dispatch(getAllServices());
+    dispatch(getAllPosts());
   }, [dispatch]);
 
 
 
   const editHandle = (value) => {
-    navigate(`/admin/editservice/${value.id}`);
+    navigate(`/admin/edituser/${value.id}`);
   };
   const { Text } = Typography;
 
@@ -120,29 +120,29 @@ const ServiceAdmin = () =>  {
 
   const columns = [
     {
-      title: "Nombre del Servicio",
-      datIndex: "name",
-      key: "name",
-      sorter: (a, b) => a.name.localeCompare(b.name),
-      ...getColumnSearchProps("name"),
-      render: (value) => <Text strong>{value.name}</Text>,
+      title: "ID de Post",
+      datIndex: "id",
+      key: "id",
+      responsive: ['lg'],
+      ...getColumnSearchProps("id"),
+      render: (value) => <Text strong>{value.id}</Text>,
     },
     {
-      title: "Descripcion",
-      datIndex: "description",
-      key: "description",
-       responsive: ['lg'], 
-      ...getColumnSearchProps("description"),
-      render: (value) => <Text strong>{value.description}</Text>,
+      title: "Autor",
+      datIndex: "author",
+      key: "author",
+      responsive: ['md'],
+      sorter: (a, b) => a.author.localeCompare(b.author),
+      ...getColumnSearchProps("author"),
+      render: (value) => <Text strong>{value.author}</Text>,
     },
     {
-      title: "Precio",
-      datIndex: "price",
-      key: "price",
-      responsive: ['md'], 
-      ...getColumnSearchProps("price"),
-      sorter: (a, b) => a.price - b.price,
-      render: (value) => <Text strong>{value.price}</Text>,
+      title: "Titulo",
+      datIndex: "title",
+      key: "title",
+      ...getColumnSearchProps("title"),
+      sorter: (a, b) => a.title.localeCompare(b.title),
+      render: (value) => <Text strong>{value.title}</Text>,
     },
     {
       title: "Acciones",
@@ -155,7 +155,7 @@ const ServiceAdmin = () =>  {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Servicio","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Eliminar Post","Post eliminado con Exito");dispatch(deletePost(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>
@@ -165,10 +165,13 @@ const ServiceAdmin = () =>  {
   ];
 
   return (
-      <div >
-        <Table  key="adminServicesTables" dataSource={servicesSelector} columns={columns} />
+    <>
+      <div>
+        <Table key="adminUserTables" dataSource={postSelector} columns={columns} />
       </div>
+    </>
   );
 }
 
-export default ServiceAdmin
+
+export default PostAdmin

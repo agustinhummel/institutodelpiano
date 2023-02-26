@@ -4,17 +4,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteProfessional, getAllProfessionals } from '../Redux/Actions/actions';
+import { deleteService, getAllServices } from '../../redux/actions';
 import Swal from 'sweetalert2'
 
-export default function AdminTestAntDesign() {
+const ServiceAdmin = () =>  {
   
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const professionalsSelector = useSelector((state) => state.professionals);
+  const servicesSelector = useSelector((state) => state.services);
 
   const alert = (messageTittle,message)=>Swal.fire({
     title: messageTittle,
@@ -24,13 +24,13 @@ export default function AdminTestAntDesign() {
     })
 
   useEffect(() => {
-    dispatch(getAllProfessionals());
+    dispatch(getAllServices());
   }, [dispatch]);
 
 
 
   const editHandle = (value) => {
-    navigate(`/admin/editprofessional/${value.id}`);
+    navigate(`/admin/editservice/${value.id}`);
   };
   const { Text } = Typography;
 
@@ -120,45 +120,29 @@ export default function AdminTestAntDesign() {
 
   const columns = [
     {
-      title: "Id del Profesional",
-      datIndex: "id",
-      key: "id",
-      responsive: ['lg'],
-      ...getColumnSearchProps("id"),
-      render: (value) => <Text strong>{value.id}</Text>,
+      title: "Nombre del Servicio",
+      datIndex: "name",
+      key: "name",
+      sorter: (a, b) => a.name.localeCompare(b.name),
+      ...getColumnSearchProps("name"),
+      render: (value) => <Text strong>{value.name}</Text>,
     },
     {
-      title: "Nombre del Profesional",
-      datIndex: "fullName",
-      key: "fullName",
-      responsive: ['md'],
-      sorter: (a, b) => a.fullName.localeCompare(b.fullName),
-      ...getColumnSearchProps("fullName"),
-      render: (value) => <Text strong>{value.fullName}</Text>,
+      title: "Descripcion",
+      datIndex: "description",
+      key: "description",
+       responsive: ['lg'], 
+      ...getColumnSearchProps("description"),
+      render: (value) => <Text strong>{value.description}</Text>,
     },
     {
-      title: "Email",
-      datIndex: "email",
-      key: "email",
-      ...getColumnSearchProps("email"),
-      sorter: (a, b) => a.email.localeCompare(b.email),
-      render: (value) => <Text strong>{value.email}</Text>,
-    },
-    {
-      title: "Telefono",
-      datIndex: "phone",
-      key: "phone",
-      responsive: ['lg'],
-      ...getColumnSearchProps("phone"),
-      render: (value) => <Text strong>{value.phone}</Text>,
-    },
-    {
-      title: "Servicios",
-      datIndex: "Servicies",
-      key: "Servicies",
-      responsive: ['md'],
-      ...getColumnSearchProps("Servicies"),
-      render: (value) => <Text strong>{value.Services?.map(s =>s.name).join(', ')}</Text>,
+      title: "Precio",
+      datIndex: "price",
+      key: "price",
+      responsive: ['md'], 
+      ...getColumnSearchProps("price"),
+      sorter: (a, b) => a.price - b.price,
+      render: (value) => <Text strong>{value.price}</Text>,
     },
     {
       title: "Acciones",
@@ -171,7 +155,7 @@ export default function AdminTestAntDesign() {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Profesional","Profesional eliminado con Exito");dispatch(deleteProfessional(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Eliminar Servicio","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>
@@ -181,10 +165,10 @@ export default function AdminTestAntDesign() {
   ];
 
   return (
-    <>
-      <div>
-        <Table key="adminUserTables" dataSource={professionalsSelector} columns={columns} />
+      <div >
+        <Table  key="adminServicesTables" dataSource={servicesSelector} columns={columns} />
       </div>
-    </>
   );
 }
+
+export default ServiceAdmin

@@ -1,10 +1,10 @@
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Sidebar from "../components/Sidebar"
-import UserAdmin from '../AdminPage/UserAdmin'
-import ProfessionalAdmin from '../AdminPage/ProfessionalAdmin'
-import ServiceAdmin from '../AdminPage/ServiceAdmin'
-import PostAdmin from '../AdminPage/PostAdmin'
+import UserAdmin from '../AdminPage/dashboard/UserAdmin'
+import ProfessionalAdmin from '../AdminPage/dashboard/ProfessionalAdmin'
+import ServiceAdmin from '../AdminPage/dashboard/ServiceAdmin'
+import PostAdmin from '../AdminPage/dashboard/PostAdmin'
 
 export default function AdminPage() {
     const adminListState = useSelector(state => state.adminList)

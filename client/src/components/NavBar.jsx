@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logoDelpiano.jpg'
 import DropdownComponent from './Dropdown';
 import { useSelector, useDispatch } from 'react-redux';
-import { LogOut } from '../Redux/Actions/actions';
+import { LogOut } from '../redux/actions';
 
 const NavBar = () => {
   const dispatch = useDispatch()

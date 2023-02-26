@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import Carrusel from '../components/Carrusel';
 import Pricing from '../components/Pricing';
-import { getAllServices } from '../Redux/Actions/actions';
+import { getAllServices } from '../redux/actions';
 
 export default function Home (){
 

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteUser, getAllUsers } from './../Redux/Actions/actions';
+import { deleteUser, getAllUsers } from '../../redux/actions';
 import Swal from 'sweetalert2'
 
 const UserAdmin = () => {
