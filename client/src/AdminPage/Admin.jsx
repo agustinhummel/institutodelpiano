@@ -13,10 +13,10 @@ export default function AdminPage() {
             <Sidebar />
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">
-                     {adminListState === 'user' ? <UserAdmin/> :
+                     {adminListState === 'post' ?  <PostAdmin /> :
                         adminListState === 'service' ? <ServiceAdmin /> :
                             adminListState === 'professional' ? <ProfessionalAdmin /> :
-                                <PostAdmin />} 
+                            <UserAdmin/>} 
                 </div>
                 <div className="listContainer">
                     <div className="listTitle"></div>

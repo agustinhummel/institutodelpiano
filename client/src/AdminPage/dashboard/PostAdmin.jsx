@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deletePost, getAllPosts } from '../../redux/actions';
-import {alert} from '../functions'
+import {alert} from '../../functions'
 
 const PostAdmin = () => {
   
@@ -15,18 +15,15 @@ const PostAdmin = () => {
   const searchInput = useRef(null)
   const dispatch = useDispatch();
   const postSelector = useSelector((state) => state.posts);
+  const { Text } = Typography;
 
   useEffect(() => {
     dispatch(getAllPosts());
   }, [dispatch]);
 
-
-
   const editHandle = (value) => {
-    navigate(`/admin/edituser/${value.id}`);
+    navigate(`/admin/editpost/${value.id}`);
   };
-  const { Text } = Typography;
-
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
@@ -38,6 +35,7 @@ const PostAdmin = () => {
     clearFilters();
     setSearchText("");
   };
+
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
       setSelectedKeys,
@@ -110,7 +108,6 @@ const PostAdmin = () => {
     render: (text) => text,
   });
   
-
   const columns = [
     {
       title: "ID de Post",
@@ -144,7 +141,7 @@ const PostAdmin = () => {
       render: (value) => {
         return (
           <div>
-            <Button onClick={() => editHandle(value)} ghost type="primary">
+            <Button onClick={() => {editHandle(value);console.log("post")}} ghost type="primary">
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
@@ -160,7 +157,7 @@ const PostAdmin = () => {
   return (
     <>
       <div>
-        <Table key="adminUserTables" dataSource={postSelector} columns={columns} />
+        <Table key="adminPostTables" dataSource={postSelector} columns={columns} />
       </div>
     </>
   );

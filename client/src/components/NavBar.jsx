@@ -25,7 +25,7 @@ const NavBar = () => {
             <ul className={`md:flex md:items-center md:pb-0 h-screen md:h-full  absolute md:static bg-sky-300  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 opacity-100 z-10':'top-[-490px] hidden md:z-auto'} md:opacity-100 opacity-0`}>
               <li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                 <Link to='/'>
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500'>

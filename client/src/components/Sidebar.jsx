@@ -59,6 +59,7 @@ const Slidebar = () => {
     }else if(e.key == 'createPost'){
       navigate('/admin/createpost')
     }
+  
     dispatch(adminList(e.key))
   };
 
@@ -82,8 +83,6 @@ const Slidebar = () => {
       </Button>
   </div>
       <Menu
-        defaultSelectedKeys={['user']}
-        defaultOpenKeys={['sub1']}
         mode="inline"
         onClick={onClick}
         inlineCollapsed={ collapsed}

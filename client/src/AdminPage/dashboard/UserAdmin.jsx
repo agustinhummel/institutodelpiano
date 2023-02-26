@@ -5,29 +5,25 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteUser, getAllUsers } from '../../redux/actions';
-import {alert} from '../functions'
+import {alert} from '../../functions'
 
 const UserAdmin = () => {
-  
+
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
   const userSelector = useSelector((state) => state.users);
-  const data = userSelector;
+  const { Text } = Typography;
 
   useEffect(() => {
     dispatch(getAllUsers());
   }, [dispatch]);
 
-
-
   const editHandle = (value) => {
     navigate(`/admin/edituser/${value.id}`);
   };
-  const { Text } = Typography;
-
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
@@ -39,6 +35,7 @@ const UserAdmin = () => {
     clearFilters();
     setSearchText("");
   };
+
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
       setSelectedKeys,
@@ -111,7 +108,6 @@ const UserAdmin = () => {
     render: (text) => text,
   });
   
-
   const columns = [
     {
       title: "ID de Usuario",
@@ -168,11 +164,9 @@ const UserAdmin = () => {
 
   return (
       <div>
-        <Table key="adminUserTables" dataSource={data} columns={columns} />
+        <Table key="adminUserTables" dataSource={userSelector} columns={columns} />
       </div>
   );
 }
-
-
 
 export default UserAdmin

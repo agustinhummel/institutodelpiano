@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteService, getAllServices } from '../../redux/actions';
-import {alert} from '../functions'
+import {alert} from '../../functions'
 
 const ServiceAdmin = () =>  {
   
@@ -15,19 +15,15 @@ const ServiceAdmin = () =>  {
   const searchInput = useRef(null)
   const dispatch = useDispatch();
   const servicesSelector = useSelector((state) => state.services);
-
+  const { Text } = Typography;
 
   useEffect(() => {
     dispatch(getAllServices());
   }, [dispatch]);
 
-
-
   const editHandle = (value) => {
     navigate(`/admin/editservice/${value.id}`);
   };
-  const { Text } = Typography;
-
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
@@ -39,6 +35,7 @@ const ServiceAdmin = () =>  {
     clearFilters();
     setSearchText("");
   };
+
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
       setSelectedKeys,
@@ -111,7 +108,6 @@ const ServiceAdmin = () =>  {
     render: (text) => text,
   });
   
-
   const columns = [
     {
       title: "Nombre del Servicio",

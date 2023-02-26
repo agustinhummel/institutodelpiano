@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
 import { deleteProfessional, getAllProfessionals } from '../../redux/actions';
-import {alert} from '../functions'
+import {alert} from '../../functions'
 
 const ProfessionalAdmin= () =>  {
   
@@ -15,20 +15,15 @@ const ProfessionalAdmin= () =>  {
   const searchInput = useRef(null)
   const dispatch = useDispatch();
   const professionalsSelector = useSelector((state) => state.professionals);
-
-
+  const { Text } = Typography;
 
   useEffect(() => {
     dispatch(getAllProfessionals());
   }, [dispatch]);
 
-
-
   const editHandle = (value) => {
     navigate(`/admin/editprofessional/${value.id}`);
   };
-  const { Text } = Typography;
-
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
@@ -40,6 +35,7 @@ const ProfessionalAdmin= () =>  {
     clearFilters();
     setSearchText("");
   };
+
   const getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
       setSelectedKeys,
@@ -112,7 +108,6 @@ const ProfessionalAdmin= () =>  {
     render: (text) => text,
   });
   
-
   const columns = [
     {
       title: "Id del Profesional",
@@ -178,7 +173,7 @@ const ProfessionalAdmin= () =>  {
   return (
     <>
       <div>
-        <Table key="adminUserTables" dataSource={professionalsSelector} columns={columns} />
+        <Table key="adminProfessionalTables" dataSource={professionalsSelector} columns={columns} />
       </div>
     </>
   );
