@@ -2,7 +2,7 @@ import axios from 'axios';
 const {VITE_SERVER_BACK} = import.meta.env
 
 //SERVICE
-export function getAllService() {
+export function getAllServices() {
     return async function (dispatch) {
       var json = await axios.get(`${VITE_SERVER_BACK}/service`);
       return dispatch({
@@ -22,7 +22,7 @@ export function getAllService() {
   }
   export function deleteService(payload) {
     return async function (dispatch) {
-      var json = await axios.delete(`${VITE_SERVER_BACK}/service/${payload}`);
+      await axios.delete(`${VITE_SERVER_BACK}/service/${payload}`);
       return dispatch({
         type: "DELETE_SERVICE",
         payload: payload,
@@ -31,7 +31,7 @@ export function getAllService() {
   }
   export function editService(payload) {
     return async function (dispatch) {
-      var json = await axios.put(`${VITE_SERVER_BACK}/service/${payload.id}`);
+      var json = await axios.put(`${VITE_SERVER_BACK}/service/${payload.id}`,payload);
       return dispatch({
         type: "UPDATE_SERVICE",
         payload: json.data,
@@ -50,7 +50,7 @@ export function getAllService() {
   }
 
   //POST
-  export function getAllPost() {
+  export function getAllPosts() {
     return async function (dispatch) {
       var json = await axios.get(`${VITE_SERVER_BACK}/post`);
       return dispatch({
@@ -71,7 +71,7 @@ export function getAllService() {
   }
   export function deletePost(payload) {
     return async function (dispatch) {
-      var json = await axios.delete(`${VITE_SERVER_BACK}/post/${payload}`);
+      await axios.delete(`${VITE_SERVER_BACK}/post/${payload}`);
       return dispatch({
         type: "DELETE_POST",
         payload: payload,
@@ -80,7 +80,7 @@ export function getAllService() {
   }
   export function editPost(payload) {
     return async function (dispatch) {
-      var json = await axios.put(`${VITE_SERVER_BACK}/post/${payload.id}`);
+      var json = await axios.put(`${VITE_SERVER_BACK}/post/${payload.id}`,payload);
       return dispatch({
         type: "UPDATE_POST",
         payload: json.data,
@@ -120,7 +120,7 @@ export function getAllUsers() {
   }
 export function deleteUser(payload) {
     return async function (dispatch) {
-      var json = await axios.delete(`${VITE_SERVER_BACK}/user/${payload}`);
+      await axios.delete(`${VITE_SERVER_BACK}/user/${payload}`);
       return dispatch({
         type: "DELETE_USER",
         payload: payload,
@@ -129,7 +129,7 @@ export function deleteUser(payload) {
   }
 export function editUser(payload) {
     return async function (dispatch) {
-      var json = await axios.put(`${VITE_SERVER_BACK}/user/${payload.id}`);
+      var json = await axios.put(`${VITE_SERVER_BACK}/user/${payload.id}`,payload);
       return dispatch({
         type: "UPDATE_USER",
         payload: json.data,
@@ -148,7 +148,7 @@ export function editUser(payload) {
   }
 
 //PROFESSIONAL
-export function getAllProfessional() {
+export function getAllProfessionals() {
   return async function (dispatch) {
     var json = await axios.get(`${VITE_SERVER_BACK}/professional`);
     return dispatch({
@@ -169,7 +169,7 @@ export function getOneProfessional(id) {
 }
 export function deleteProfessional(payload) {
   return async function (dispatch) {
-    var json = await axios.delete(`${VITE_SERVER_BACK}/professional/${payload}`);
+    await axios.delete(`${VITE_SERVER_BACK}/professional/${payload}`);
     return dispatch({
       type: "DELETE_PROFESSIONAL",
       payload: payload,
@@ -178,7 +178,7 @@ export function deleteProfessional(payload) {
 }
 export function editProfessional(payload) {
   return async function (dispatch) {
-    var json = await axios.put(`${VITE_SERVER_BACK}/professional/${payload.id}`);
+    var json = await axios.put(`${VITE_SERVER_BACK}/professional/${payload.id}`,payload);
     return dispatch({
       type: "UPDATE_PROFESSIONAL",
       payload: json.data,
@@ -213,4 +213,12 @@ export function createProfessional(payload) {
   }
 
 
-
+//Admin Dashboard
+  export function adminList(payload) {
+    return async function (dispatch) {
+      return dispatch({
+        type: "ADMIN_PAGE",
+        payload: payload,
+      });
+    };
+  }

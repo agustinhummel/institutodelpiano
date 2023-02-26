@@ -7,14 +7,14 @@ module.exports = {
 
         try {
             const {postId} = req.params 
-            const {  title, description, image, autor } = req.body;
-            if (!title || !description || !image || !autor) {
+            const {  title, description, image, author } = req.body;
+            if (!title || !description || !image || !author) {
                 throw new Error('missing parameters')
             }
             const postFound = await Post.findByPk(postId);
 
             if (!postFound) throw new Error("Post not found");
-            const response = await postFound.update({ title, description, image, autor });
+            const response = await postFound.update({ title, description, image, author });
             await postFound.save();
             return res.status(200).json(response)
 

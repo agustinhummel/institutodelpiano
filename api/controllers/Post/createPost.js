@@ -2,15 +2,15 @@ const { Post } = require('../../database/models');
 
 module.exports = {
     createPost: async (req, res, next) => {
-        const { title, description,image,autor } = req.body;
+        const { title, description,image,author } = req.body;
 
         try {
             
-            if (!title || !description || !image || !autor ) {
+            if (!title || !description || !image || !author ) {
                 throw new Error('missing parameters')
             }
 
-            const newService = await Post.create({title,description,image,autor})
+            const newService = await Post.create({title,description,image,author})
 
             return res.status(201).json(newService)
 

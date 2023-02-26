@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Post from '../components/Post';
-import { getAllPost } from '../Redux/Actions/actions';
+import { getAllPosts } from '../Redux/Actions/actions';
 
 
 const Blog = () => {
@@ -12,7 +12,7 @@ const Blog = () => {
 
   useEffect(() => {
     if (!allPosts.length) {
-        dispatch(getAllPost())
+        dispatch(getAllPosts())
     }
   }, [])
 
@@ -27,7 +27,7 @@ const Blog = () => {
             image={post.image}
             title={post.title}
             description={post.description}
-            autor={post.autor}
+            author={post.author}
           />
         ))
       }

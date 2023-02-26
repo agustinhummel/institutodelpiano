@@ -4,11 +4,18 @@ const initialState = {
     users:[],
     posts: [],
     user: JSON.parse(localStorage.getItem('user')) ||  "",
+    adminList: ""
 
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
+    //slider admin dashboard
+    case 'ADMIN_PAGE':
+      return {
+          ...state,
+          adminList: action.payload
+      }
   //SERVICE
     case "GET_ALL_SERVICES":
       return {
@@ -18,22 +25,22 @@ const rootReducer = (state = initialState, action) => {
     case "GET_ONE_SERVICE":
       return {
           ...state, 
-          services: payload
+          services: action.payload
         };
     case "DELETE_SERVICE":
       return {
         ...state,
-        services: [state.services.filter(service => service.id != action.payload)],
+        services: state.services.filter(service => service.id != action.payload),
       };
     case "UPDATE_SERVICE":
       return{
         ...state, 
-        services:payload
+        services:action.payload
       };
     case "CREATE_SERVICE":
       return {
           ...state,
-          services: payload,
+          services: action.payload,
       };
 
     //POST
@@ -45,22 +52,22 @@ const rootReducer = (state = initialState, action) => {
     case "GET_ONE_POST":
       return {
           ...state, 
-          posts: payload
+          posts: action.payload
         };
     case "DELETE_POST":
         return {
           ...state,
-          posts: [state.posts.filter(post => post.id != action.payload)],
+          posts: state.posts.filter(post => post.id != action.payload),
         };
     case "UPDATE_POST":
         return{
           ...state, 
-          posts:payload
+          posts:action.payload
         }
     case "CREATE_POST":
       return {
           ...state,
-          posts: payload,
+          posts: action.payload,
       };
     //USER
     case "GET_ALL_USERS":
@@ -71,12 +78,12 @@ const rootReducer = (state = initialState, action) => {
     case "GET_ONE_USER":
       return {
           ...state, 
-          users: payload
+          users: action.payload
         };
     case "DELETE_USER":
       return {
         ...state,
-        users: [state.users.filter(user => user.id != action.payload)],
+        users: state.users.filter(user => user.id != action.payload),
       };
     case "UPDATE_USER":
       return{
@@ -86,7 +93,7 @@ const rootReducer = (state = initialState, action) => {
     case "CREATE_USER":
       return {
           ...state,
-          users: payload,
+          users: action.payload,
       };
 
     //PROFESSIONALS
@@ -103,17 +110,17 @@ const rootReducer = (state = initialState, action) => {
     case "DELETE_PROFESSIONAL":
       return {
         ...state,
-        professionals: [state.professionals.filter(prof => prof.id != action.payload)],
+        professionals: state.professionals.filter(prof => prof.id != action.payload),
       };
     case "UPDATE_PROFESSIONAL":
       return{
         ...state, 
-        professionals: payload
+        professionals: action.payload
       }
     case "CREATE_PROFESSIONAL":
       return {
           ...state,
-          users: payload,
+          users: action.ayload,
       };
 
     //LOGIN

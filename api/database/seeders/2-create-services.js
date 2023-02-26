@@ -50,7 +50,7 @@ module.exports = {
         deletedAt: null
       },
       {
-        name: "estimulasion temprana",
+        name: "estimulacion temprana",
         description:"Orientado a niños de 0 a 4 años",
         image:["urltest"],
         price: 0.1,

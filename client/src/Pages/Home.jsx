@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import Carrusel from '../components/Carrusel';
 import Pricing from '../components/Pricing';
-import { getAllService } from '../Redux/Actions/actions';
+import { getAllServices } from '../Redux/Actions/actions';
 
 export default function Home (){
 
@@ -15,7 +15,7 @@ export default function Home (){
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getAllService())
+        dispatch(getAllServices())
     }, [])
 
     return (

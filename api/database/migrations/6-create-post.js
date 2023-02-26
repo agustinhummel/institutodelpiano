@@ -22,7 +22,7 @@ module.exports = {
        type: DataTypes.ARRAY(DataTypes.STRING),
        allowNull: false
       },
-      autor: {
+      author: {
        type: DataTypes.STRING,
        allowNull: false
       },

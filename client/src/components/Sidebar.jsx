@@ -10,7 +10,9 @@ import {
 } from '@ant-design/icons';
 import { Button, Menu } from 'antd';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate,Link } from 'react-router-dom';
+import { adminList } from '../Redux/Actions/actions';
 
 
 function getItem(label, key, icon, children, type) {
@@ -47,7 +49,7 @@ const Slidebar = () => {
     window.matchMedia("(max-width: 768px)").matches ? null :  setCollapsed(!collapsed);
 
   };
-
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   const onClick = (e) => {
     if (e.key == "createUser") {
@@ -59,7 +61,7 @@ const Slidebar = () => {
     }else if(e.key == 'createPost'){
       navigate('/admin/createpost')
     }
-
+    dispatch(adminList(e.key))
   };
 
 
@@ -67,8 +69,7 @@ const Slidebar = () => {
 
 
   return (
-    <div className={`sidebar pt-5 min-h-[77.5vh] w-fit `}
-
+    <div className={`sidebar pt-5 min-h-[77.5vh] min-w-[80px] `}
     > 
     <div className="top text-center grid">
     <Link to="/admin" style={{ textDecoration: "none" }}>
@@ -80,10 +81,8 @@ const Slidebar = () => {
         className ={`text-dark-color hover:bg-white`}
       >
         {collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined />}
-        
-              </Button>
+      </Button>
   </div>
-      
       <Menu
         defaultSelectedKeys={['user']}
         defaultOpenKeys={['sub1']}

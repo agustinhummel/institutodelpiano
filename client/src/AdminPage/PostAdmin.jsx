@@ -2,68 +2,38 @@ import React, { useRef, useState } from "react";
 import { Table, Button, Modal, Alert, Typography, Input, Space } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import {
-  deleteTransaction,
-  getTransactions,
-} from "../redux/actions/actionsAdmin";
+import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import "../adminStyles/AdminTestAntDesign.css";
-import { useHistory } from "react-router-dom";
+import { deletePost, getAllPosts } from './../Redux/Actions/actions';
+import Swal from 'sweetalert2'
 
 export default function AdminTestAntDesign() {
+  
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
-  const searchInput = useRef(null);
-  const { Text } = Typography;
-  const [open, setOpen] = useState(false);
-  const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState(
-    <Alert
-      message="Are you sure you want to access this data?"
-      type="error"
-    />
-  );
-  const [seletedTransaction,setSeletedTransaction] = useState({})
-  const history = useHistory();
-  const editHandle = (value) => {
-    history.push(`admin/editTransaction/${value.id}`);
-  };
-
-  const showModal = (value) => {
-    setOpen(true);
-    setSeletedTransaction(value.id)
-  };
-
-  const handleOk = () => {
-    setModalText(<Alert message="Please wait a few seconds..." type="success" />);
-    setConfirmLoading(true);
-    dispatch(deleteTransaction(seletedTransaction));
-    setTimeout(() => {
-      setOpen(false);
-      setConfirmLoading(false);
-      setModalText(
-        <Alert
-          message="Are you sure you want to access this data?"
-          type="error"
-        />
-      );
-    }, 2000);
-  };
-
-  const handleCancel = () => {
-    setOpen(false);
-  };
-
+  const navigate = useNavigate();
+  const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const transactionsSelector = useSelector(
-    (state) => state.reducerAdmin.transactions
-  );
+  const postSelector = useSelector((state) => state.posts);
+
+  const alert = (messageTittle,message)=>Swal.fire({
+    title: messageTittle,
+    html: message,
+    timer: 3000,
+    timerProgressBar: true,
+    })
 
   useEffect(() => {
-    dispatch(getTransactions());
-  }, []);
+    dispatch(getAllPosts());
+  }, [dispatch]);
 
-  const data = transactionsSelector;
+
+
+  const editHandle = (value) => {
+    navigate(`/admin/edituser/${value.id}`);
+  };
+  const { Text } = Typography;
+
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
@@ -146,71 +116,48 @@ export default function AdminTestAntDesign() {
     },
     render: (text) => text,
   });
+  
 
   const columns = [
     {
-      title: "Id",
+      title: "ID de Post",
       datIndex: "id",
       key: "id",
+      responsive: ['lg'],
       ...getColumnSearchProps("id"),
       render: (value) => <Text strong>{value.id}</Text>,
     },
     {
-      title: "Value",
-      datIndex: "value",
-      key: "value",
-      sorter: (a, b) => a.value - b.value,
-      render: (value) => <Text strong>{value.value}</Text>,
+      title: "Autor",
+      datIndex: "author",
+      key: "author",
+      sorter: (a, b) => a.author.localeCompare(b.author),
+      ...getColumnSearchProps("author"),
+      render: (value) => <Text strong>{value.author}</Text>,
     },
     {
-      title: "Description",
-      datIndex: "description",
-      key: "description",
-      render: (value) => <Text strong>{value.description}</Text>,
+      title: "Titulo",
+      datIndex: "title",
+      key: "title",
+      responsive: ['md'],
+      ...getColumnSearchProps("title"),
+      sorter: (a, b) => a.title.localeCompare(b.title),
+      render: (value) => <Text strong>{value.title}</Text>,
     },
     {
-      title: "Status",
-      datIndex: "status",
-      key: "status",
-      filters: [
-        { text: "Completed", value: "Completed" },
-        { text: "Canceled", value: "Canceled" },
-        { text: "Pending", value: "Pending" },
-      ],
-      onFilter: (value, record) => record.status == value,
-      render: (value) => <Text strong>{value.status}</Text>,
-    },
-    {
-      title: "User ID",
-      datIndex: "userId",
-      key: "userId",
-      sorter: (a, b) => a.userId.localeCompare(b.userId),
-      render: (value) => <Text strong>{value.userId}</Text>,
-    },
-
-    {
-      title: "Actions",
-      datIndex: "",
+      title: "Acciones",
+      dataIndex: "",
       key: "actionButon",
       render: (value) => {
         return (
           <div>
-            <Button onClick={() => editHandle(value)} success type="primary">
-              Edit Transaction
+            <Button onClick={() => editHandle(value)} ghost type="primary">
+              Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => showModal(value)} danger type="primary">
-              Delete Transaction
+            <Button onClick={() => {alert("Eliminar Post","Post eliminado con Exito");dispatch(deletePost(value.id))}} danger type="primary">
+              Eliminar
             </Button>
-            <Modal
-              title="Watch out!"
-              open={open}
-              onOk={handleOk}
-              confirmLoading={confirmLoading}
-              onCancel={handleCancel}
-            >
-              <p>{modalText}</p>
-            </Modal>
           </div>
         );
       },
@@ -218,8 +165,10 @@ export default function AdminTestAntDesign() {
   ];
 
   return (
-    <div>
-      <Table key="adminTransactionTables" dataSource={data} columns={columns} />
-    </div>
+    <>
+      <div>
+        <Table key="adminUserTables" dataSource={postSelector} columns={columns} />
+      </div>
+    </>
   );
 }

@@ -5,7 +5,7 @@ module.exports = {
         
      
         try {
-            const allProfessional = await Professional.findAll({include:{model:Service}})
+            const allProfessional = await Professional.findAll({include:{model:Service,attributes: ['name', 'id']}})
 
 
         return res.status(200).json(allProfessional)
