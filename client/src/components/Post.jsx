@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 
 const Post = ({id, title, description, image, author}) => {
 
+
+  const getText = (html) =>{
+    const doc = new DOMParser().parseFromString(html, "text/html")
+    return doc.body.textContent
+  }
+
   return (
     <section>
   <div className="mx-auto flex w-80 flex-col justify-center font-serif bg-white rounded-2xl shadow-xl shadow-gray-400/20">
@@ -11,7 +17,7 @@ const Post = ({id, title, description, image, author}) => {
     <div className="p-6">
       <h1 className="text-2xl font-medium text-gray-700 pb-2">{title}</h1>
       <h3 className="text-gray-900 text-s">{author.charAt(0).toUpperCase() + author.toLowerCase().slice(1)}</h3>
-      <p className="text text-gray-500 leading-6">{description.slice(0, 100)}</p>
+      <p className="text text-gray-500 leading-6">{getText(description.slice(0, 100))}</p>
       <Link to={`${id}`}>
       <button class="px-5 py-2 text-base font-medium text-center text-black transition duration-500 ease-in-out transform bg-sky-300 lg:px-10 rounded-xl hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Leer mas</button>
         </Link>

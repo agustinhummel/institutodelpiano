@@ -8,14 +8,14 @@ import Blog from './Pages/Blog';
 import AdminPage from './AdminPage/Admin.jsx';
 import Protected from './components/Protected';
 import NotFound from './pages/NotFound.jsx';
-import CreateProfessional from './adminPage/create/CreateProfessional.jsx';
-import CreatePost from './adminPage/create/CreatePost.jsx';
-import CreateService from './adminPage/create/CreateService.jsx';
-import CreateUser from './adminPage/create/CreateUser.jsx';
-import EditProfessional from './adminPage/edit/EditProfessional';
-import EditUser from './adminPage/edit/EditUser.jsx';
-import EditService from './adminPage/edit/EditService.jsx';
-import EditPost from './adminPage/edit/EditPost';
+import CreateProfessional from './adminPage/CreateProfessional.jsx';
+import CreatePost from './AdminPage/CreatePost.jsx';
+import CreateService from './adminPage/CreateService.jsx';
+import CreateUser from './adminPage/CreateUser.jsx';
+import EditProfessional from './adminPage/EditProfessional';
+import EditUser from './adminPage/EditUser.jsx';
+import EditService from './adminPage/EditService.jsx';
+import EditPost from './AdminPage/EditPost';
 
 function App() {
   return (
@@ -26,9 +26,10 @@ function App() {
           <Route exact path='login' element={<Login/>} /> 
           <Route exact path='about' element={<About/>} /> 
           <Route exact path='blog' element={<Blog/>} /> 
+          <Route exact path='test' element={<CreatePost/>} /> 
           <Route exact path='admin' element={<Protected><AdminPage/></Protected> }/>
           <Route exact path='admin/createprofessional' element={<Protected><CreateProfessional/></Protected>}/>   
-          <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
+          {/* <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>    */}
           <Route exact path='admin/createservice' element={<Protected><CreateService/></Protected>}/>   
           <Route exact path='admin/createuser' element={<Protected><CreateUser/></Protected>}/>   
           <Route exact path='admin/editprofessional/:professionalId' element={<Protected><EditProfessional/></Protected>}/>   

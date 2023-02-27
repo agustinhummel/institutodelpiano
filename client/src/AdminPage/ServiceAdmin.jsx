@@ -4,25 +4,25 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteUser, getAllUsers } from '../../redux/actions';
-import {alert} from '../../functions'
+import { deleteService, getAllServices } from '../redux/actions';
+import {alert} from '../functions'
 
-const UserAdmin = () => {
-
+const ServiceAdmin = () =>  {
+  
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const userSelector = useSelector((state) => state.users);
+  const servicesSelector = useSelector((state) => state.services);
   const { Text } = Typography;
 
   useEffect(() => {
-    dispatch(getAllUsers());
+    dispatch(getAllServices());
   }, [dispatch]);
 
   const editHandle = (value) => {
-    navigate(`/admin/edituser/${value.id}`);
+    navigate(`/admin/editservice/${value.id}`);
   };
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -110,37 +110,29 @@ const UserAdmin = () => {
   
   const columns = [
     {
-      title: "ID de Usuario",
-      datIndex: "id",
-      key: "id",
-      responsive: ['lg'],
-      ...getColumnSearchProps("id"),
-      render: (value) => <Text strong>{value.id}</Text>,
+      title: "Nombre del Servicio",
+      datIndex: "name",
+      key: "name",
+      sorter: (a, b) => a.name.localeCompare(b.name),
+      ...getColumnSearchProps("name"),
+      render: (value) => <Text strong>{value.name}</Text>,
     },
     {
-      title: "Nombre de Usuario",
-      datIndex: "userName",
-      key: "userName",
-      sorter: (a, b) => a.userName.localeCompare(b.userName),
-      ...getColumnSearchProps("userName"),
-      render: (value) => <Text strong>{value.userName}</Text>,
+      title: "Descripcion",
+      datIndex: "description",
+      key: "description",
+       responsive: ['lg'], 
+      ...getColumnSearchProps("description"),
+      render: (value) => <Text strong>{value.description}</Text>,
     },
     {
-      title: "Email",
-      datIndex: "email",
-      key: "email",
-      responsive: ['md'],
-      ...getColumnSearchProps("email"),
-      sorter: (a, b) => a.email.localeCompare(b.email),
-      render: (value) => <Text strong>{value.email}</Text>,
-    },
-    {
-      title: "Password",
-      datIndex: "password",
-      key: "password",
-      responsive: ['lg'],
-      ...getColumnSearchProps("password"),
-      render: (value) => <Text strong>{value.password}</Text>,
+      title: "Precio",
+      datIndex: "price",
+      key: "price",
+      responsive: ['md'], 
+      ...getColumnSearchProps("price"),
+      sorter: (a, b) => a.price - b.price,
+      render: (value) => <Text strong>{value.price}</Text>,
     },
     {
       title: "Acciones",
@@ -153,7 +145,7 @@ const UserAdmin = () => {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Usuario","Usuario eliminado con Exito");dispatch(deleteUser(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Eliminar Servicio","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>
@@ -163,10 +155,10 @@ const UserAdmin = () => {
   ];
 
   return (
-      <div>
-        <Table key="adminUserTables" dataSource={userSelector} columns={columns} />
+      <div >
+        <Table  key="adminServicesTables" dataSource={servicesSelector} columns={columns} />
       </div>
   );
 }
 
-export default UserAdmin
+export default ServiceAdmin

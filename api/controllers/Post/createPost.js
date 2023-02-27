@@ -10,9 +10,9 @@ module.exports = {
                 throw new Error('missing parameters')
             }
 
-            const newService = await Post.create({title,description,image,author})
+            const newPost = await Post.create({title,description,image,author})
 
-            return res.status(201).json(newService)
+            return res.status(201).json(newPost)
 
         } catch (error) {
             return res.status(404).json(`[Error post Post] - [Post - POST]: ${error.message}`)

@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deletePost, getAllPosts } from '../../redux/actions';
-import {alert} from '../../functions'
+import { deletePost, getAllPosts } from '../redux/actions';
+import {alert} from '../functions'
 
 const PostAdmin = () => {
   

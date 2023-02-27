@@ -4,25 +4,25 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteService, getAllServices } from '../../redux/actions';
-import {alert} from '../../functions'
+import { deleteProfessional, getAllProfessionals } from '../redux/actions';
+import {alert} from '../functions'
 
-const ServiceAdmin = () =>  {
+const ProfessionalAdmin= () =>  {
   
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const servicesSelector = useSelector((state) => state.services);
+  const professionalsSelector = useSelector((state) => state.professionals);
   const { Text } = Typography;
 
   useEffect(() => {
-    dispatch(getAllServices());
+    dispatch(getAllProfessionals());
   }, [dispatch]);
 
   const editHandle = (value) => {
-    navigate(`/admin/editservice/${value.id}`);
+    navigate(`/admin/editprofessional/${value.id}`);
   };
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -110,29 +110,45 @@ const ServiceAdmin = () =>  {
   
   const columns = [
     {
-      title: "Nombre del Servicio",
-      datIndex: "name",
-      key: "name",
-      sorter: (a, b) => a.name.localeCompare(b.name),
-      ...getColumnSearchProps("name"),
-      render: (value) => <Text strong>{value.name}</Text>,
+      title: "Id del Profesional",
+      datIndex: "id",
+      key: "id",
+      responsive: ['lg'],
+      ...getColumnSearchProps("id"),
+      render: (value) => <Text strong>{value.id}</Text>,
     },
     {
-      title: "Descripcion",
-      datIndex: "description",
-      key: "description",
-       responsive: ['lg'], 
-      ...getColumnSearchProps("description"),
-      render: (value) => <Text strong>{value.description}</Text>,
+      title: "Nombre del Profesional",
+      datIndex: "fullName",
+      key: "fullName",
+      responsive: ['md'],
+      sorter: (a, b) => a.fullName.localeCompare(b.fullName),
+      ...getColumnSearchProps("fullName"),
+      render: (value) => <Text strong>{value.fullName}</Text>,
     },
     {
-      title: "Precio",
-      datIndex: "price",
-      key: "price",
-      responsive: ['md'], 
-      ...getColumnSearchProps("price"),
-      sorter: (a, b) => a.price - b.price,
-      render: (value) => <Text strong>{value.price}</Text>,
+      title: "Email",
+      datIndex: "email",
+      key: "email",
+      ...getColumnSearchProps("email"),
+      sorter: (a, b) => a.email.localeCompare(b.email),
+      render: (value) => <Text strong>{value.email}</Text>,
+    },
+    {
+      title: "Telefono",
+      datIndex: "phone",
+      key: "phone",
+      responsive: ['lg'],
+      ...getColumnSearchProps("phone"),
+      render: (value) => <Text strong>{value.phone}</Text>,
+    },
+    {
+      title: "Servicios",
+      datIndex: "Servicies",
+      key: "Servicies",
+      responsive: ['md'],
+      ...getColumnSearchProps("Servicies"),
+      render: (value) => <Text strong>{value.Services?.map(s =>s.name).join(', ')}</Text>,
     },
     {
       title: "Acciones",
@@ -145,7 +161,7 @@ const ServiceAdmin = () =>  {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Servicio","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Eliminar Profesional","Profesional eliminado con Exito");dispatch(deleteProfessional(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>
@@ -155,10 +171,12 @@ const ServiceAdmin = () =>  {
   ];
 
   return (
-      <div >
-        <Table  key="adminServicesTables" dataSource={servicesSelector} columns={columns} />
+    <>
+      <div>
+        <Table key="adminProfessionalTables" dataSource={professionalsSelector} columns={columns} />
       </div>
+    </>
   );
 }
 
-export default ServiceAdmin
+export default ProfessionalAdmin

@@ -4,25 +4,25 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteProfessional, getAllProfessionals } from '../../redux/actions';
-import {alert} from '../../functions'
+import { deleteUser, getAllUsers } from '../redux/actions';
+import {alert} from '../functions'
 
-const ProfessionalAdmin= () =>  {
-  
+const UserAdmin = () => {
+
   const [searchText, setSearchText] = useState("");
   const [searchedColumn, setSearchedColumn] = useState("");
   const navigate = useNavigate();
   const searchInput = useRef(null)
   const dispatch = useDispatch();
-  const professionalsSelector = useSelector((state) => state.professionals);
+  const userSelector = useSelector((state) => state.users);
   const { Text } = Typography;
 
   useEffect(() => {
-    dispatch(getAllProfessionals());
+    dispatch(getAllUsers());
   }, [dispatch]);
 
   const editHandle = (value) => {
-    navigate(`/admin/editprofessional/${value.id}`);
+    navigate(`/admin/edituser/${value.id}`);
   };
 
   const handleSearch = (selectedKeys, confirm, dataIndex) => {
@@ -110,7 +110,7 @@ const ProfessionalAdmin= () =>  {
   
   const columns = [
     {
-      title: "Id del Profesional",
+      title: "ID de Usuario",
       datIndex: "id",
       key: "id",
       responsive: ['lg'],
@@ -118,37 +118,29 @@ const ProfessionalAdmin= () =>  {
       render: (value) => <Text strong>{value.id}</Text>,
     },
     {
-      title: "Nombre del Profesional",
-      datIndex: "fullName",
-      key: "fullName",
-      responsive: ['md'],
-      sorter: (a, b) => a.fullName.localeCompare(b.fullName),
-      ...getColumnSearchProps("fullName"),
-      render: (value) => <Text strong>{value.fullName}</Text>,
+      title: "Nombre de Usuario",
+      datIndex: "userName",
+      key: "userName",
+      sorter: (a, b) => a.userName.localeCompare(b.userName),
+      ...getColumnSearchProps("userName"),
+      render: (value) => <Text strong>{value.userName}</Text>,
     },
     {
       title: "Email",
       datIndex: "email",
       key: "email",
+      responsive: ['md'],
       ...getColumnSearchProps("email"),
       sorter: (a, b) => a.email.localeCompare(b.email),
       render: (value) => <Text strong>{value.email}</Text>,
     },
     {
-      title: "Telefono",
-      datIndex: "phone",
-      key: "phone",
+      title: "Password",
+      datIndex: "password",
+      key: "password",
       responsive: ['lg'],
-      ...getColumnSearchProps("phone"),
-      render: (value) => <Text strong>{value.phone}</Text>,
-    },
-    {
-      title: "Servicios",
-      datIndex: "Servicies",
-      key: "Servicies",
-      responsive: ['md'],
-      ...getColumnSearchProps("Servicies"),
-      render: (value) => <Text strong>{value.Services?.map(s =>s.name).join(', ')}</Text>,
+      ...getColumnSearchProps("password"),
+      render: (value) => <Text strong>{value.password}</Text>,
     },
     {
       title: "Acciones",
@@ -161,7 +153,7 @@ const ProfessionalAdmin= () =>  {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Profesional","Profesional eliminado con Exito");dispatch(deleteProfessional(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Eliminar Usuario","Usuario eliminado con Exito");dispatch(deleteUser(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>
@@ -171,12 +163,10 @@ const ProfessionalAdmin= () =>  {
   ];
 
   return (
-    <>
       <div>
-        <Table key="adminProfessionalTables" dataSource={professionalsSelector} columns={columns} />
+        <Table key="adminUserTables" dataSource={userSelector} columns={columns} />
       </div>
-    </>
   );
 }
 
-export default ProfessionalAdmin
+export default UserAdmin
