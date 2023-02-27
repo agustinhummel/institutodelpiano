@@ -20,11 +20,11 @@ export default function Home (){
 
     return (
         
-        <div className='mx-10 mt-20 bg-light-color'>
+        <div className='mt-24'>
             <div>
                 <Carrusel urlsData={imagesCarrusel}  />
             </div>
-            <div className='w-full'> <Pricing/> </div>
+            <div className='mx-10 bg-light-color'> <Pricing/> </div>
 
         </div>
     )

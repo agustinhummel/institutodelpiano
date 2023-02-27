@@ -50,7 +50,7 @@ useEffect(() => {
                   key={index}
                   className={
                     index === state.currentSlide
-                      ? styles?.slice===undefined ? "block w-full h-auto object-cover p-1 bg-white border rounded" : `${styles.showSlice}`
+                      ? styles?.slice===undefined ? "block w-full h-auto object-cover p-1 bg-light-color border-none rounded" : `${styles.showSlice}`
                       : "hidden"
                   }
                 />
