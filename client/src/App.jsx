@@ -26,10 +26,9 @@ function App() {
           <Route exact path='login' element={<Login/>} /> 
           <Route exact path='about' element={<About/>} /> 
           <Route exact path='blog' element={<Blog/>} /> 
-          <Route exact path='test' element={<CreatePost/>} /> 
           <Route exact path='admin' element={<Protected><AdminPage/></Protected> }/>
           <Route exact path='admin/createprofessional' element={<Protected><CreateProfessional/></Protected>}/>   
-          {/* <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>    */}
+          <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
           <Route exact path='admin/createservice' element={<Protected><CreateService/></Protected>}/>   
           <Route exact path='admin/createuser' element={<Protected><CreateUser/></Protected>}/>   
           <Route exact path='admin/editprofessional/:professionalId' element={<Protected><EditProfessional/></Protected>}/>   
