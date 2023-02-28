@@ -6,3 +6,10 @@ export const alert = (messageTittle,message)=>Swal.fire({
     timer: 3000,
     timerProgressBar: true,
     })
+
+export const error = (messageTittle,message)=>Swal.fire({
+    title: messageTittle,
+    html: message,
+    timer: 3000,
+    timerProgressBar: true,
+    })

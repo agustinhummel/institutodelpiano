@@ -16,8 +16,11 @@ import EditProfessional from './adminPage/EditProfessional';
 import EditUser from './adminPage/EditUser.jsx';
 import EditService from './adminPage/EditService.jsx';
 import EditPost from './AdminPage/EditPost';
+import PostDetail from './Pages/PostDetail.jsx';
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <NavBar/> 
@@ -25,7 +28,8 @@ function App() {
           <Route exact path='/' element={<Home/>} /> 
           <Route exact path='login' element={<Login/>} /> 
           <Route exact path='about' element={<About/>} /> 
-          <Route exact path='blog' element={<Blog/>} /> 
+          <Route exact path='posts' element={<Blog/>} /> 
+          <Route exact path='posts/:postId' element={<PostDetail/>} /> 
           <Route exact path='admin' element={<Protected><AdminPage/></Protected> }/>
           <Route exact path='admin/createprofessional' element={<Protected><CreateProfessional/></Protected>}/>   
           <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   

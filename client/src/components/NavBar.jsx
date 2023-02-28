@@ -37,7 +37,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className='md:ml-8 text-xl md:my-0 my-7 text-gray-700 hover:text-yellow-300 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
-                <Link to='/blog'>
+                <Link to='/posts'>
                   Blog
                 </Link>
               </li>

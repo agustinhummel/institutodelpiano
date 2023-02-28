@@ -1,8 +1,10 @@
 const initialState = {
     services: [],
+    service: [],
     professionals: [],
     users:[],
     posts: [],
+    post:[],
     user: JSON.parse(localStorage.getItem('user')) ||  "",
     adminList: ""
 
@@ -25,7 +27,7 @@ const rootReducer = (state = initialState, action) => {
     case "GET_ONE_SERVICE":
       return {
           ...state, 
-          services: action.payload
+          service: action.payload
         };
     case "DELETE_SERVICE":
       return {
@@ -52,7 +54,7 @@ const rootReducer = (state = initialState, action) => {
     case "GET_ONE_POST":
       return {
           ...state, 
-          posts: action.payload
+          post: action.payload
         };
     case "DELETE_POST":
         return {

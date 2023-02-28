@@ -11,7 +11,6 @@ const Blog = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    console.log(allPosts)
     if (!allPosts.length) {
         dispatch(getAllPosts())
     }

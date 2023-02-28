@@ -13,7 +13,7 @@ module.exports = {
 
         const validatePass = await bcrypt.compare(req.body.password, user.password)
         if(!validatePass) return res.json({error:"Has ingresado una contraseña erronea"})
-        let token = jwt.sign({ id: user.id,email:user.email }, process.env.JWT_SECRETO, {expiresIn: '20h'})
+        let token = jwt.sign({ id: user.id,email:user.email }, process.env.JWT_SECRETO, {expiresIn: '8h'})
       
     
       return res.status(200).json({accessToken:token})
