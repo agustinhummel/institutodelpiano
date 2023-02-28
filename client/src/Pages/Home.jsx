@@ -24,7 +24,7 @@ export default function Home (){
             <div>
                 <Carrusel urlsData={imagesCarrusel}  />
             </div>
-            <div className='mx-10 bg-light-color'> <Pricing/> </div>
+            <div className='mx-10'> <Pricing/> </div>
 
         </div>
     )

@@ -23,7 +23,6 @@ const CreatePost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
       dispatch(createPost(info));
-      dispatch((getAllPosts()))
       navigate('admin')
       alert('Creado y publicado con exito en el Blog')
     }
@@ -54,7 +53,7 @@ const CreatePost = () => {
 
 
   return (
-    <div className='mt-20 relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl' >
+    <div className='mt-20  relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl' >
       <form className='md:grid grid-cols-3 gap-4' onSubmit={(e) => handleSubmit(e)}>
       <div className='md:col-span-2 border border-sky-200 p-2'>
         <div className='md:flex justify-between mb-5'>

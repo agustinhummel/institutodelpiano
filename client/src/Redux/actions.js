@@ -44,7 +44,7 @@ export function getAllServices() {
       const response  = await axios.get(`${VITE_SERVER_BACK}/service`);
       return dispatch({
         type: "CREATE_SERVICE",
-        payload: response.data.body,
+        payload: response.data,
       });
     };
   }
@@ -93,7 +93,7 @@ export function getAllServices() {
       const response  = await axios.get(`${VITE_SERVER_BACK}/post`);
       return dispatch({
         type: "CREATE_POST",
-        payload: response.data.body,
+        payload: response.data,
       });
     };
   }
@@ -142,7 +142,7 @@ export function editUser(payload) {
       const response  = await axios.get(`${VITE_SERVER_BACK}/user`);
       return dispatch({
         type: "CREATE_USER",
-        payload: response.data.body,
+        payload: response.data,
       });
     };
   }
@@ -191,7 +191,7 @@ export function createProfessional(payload) {
     const response  = await axios.get(`${VITE_SERVER_BACK}/professional`);
     return dispatch({
       type: "CREATE_PROFESSIONAL",
-      payload: response.data.body,
+      payload: response.data,
     });
   };
 }
