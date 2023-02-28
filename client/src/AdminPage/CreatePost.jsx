@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { createPost, getAllPosts } from '../redux/actions';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, redirect } from "react-router-dom";
 import { alert } from '../functions';
 
 const CreatePost = () => {
@@ -23,8 +23,9 @@ const CreatePost = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
       dispatch(createPost(info));
-      navigate('admin')
-      alert('Creado y publicado con exito en el Blog')
+      navigate('/admin')
+      alert('Post creado con exito')
+      
     }
 
     const handleChange = function (e) {
@@ -78,88 +79,4 @@ const CreatePost = () => {
     </div>
   )
 }
-export default CreatePost
-
-
-// import React, { useState } from "react";
-// import ReactQuill from "react-quill";
-// import "react-quill/dist/quill.snow.css";
-// import axios from "axios";
-// import { useLocation, useNavigate } from "react-router-dom";
-
-
-// const CreatePost = () => {
-//   const state = useLocation().state;
-//   const [value, setValue] = useState(state?.title || "");
-//   const [title, setTitle] = useState(state?.description || "");
-//   const [autor, setAutor] = useState(state?.autor || "");
-//   const [file, setFile] = useState(null);
-//   const navigate = useNavigate()
-
-
-
-//   const handleClick = async (e) => {
-//     e.preventDefault();
-//     const imgUrl = await upload();
-    
-
-//     try {
-//       state
-//         ? await axios.put(`/posts/${state.id}`, {
-//             title,
-//             desc: value,
-//             autor,
-//             img: file ? imgUrl : "",
-//           })
-//         : await axios.post(`/posts/`, {
-//             title,
-//             desc: value,
-//             autor,
-//             img: file ? imgUrl : "",
-//           });
-//           navigate("/")
-//           console.log('aaaaaaaaa')
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   };
-
-//   return (
-//     <div className="mt-40" >
-//       <div >
-//         <input
-//           type="text"
-//           placeholder="Title"
-//           onChange={(e) => setTitle(e.target.value)}
-//         />
-//         <div >
-//           <ReactQuill
-//             theme="snow"
-//             value={value}
-//             onChange={setValue}
-//           />
-//         </div>
-//       </div>
-//       <div >
-//         <div >
-//           <input type="text" placeholder="autor" id="autor" onChange={(e) => setAutor(e.target.value)} />
-//           <input
-//             style={{ display: "none" }}
-//             type="file"
-//             id="file"
-//             name=""
-//             onChange={(e) => setFile(e.target.files[0])}
-//           />
-//           <label  htmlFor="file">
-//             Upload Image
-//           </label>
-//           <div >
-//             <button onClick={handleClick}>Publish</button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CreatePost;
+export default CreatePost;

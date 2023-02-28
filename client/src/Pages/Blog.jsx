@@ -29,6 +29,7 @@ const Blog = () => {
             title={post.title}
             description={post.description}
             author={post.author}
+            created={post.createdAt}
           />
         ))
       }
