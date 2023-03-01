@@ -8,7 +8,7 @@ module.exports = {
             if (!serviceId) {
                 throw new Error("Missing Parameters")
             }
-              const serviceFound = await Service.findAll({where:{id:serviceId},include:{model:Professional}})
+              const serviceFound = await Service.findByPk(serviceId,{include:{model:Professional}})
 
             return res.status(200).json(serviceFound)
         } catch (error) {

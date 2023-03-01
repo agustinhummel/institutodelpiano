@@ -56,7 +56,7 @@ export default function DropdownComponent({setOpen,open}) {
                             {({ active }) => (
                                 
                                 <Link onClick={()=>setOpen(!open)} 
-                                to={`services/${s.name}`} className={classNames(
+                                to={`services/${s.id}`} className={classNames(
                                     active
                                         ? "bg-sky-300 hover:text-yellow-300"
                                         : "text-gray-700",

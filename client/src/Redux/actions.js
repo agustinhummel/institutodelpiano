@@ -14,6 +14,7 @@ export function getAllServices() {
   export function getOneService(id) {
     return async function (dispatch) {
       let json = await axios.get(`${VITE_SERVER_BACK}/service/${id}`)
+      console.log(json.data);
       return dispatch({
         type: "GET_ONE_SERVICE",
         payload: json.data

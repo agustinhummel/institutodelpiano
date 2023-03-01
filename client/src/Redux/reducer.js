@@ -104,11 +104,11 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         professionals: action.payload,
       };
-    case "GET_ONE_PROFESSIONAL":
-      return {
-        ...state,
-        professionals: action.payload,
-      };
+    // case "GET_ONE_PROFESSIONAL":
+    //   return {
+    //     ...state,
+    //     professionals: action.payload,
+    //   };
     case "DELETE_PROFESSIONAL":
       return {
         ...state,

@@ -35,7 +35,7 @@ useEffect(() => {
 
     return (
       <div >
-        <div className={styles?.container===undefined ? "w-[100%] h-auto flex overflow-hidden relative" : `${styles.container}`}>
+        <div className={styles?.container===undefined ? "w-full h-auto flex overflow-hidden relative" : `${styles.container}`}>
           <AiOutlineLeft
             onClick={prevSlide}
             className="absolute left-0 text-3xl inset-y-1/2 text-white cursor-pointer"

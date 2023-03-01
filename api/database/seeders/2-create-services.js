@@ -6,8 +6,8 @@ module.exports = {
       "Services",
       [{
         name: "kinesiologia",
-        description:"Servicio de kinesiologia",
-        image:["urltest"],
+        description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+        image:["https://img.freepik.com/vector-premium/bandera-conceptos-palabra-kinesiologia-monitoreo-muscular-trastornos-movimiento_106317-1548.jpg"],
         price: 1500,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -15,8 +15,8 @@ module.exports = {
       },
       {
         name: "masaje",
-        description:" Reduce la tensión muscular. Disminuye dolores musculares. Estimula la circulación. Alivia el stress.  Mejora la calidad del sueño. Mejora la movilidad articular. Aumenta la función inmune.",
-        image:["urltest"],
+        description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+        image:["untest"],
         price: 900,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -24,8 +24,8 @@ module.exports = {
       },
       {
         name: "hidroterapia",
-        description:"Piletas hambientas para tratamientos, por favor mayores de 60 años presentar certificado",
-        image:["urltest"],
+        description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+        image:["https://www.chacarilla.com.pe/wp-content/uploads/2017/07/IMG_5188-1537x1024.jpg"],
         price: 2000,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -33,8 +33,8 @@ module.exports = {
       },
       {
         name: "pilates",
-        description:"Nuevo espacio ambientado para hacer pilates",
-        image:["urltest"],
+        description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
+        image:["https://www.feda.net/wp-content/uploads/2016/12/pilates-reformer.jpg"],
         price: 3000,
         createdAt: new Date(),
         updatedAt: new Date(),

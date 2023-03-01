@@ -17,6 +17,7 @@ import EditUser from './adminPage/EditUser.jsx';
 import EditService from './adminPage/EditService.jsx';
 import EditPost from './AdminPage/EditPost';
 import PostDetail from './Pages/PostDetail.jsx';
+import ServiceDetail from './Pages/ServiceDetail.jsx';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='about' element={<About/>} /> 
           <Route exact path='posts' element={<Blog/>} /> 
           <Route exact path='posts/:postId' element={<PostDetail/>} /> 
+          <Route exact path='services/:serviceId' element={<ServiceDetail/>}/> 
           <Route exact path='admin' element={<Protected><AdminPage/></Protected> }/>
           <Route exact path='admin/createprofessional' element={<Protected><CreateProfessional/></Protected>}/>   
           <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
