@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment} from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { Link } from "react-router-dom";
-import {useSelector, useDispatch} from 'react-redux';
+import { useNavigate } from "react-router-dom";
+import {useSelector} from 'react-redux';
 
 
 function classNames(...classes) {
@@ -11,9 +11,7 @@ function classNames(...classes) {
 export default function DropdownComponent({setOpen,open}) {
 
     const allService = useSelector((state) => state.services)
-
-  
-
+    const navigate = useNavigate();
 
     return (
         <Menu as="div" className="relative inline-block text-left">
@@ -55,15 +53,15 @@ export default function DropdownComponent({setOpen,open}) {
                             
                             {({ active }) => (
                                 
-                                <Link onClick={()=>setOpen(!open)} 
-                                to={`services/${s.id}`} className={classNames(
+                                <p onClick={()=>{setOpen(!open) ; navigate(`/services/${s.id}`)}}
+                                 className={classNames(
                                     active
                                         ? "bg-sky-300 hover:text-yellow-300"
                                         : "text-gray-700",
                                     "block px-4 py-2 text-sm"
                                 )}>
                                     {s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}
-                                </Link>
+                                </p>
 
                             )}
                             
