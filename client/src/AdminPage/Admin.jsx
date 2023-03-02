@@ -9,7 +9,7 @@ import PostAdmin from './PostAdmin'
 export default function AdminPage() {
     const adminListState = useSelector(state => state.adminList)
     return (
-        <div className="admin pt-24 flex ">
+        <div className="admin pt-24 flex">
             <Sidebar />
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">

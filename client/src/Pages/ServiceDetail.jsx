@@ -44,9 +44,9 @@ const ServiceDetail = () => {
                             ))
                     }
             </div>
-            </article>
+        </article>
 
-            )
+        )
 }
 
 export default ServiceDetail

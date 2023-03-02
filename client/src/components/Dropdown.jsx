@@ -16,7 +16,7 @@ export default function DropdownComponent({setOpen,open}) {
     return (
         <Menu as="div" className="relative inline-block text-left">
             <div>
-                <Menu.Button className="flex items-center w-full text-gray-700 rounded-md hover:text-yellow-300 cursor-pointer duration-500">
+                <Menu.Button className="flex items-center w-full text-option1-color rounded-md hover:text-sky-200 cursor-pointer duration-500">
 
                     Servicios
 
@@ -46,7 +46,7 @@ export default function DropdownComponent({setOpen,open}) {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute w-auto mt-1 origin-top-right bg-sky-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute w-auto mt-1 origin-top-right bg-options-color rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div className="py-1">
                         {allService.map((s,i)=>(
                         <Menu.Item key={i}>
@@ -56,7 +56,7 @@ export default function DropdownComponent({setOpen,open}) {
                                 <p onClick={()=>{setOpen(!open) ; navigate(`/services/${s.id}`)}}
                                  className={classNames(
                                     active
-                                        ? "bg-sky-300 hover:text-yellow-300"
+                                        ? "bg-options-color hover:text-sky-200"
                                         : "text-gray-700",
                                     "block px-4 py-2 text-sm"
                                 )}>
