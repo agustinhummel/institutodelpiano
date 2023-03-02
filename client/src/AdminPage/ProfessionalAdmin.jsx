@@ -161,7 +161,7 @@ const ProfessionalAdmin= () =>  {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Profesional","Profesional eliminado con Exito");dispatch(deleteProfessional(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Admin","Profesional eliminado con Exito");dispatch(deleteProfessional(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>

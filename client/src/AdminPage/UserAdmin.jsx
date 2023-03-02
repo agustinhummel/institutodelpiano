@@ -153,7 +153,7 @@ const UserAdmin = () => {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Usuario","Usuario eliminado con Exito");dispatch(deleteUser(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Admin","Usuario eliminado con Exito");dispatch(deleteUser(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>

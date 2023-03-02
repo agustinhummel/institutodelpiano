@@ -4,12 +4,12 @@ module.exports = {
     deleteService: async (req, res, next) => {
         const { serviceId } = req.params;
         try{
-            if (!serviceId) throw new Error("Missing parameters");
+            if (!serviceId) throw new Error("Faltan Parametros");
             const serviceFound= await Service.findByPk(serviceId)
-            if (!serviceFound) throw new Error("Service not found");
+            if (!serviceFound) throw new Error("Servicio no encontrado");
             await serviceFound.destroy()
             
-                return res.status(200).json("Service deleted")
+                return res.status(200).json("Servicio Eliminado con exito")
 
         } catch (error) {
            return res.status(500).json( `[Error delete service] - [deleteService - DELETE]: ${error.message}`)

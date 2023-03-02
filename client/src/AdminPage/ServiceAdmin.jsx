@@ -145,7 +145,7 @@ const ServiceAdmin = () =>  {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Servicio","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Admin","Servicio eliminado con Exito");dispatch(deleteService(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>

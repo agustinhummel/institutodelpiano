@@ -145,7 +145,7 @@ const PostAdmin = () => {
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
-            <Button onClick={() => {alert("Eliminar Post","Post eliminado con Exito");dispatch(deletePost(value.id))}} danger type="primary">
+            <Button onClick={() => {alert("Admin","Post eliminado con Exito");dispatch(deletePost(value.id))}} danger type="primary">
               Eliminar
             </Button>
           </div>

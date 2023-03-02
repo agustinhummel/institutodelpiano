@@ -5,9 +5,9 @@ module.exports = {
         const { name, description,image,price } = req.body;
 
         try {
-            
+            console.log(typeof image)
             if (!name || !description || !image || !price ) {
-                throw new Error('missing parameters')
+                return res.json({error:"Faltan parametros"})
             }
 
             const newService = await Service.create({name,description,image,price})
@@ -15,7 +15,8 @@ module.exports = {
             return res.status(201).json(newService)
 
         } catch (error) {
-            return res.status(404).json(`[Error post service] - [service - POST]: ${error.message}`)
+            console.log(error)
+            return res.status(500).json(`[Error post service] - [service - POST]: ${error.message}`)
 
         }
     }

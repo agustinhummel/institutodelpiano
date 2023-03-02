@@ -9,11 +9,11 @@ module.exports = {
 
             const { serviceId, name, description, image, price } = req.body;
             if (!serviceId || !name || !description || !image || !price) {
-                throw new Error('missing parameters')
+                throw new Error('Faltan Parametros')
             }
             const serviceFound = await Service.findByPk(serviceId);
 
-            if (!serviceFound) throw new Error("Service not found");
+            if (!serviceFound) throw new Error("Servicio no encontrado");
             const response = await serviceFound.update({ name, description, image, price });
             await serviceFound.save();
             return res.status(200).json(response)
