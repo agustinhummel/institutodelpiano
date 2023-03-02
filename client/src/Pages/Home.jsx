@@ -27,7 +27,8 @@ export default function Home (){
                 <Carrusel urlsData={imagesCarrusel}  />
             </div>
             <div className='mx-10'> <Pricing/> </div>
-            <ChatBot/>
+            <div className='mx-10'> <Contactos/> </div>
+ 
         </div>
     )
 }
