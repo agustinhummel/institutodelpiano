@@ -19,14 +19,14 @@ const NavBar = () => {
             <img className='h-16 w-16' src={logo} alt='logoEmpresa' />
             <div>
               <h1 className='hidden lg:flex'>Instituto Delpiano</h1>
-              <p className='text-sm'>Un lugar para sentirse bien</p>
+              <p className='text-sm hidden lg:flex'>Un lugar para sentirse bien</p>
             </div>
 
           </div>
           <div onClick={()=>setOpen(!open)} className='text-3xl absolute right-8 top-8 cursor-pointer md:hidden z-[11]'>
           <ion-icon name={open ? 'close': 'menu' }></ion-icon>
           </div>
-            <ul className={`md:flex md:items-center md:pb-0 h-screen md:h-full  absolute md:static bg-options-colo  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 opacity-100 z-10':'top-[-490px] hidden md:z-auto'} md:opacity-100 opacity-0`}>
+            <ul className={`md:flex md:items-center md:pb-0 h-screen md:h-full absolute md:static bg-options-color  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 opacity-100 z-10':'top-[-490px] hidden md:z-auto'} md:opacity-100 opacity-0`}>
               <li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                 <Link to='/'>
                   Inicio
