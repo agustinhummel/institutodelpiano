@@ -19,6 +19,7 @@ import EditPost from './AdminPage/EditPost';
 import PostDetail from './Pages/PostDetail.jsx';
 import ServiceDetail from './Pages/ServiceDetail.jsx';
 
+
 function App() {
 
 
@@ -26,7 +27,7 @@ function App() {
     <BrowserRouter>
       <NavBar/> 
         <Routes>
-          <Route exact path='/' element={<Home/>} /> 
+          <Route exact path='/' element={<Home/>} />  
           <Route exact path='login' element={<Login/>} /> 
           <Route exact path='about' element={<About/>} /> 
           <Route exact path='posts' element={<Blog/>} /> 

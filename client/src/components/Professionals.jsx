@@ -20,7 +20,6 @@ const Professionals = ({fullName, email, avatar, phone, serviceName}) => {
 
             <button href={`https://api.whatsapp.com/send?phone=${phone}&text=Hola quisiera reservar un turno de ${serviceName}`} className=" py-2 w-full mt-auto text-lg text-white transition duration-500 ease-in-out transform bg-green-600 border border-current rounded hover:bg-green-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
             <ion-icon name="logo-whatsapp"></ion-icon>
-                {phone}
             </button>
  
         </div>
