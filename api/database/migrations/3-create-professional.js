@@ -16,13 +16,12 @@ module.exports = {
       },
       avatar: {
        type: DataTypes.STRING,
-       allowNull: false
+        defaultValue:"https://www.sports-king.com/images/nicknames/lionel-messi.jpg"
       },
       phone: {
-        type: DataTypes.STRING
-       }, 
-      email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        
+        defaultValue: "0376 442-8578"
        }, 
       createdAt: {
          allowNull: false,

@@ -127,14 +127,6 @@ const ProfessionalAdmin= () =>  {
       render: (value) => <Text strong>{value.fullName}</Text>,
     },
     {
-      title: "Email",
-      datIndex: "email",
-      key: "email",
-      ...getColumnSearchProps("email"),
-      sorter: (a, b) => a.email.localeCompare(b.email),
-      render: (value) => <Text strong>{value.email}</Text>,
-    },
-    {
       title: "Telefono",
       datIndex: "phone",
       key: "phone",

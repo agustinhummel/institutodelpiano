@@ -6,14 +6,14 @@ module.exports = {
 
         try {
             
-            const { id,fullName, email, avatar,phone , services} = req.body;
+            const { id,fullName, avatar,phone , services} = req.body;
              
-            if (!fullName || !email || !avatar || !phone || !services) {
+            if (!fullName || !avatar || !phone || !services) {
                 throw new Error('missing parameters')
             }
             const professionalFound = await Professional.findByPk(id);
             if (!professionalFound) throw new Error("Professional not found");
-            const response = await professionalFound.update({ fullName, email, avatar,phone  });
+            const response = await professionalFound.update({ fullName, avatar,phone  });
 
             const dbServices = await Service.findAll({
                 where: {

@@ -10,7 +10,6 @@ const CreateProfessional = () => {
   const [errors, setErrors] = useState({});
   const [state, setState] = useState({ 
     fullName:"",
-    email:"",
     avatar:"",
     phone:"",
     services:[]
@@ -35,22 +34,11 @@ const CreateProfessional = () => {
   }
 
   let validate=(state) => {
-    console.log(state)
     let errores = {};
 
     if (!state.fullName) {
       errores.fullName = "Por favor, ingresa el nombre del profesional";
     } 
-    if (!state.email) {
-      errores.email = "Por favor, ingresa un correo electrónico";
-    } else if (
-      !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
-        state.email
-      )
-    ) {
-      errores.email =
-        "Por favor, ingresa un correo electrónico valido";
-    }
     if (state.services.length ==0 ) {
       errores.services = "Por favor, seleccionar un servicio"
     }
@@ -62,11 +50,11 @@ const CreateProfessional = () => {
 
   let onSubmit=async (e) => {
     e.preventDefault()
-    if (Object.values(errors).length ==0) {
+    setErrors(validate(state))
+    if (Object.values(validate(state)).length ==0) {
       const response = await axios.post(`${import.meta.env.VITE_SERVER_BACK}/professional`, 
    {
     fullName:state.fullName,
-    email:state.email,
     avatar:state.avatar,
     phone:state.phone,
     services:state.services 
@@ -122,28 +110,7 @@ const CreateProfessional = () => {
                   {errors.fullName && <div className="error text-red-500 mx-3">{errors.fullName}</div>}
 
                 </div>
-                <div>
-                  <label
-                    
-                    className="block text-sm font-medium text-neutral-600"
-                  >
-                    {" "}
-                    Correo Electronico{" "}
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      onChange={handleChange}
-                      value={state.email}
-                      placeholder="Correo Electronico"
-                      className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-dark-color bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
-                    />
-                  </div>
-                  {errors.email && <div className="error text-red-500 mx-3">{errors.email}</div>}
-
-                </div>
+                
                 <div className="space-y-1">
                   <label
                     

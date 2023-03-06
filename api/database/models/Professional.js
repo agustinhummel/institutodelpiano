@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
   };
   Professional.init({
     fullName: DataTypes.STRING,
-    email: DataTypes.STRING,
     avatar:DataTypes.STRING,
     phone: DataTypes.STRING  
   }, {

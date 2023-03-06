@@ -7,7 +7,6 @@ module.exports = {
       [
         {
         fullName: "Miguel Beltran",
-        email: "miguel@admin.com",
         avatar: "https://www.sports-king.com/images/nicknames/lionel-messi.jpg",
         phone: "+57 123467896",
         createdAt: new Date(),

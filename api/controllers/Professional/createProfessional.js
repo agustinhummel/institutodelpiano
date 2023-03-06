@@ -2,15 +2,19 @@ const { Service,Professional } = require('../../database/models');
 
 module.exports = {
     createProfessional: async (req, res, next) => {
-       const {fullName, email, avatar,phone,services } = req.body;
+       const {fullName, avatar,phone,services } = req.body;
 
         try {
             
-            if (!fullName || !email || !avatar || !phone) {
-                throw new Error('missing parameters')
+            if (!fullName, !services) {
+                return res.json({error:"faltan parametros"})
             }
 
-            const newProfessional = await Professional.create({fullName,email,avatar,phone})
+            let attribute = {fullName}
+            avatar ? attribute.avatar=avatar : null
+            phone ? attribute.phone = phone : null
+
+            const newProfessional = await Professional.create(attribute)
 
             const dbServices = await Service.findAll({
                     where: {
