@@ -95,6 +95,15 @@ module.exports = {
         updatedAt: new Date(),
         deletedAt: null
       },
+      {
+        name: "Psicologia",
+        description:"es una descricion de prueba ",
+        image:["urltest"],
+        price: 0.1,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
       ],
       {}
     );

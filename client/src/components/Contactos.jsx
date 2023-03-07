@@ -4,15 +4,11 @@ import Formulario from './Formulario';
 
 const Contactos = () => {
 
-
-
-    //<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3543.0221040073384!2d-55.89534218494508!3d-27.375025082930723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be4b6cfa39ef%3A0x64abeae706c5c909!2sInstituto%20Delpiano!5e0!3m2!1ses-419!2sar!4v1677761302774!5m2!1ses-419!2sar" width="100%" height="100%" style={{filter:"grayscale(1) contrast(1.2) opacity(0.4) "}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
   return (
     <div className="w-full min-h-screen md:px-8 sm:pt-10 px-4 pb-10 bg-white" id="contacto">
       <section className="text-dark-color body-font relative">
         <div className="flex justify-center">
-          <h1 className="px-5 pt-24 pb-2 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 mb-20">
+          <h1 className="px-5 pt-8 pb-2 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 mb-20">
             Contacto
           </h1>
         </div>
@@ -37,6 +33,7 @@ const Contactos = () => {
                 <h2 className="title-font font-semibold text-option1-color tracking-widest text-xs">
                   E-MAIL
                 </h2>
+                  <p className="leading-relaxed">administracion@institutodelpiano.com.ar</p>
                 <a className="text-indigo-500 leading-relaxed"></a>
                 <h2 className="title-font font-semibold text-option1-color tracking-widest text-xs mt-4">
                   TELÉFONO

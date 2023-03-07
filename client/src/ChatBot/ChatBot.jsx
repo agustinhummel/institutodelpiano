@@ -26,7 +26,7 @@ const ChatBot = () => {
           )}
           </div>
           <div className='flex justify-end ' >
-            <button className='w-12 h-12 text-2xl m-2 p-1 rounded-full bg-options-color fixed right-5 bottom-5' onClick={() => toggleBot((prev) => !prev)}><ion-icon  name={showBot ? 'close': 'mail-outline' }></ion-icon></button> 
+            <button className='w-12 h-12 text-2xl m-2 p-1 text-white rounded-full bg-option1-color fixed right-5 bottom-5' onClick={() => toggleBot((prev) => !prev)}><ion-icon  name={showBot ? 'close': 'mail-outline' }></ion-icon></button> 
         </div>
       </div>
 
