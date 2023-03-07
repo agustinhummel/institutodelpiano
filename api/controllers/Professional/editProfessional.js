@@ -11,19 +11,22 @@ module.exports = {
             if (!fullName || !avatar || !phone || !services) {
                 throw new Error('missing parameters')
             }
-            const professionalFound = await Professional.findByPk(id);
+            const professionalFound = await Professional.findByPk(id,{include:{model:Service,attributes: ['name', 'id']}});
+           
             if (!professionalFound) throw new Error("Professional not found");
-            const response = await professionalFound.update({ fullName, avatar,phone  });
+            await professionalFound.update({ fullName, avatar,phone  });
 
             const dbServices = await Service.findAll({
                 where: {
                     name: services
                 }
             });
+
+            await professionalFound.removeServices(professionalFound.Services)
+            await professionalFound.addServices(dbServices); 
             await professionalFound.save();
-            professionalFound.addService(dbServices); 
-           
-            return res.status(200).json(response)
+
+            return res.status(200).json(professionalFound) 
 
         }
         catch (error) {

@@ -42,8 +42,6 @@ const CreateProfessional = () => {
     if (state.services.length ==0 ) {
       errores.services = "Por favor, seleccionar un servicio"
     }
-
-    console.log(errores)
     return errores;
   }
  

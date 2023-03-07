@@ -8,6 +8,7 @@ module.exports = {
         userName: "Admin",
         email: "admin@admin.com",
         password: "$2b$10$058rWWyQIDvjjHZcW8JtbeGLnWdqaOeQV71upF.baS/sYrVFLDovW",
+        level: 2,
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null

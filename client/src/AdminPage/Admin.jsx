@@ -8,9 +8,13 @@ import PostAdmin from './PostAdmin'
 import OpeningAdmin from "./OpeningAdmin";
 import { useEffect } from 'react';
 import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings } from "../redux/actions";
+import { useJwt } from "react-jwt";
 
 export default function AdminPage() {
 
+    const user = useSelector(state => state.user)
+    const { decodedToken, isExpired } = useJwt(user);
+    
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -29,11 +33,11 @@ export default function AdminPage() {
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">
                      {
-                     adminListState === 'opening' ?  <OpeningAdmin /> :
-                        adminListState === 'post' ?  <PostAdmin /> :
-                            adminListState === 'service' ? <ServiceAdmin /> :
-                                adminListState === 'professional' ? <ProfessionalAdmin /> :
-                                    <UserAdmin/>} 
+                     adminListState === 'opening' && decodedToken?.level===2 && !isExpired ?  <OpeningAdmin /> :
+                        adminListState === 'user' && decodedToken?.level===2 && !isExpired?  <UserAdmin/> :
+                            adminListState === 'service'  && decodedToken?.level===2 && !isExpired ? <ServiceAdmin /> :
+                                adminListState === 'professional'  && decodedToken?.level===2 && !isExpired ? <ProfessionalAdmin /> :
+                                <PostAdmin />} 
                 </div>
                 <div className="listContainer">
                     <div className="listTitle"></div>
