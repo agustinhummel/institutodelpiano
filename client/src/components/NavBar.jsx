@@ -52,14 +52,14 @@ const NavBar = () => {
                   Vacantes
                 </Link>
               </li>
-              {decodedToken !=null && !isExpired ?<li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              {decodedToken !=null && !isExpired ?<li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/admin'>
                     Admin
                   </Link>
                 </li> 
                 :null}
               {decodedToken !=null && !isExpired   
-                ?<li className='md:ml-8 text-xl md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
+                ?<li className='md:ml-8 text-lg md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
                   setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")} }>
                 <Link to='/'>
                   Cerrar Sesion

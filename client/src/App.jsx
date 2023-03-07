@@ -39,25 +39,16 @@ function App() {
           <Route exact path='services/:serviceId' element={<ServiceDetail/>}/> 
           <Route exact path='opening' element={<Vacante/>} /> 
           <Route exact path='admin' element={<Protected><AdminPage/></Protected> }/>
+          <Route exact path='admin/createopening' element={<ProtectedAdmin><CreateOpening/></ProtectedAdmin>}/>
+          <Route exact path='admin/editopening/:openingId' element={<ProtectedAdmin><EditOpening/></ProtectedAdmin>}/>
           <Route exact path='admin/createprofessional' element={<ProtectedAdmin><CreateProfessional/></ProtectedAdmin>}/>   
           <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
-<<<<<<< HEAD
-          <Route exact path='admin/createservice' element={<Protected><CreateService/></Protected>}/>   
-          <Route exact path='admin/createuser' element={<Protected><CreateUser/></Protected>}/>   
-          <Route exact path='admin/createopening' element={<Protected><CreateOpening/></Protected>}/> 
-          <Route exact path='admin/editprofessional/:professionalId' element={<Protected><EditProfessional/></Protected>}/>   
-          <Route exact path='admin/edituser/:userId' element={<Protected><EditUser/></Protected>}/>   
-          <Route exact path='admin/editservice/:serviceId' element={<Protected><EditService/></Protected>}/>   
-          <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/> 
-          <Route exact path='admin/editopening/:openingId' element={<Protected><EditOpening/></Protected>}/>  
-=======
           <Route exact path='admin/createservice' element={<ProtectedAdmin><CreateService/></ProtectedAdmin>}/>   
           <Route exact path='admin/createuser' element={<ProtectedAdmin><CreateUser/></ProtectedAdmin>}/>   
           <Route exact path='admin/editprofessional/:professionalId' element={<ProtectedAdmin><EditProfessional/></ProtectedAdmin>}/>   
           <Route exact path='admin/edituser/:userId' element={<ProtectedAdmin><EditUser/></ProtectedAdmin>}/>   
           <Route exact path='admin/editservice/:serviceId' element={<ProtectedAdmin><EditService/></ProtectedAdmin>}/>   
           <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/>   
->>>>>>> ce41786689bf47b54be5d55ac27413b3d3d8a36b
           <Route path="*" element={<NotFound/>}/>
         </Routes>
      <Footer/> 
