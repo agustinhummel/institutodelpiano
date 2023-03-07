@@ -121,7 +121,6 @@ const ProfessionalAdmin= () =>  {
       title: "Nombre del Profesional",
       datIndex: "fullName",
       key: "fullName",
-      responsive: ['md'],
       sorter: (a, b) => a.fullName.localeCompare(b.fullName),
       ...getColumnSearchProps("fullName"),
       render: (value) => <Text strong>{value.fullName}</Text>,

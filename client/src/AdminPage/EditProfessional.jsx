@@ -45,8 +45,6 @@ const EditProfessional = () => {
     if (state.services.length ==0 ) {
       errores.services = "Por favor, seleccionar un servicio"
     }
-
-    console.log(errores)
     return errores;
   }
  
@@ -86,7 +84,7 @@ const EditProfessional = () => {
         <div className="w-full max-w-xl mx-auto sm:w-96">
           <div>
             <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">
-              Creacion de profesional
+              Editar Profesional
             </h2>
           </div>
 
@@ -168,9 +166,8 @@ const EditProfessional = () => {
                     Servicios{" "}
                   </label>
                   <div className="mt-1">
-                    {console.log(servicios.find(s => state.services.map(ss =>ss.name).includes(s.value)))}
                   <Select
-                  defaultValue={servicios.find(s => state.services.map(ss =>ss.name).includes(s.value))}
+                  defaultValue={servicios.filter(s => state.services.map( se => se.name).includes(s.value))}
                     onChange={selectChange}
                     isMulti
                     name="services"
@@ -186,7 +183,7 @@ const EditProfessional = () => {
                     type="submit"
                     className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-dark-color transition duration-500 ease-in-out transform bg-main-color rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
-                    Crear
+                    Editar
                   </button>
                 </div>
               </form>
