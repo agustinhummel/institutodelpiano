@@ -27,38 +27,43 @@ const NavBar = () => {
           <ion-icon name={open ? 'close': 'menu' }></ion-icon>
           </div>
             <ul className={`md:flex md:items-center md:pb-0 h-screen md:h-full absolute md:static bg-options-color  left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 opacity-100 z-10':'top-[-490px] hidden md:z-auto'} md:opacity-100 opacity-0`}>
-              <li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              <li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                 <Link to='/'>
                   Inicio
                 </Link>
               </li>
-              <li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500'>
+              <li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500'>
                 <DropdownComponent setOpen={setOpen} open={open}/>
                 </li>
-              <li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              <li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                 <Link to='/about'>
                   Nosotros
                 </Link>
               </li>
-              <li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              <li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                 <Link to='/posts'>
                   Blog
                 </Link>
               </li>
-              {user ?<li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              <li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+                <Link to='/opening'>
+                  Vacantes
+                </Link>
+              </li>
+              {user ?<li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/admin'>
                     Admin
                   </Link>
                 </li> 
                 :null}
               {user   
-                ?<li className='md:ml-8 text-xl md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
+                ?<li className='md:ml-8 text-lg md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
                   setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")} }>
                 <Link to='/'>
                   Cerrar Sesion
                 </Link>
                 </li>
-                :<li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+                :<li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/login'>
                     Inicio de Sesion
                   </Link>
@@ -76,7 +81,7 @@ export default NavBar;
 
 {/* {
 Links.map((link, i)=>(
-<li key={i} className='md:ml-8 text-xl md:my-0 my-7' >
+<li key={i} className='md:ml-8 text-lg md:my-0 my-7' >
 <a href={link.link} className='text-option1-color hover:text-sky-200 duration-500'>{link.name}</a>
 </li>
 ))

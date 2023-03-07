@@ -30,7 +30,7 @@ const ServiceDetail = () => {
                 {service.description}
                 </p>
             </div>
-            <div >
+            <div className="w-full mx-auto mb-12 text-left md:w-3/4  lg:grid grid-cols-2 w-full mx-auto" >
                     {
                         service.Professionals?.map((prof, i)=>(
                             <Professionals 

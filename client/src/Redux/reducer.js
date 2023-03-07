@@ -5,6 +5,8 @@ const initialState = {
     users:[],
     posts: [],
     post:[],
+    openings: [],
+    opening: [],
     user: JSON.parse(localStorage.getItem('user')) ||  "",
     adminList: ""
 
@@ -123,6 +125,33 @@ const rootReducer = (state = initialState, action) => {
       return {
           ...state,
           users: action.ayload,
+      };
+
+    //OPENING
+    case "GET_ALL_OPENINGS":
+      return {
+        ...state,
+        openings: action.payload,
+      };
+    case "GET_ONE_OPENING":
+      return {
+          ...state, 
+          opening: action.payload
+        };
+    case "DELETE_OPENING":
+        return {
+          ...state,
+          openings: state.openings.filter(openings => openings.id != action.payload),
+        };
+    case "UPDATE_OPENING":
+        return{
+          ...state, 
+          openings:action.payload
+        }
+    case "CREATE_OPENING":
+      return {
+          ...state,
+          openings: action.payload,
       };
 
     //LOGIN

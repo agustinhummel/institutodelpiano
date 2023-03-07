@@ -197,6 +197,55 @@ export function createProfessional(payload) {
   };
 }
 
+  //OPENING
+  export function getAllOpenings() {
+    return async function (dispatch) {
+      var json = await axios.get(`${VITE_SERVER_BACK}/opening`);
+      return dispatch({
+        type: "GET_ALL_OPENINGS",
+        payload: json.data,
+        
+      });
+    };
+  }
+  export function getOneOpening(id) {
+    return async function (dispatch) {
+      let json = await axios.get(`${VITE_SERVER_BACK}/opening/${id}`)
+      return dispatch({
+        type: "GET_ONE_OPENING",
+        payload: json.data
+      })
+    }
+  }
+  export function deleteOpening(payload) {
+    return async function (dispatch) {
+      await axios.delete(`${VITE_SERVER_BACK}/opening/${payload}`);
+      return dispatch({
+        type: "DELETE_OPENING",
+        payload: payload,
+      });
+    };
+  }
+  export function editOpening(payload) {
+    return async function (dispatch) {
+      var json = await axios.put(`${VITE_SERVER_BACK}/opening/${payload.id}`,payload);
+      return dispatch({
+        type: "UPDATE_OPENING",
+        payload: json.data,
+      });
+    };
+  }
+  export function createOpening(payload) {
+    return async function (dispatch) {
+      await axios.post(`${VITE_SERVER_BACK}/opening`, payload);
+      const response  = await axios.get(`${VITE_SERVER_BACK}/opening`);
+      return dispatch({
+        type: "CREATE_OPENING",
+        payload: response.data,
+      });
+    };
+  }
+
 //LOGIN
  export function loginUser() {
     return {

@@ -5,8 +5,9 @@ import UserAdmin from '../AdminPage/UserAdmin'
 import ProfessionalAdmin from '../AdminPage/ProfessionalAdmin'
 import ServiceAdmin from '../AdminPage/ServiceAdmin'
 import PostAdmin from './PostAdmin'
+import OpeningAdmin from "./OpeningAdmin";
 import { useEffect } from 'react';
-import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers } from "../redux/actions";
+import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings } from "../redux/actions";
 
 export default function AdminPage() {
 
@@ -17,6 +18,7 @@ export default function AdminPage() {
         dispatch(getAllProfessionals());
         dispatch(getAllServices());
         dispatch(getAllUsers());
+        dispatch(getAllOpenings());
       }, [dispatch]);
 
 
@@ -26,10 +28,12 @@ export default function AdminPage() {
             <Sidebar />
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">
-                     {adminListState === 'post' ?  <PostAdmin /> :
-                        adminListState === 'service' ? <ServiceAdmin /> :
-                            adminListState === 'professional' ? <ProfessionalAdmin /> :
-                            <UserAdmin/>} 
+                     {
+                     adminListState === 'opening' ?  <OpeningAdmin /> :
+                        adminListState === 'post' ?  <PostAdmin /> :
+                            adminListState === 'service' ? <ServiceAdmin /> :
+                                adminListState === 'professional' ? <ProfessionalAdmin /> :
+                                    <UserAdmin/>} 
                 </div>
                 <div className="listContainer">
                     <div className="listTitle"></div>
