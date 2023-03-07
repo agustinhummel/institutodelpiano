@@ -2,16 +2,16 @@ import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
-    if (message.includes('Hola')) {
+    if (message.toLowerCase().includes('hola')) {
       actions.handleHello();
     }
-    if (message.includes('Horario')) {
+    if (message.toLowerCase().includes('horario')) {
       actions.handleHorario();
     }
-    if (message.includes('Servicios')) {
+    if (message.toLowerCase().includes('servicios')) {
       actions.handleServicios();
     }
-    if (message.includes('Muchas gracias')) {
+    if (message.toLowerCase().includes('muchas gracias')) {
       actions.handleSaludo();
     }
     else if (message.length === 0){

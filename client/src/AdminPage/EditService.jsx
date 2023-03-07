@@ -75,7 +75,7 @@ const EditService = ({id}) => {
         handleChange,
         handleBlur,
       }) => (
-      <div className="flex flex-col justify-center flex-1 px-4  ">
+      <div className="flex flex-col justify-center flex-1 px-4 py-6 ">
         <div className="w-full max-w-xl mx-auto sm:w-96">
           <div>
             <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">

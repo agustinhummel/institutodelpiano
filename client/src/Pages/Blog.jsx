@@ -11,9 +11,9 @@ const Blog = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (!allPosts.length) {
+   
         dispatch(getAllPosts())
-    }
+
   }, [])
 
   return (

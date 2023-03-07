@@ -1,20 +1,30 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
-import MyAvatar from './MyAvatar';
+import ServiciosChat from './ServiciosChat';
 
 const botName = 'Intituto Delpiano';
 
 
 const config = {
+
   initialMessages: [
-    createChatBotMessage(`Hola! somos el ${botName}, Estoy aquí para ayudarte.`),
+    createChatBotMessage(`Hola! somos el ${botName}.`),
     createChatBotMessage(
       "¿Cuál es tu consulta?",
       {
         withAvatar: true,
         delay: 500,
-        widget: "overview",
       }
     ),
+  ],
+  state: {
+    servicios: [],
+  },
+  widgets: [
+    {
+      widgetName: 'serviciosChat',
+      widgetFunc: (props) => <ServiciosChat {...props} />,
+      mapStateToProps: ['servicios'],
+    },
   ],
 
   botName: botName,

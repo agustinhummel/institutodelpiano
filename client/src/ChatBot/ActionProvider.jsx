@@ -17,8 +17,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   };
+  // const handleServicios = () => {
+  //   const botMessage = createChatBotMessage('Servicios: Kinesiologia, Hidroterapia, Gimnasio');
+  //   setState((prev) => ({
+  //     ...prev,
+  //     messages: [...prev.messages, botMessage],
+  //   }));
+  // };
   const handleServicios = () => {
-    const botMessage = createChatBotMessage('Servicios: Kinesiologia, Hidroterapia, Gimnasio');
+    const botMessage = createChatBotMessage(
+      "Aqui tienes nuestros servicios!",
+      {
+        widget: 'serviciosChat',
+      }
+    );
+
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],

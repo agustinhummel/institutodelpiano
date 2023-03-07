@@ -30,7 +30,7 @@ const ServiceDetail = () => {
                 {service.description}
                 </p>
             </div>
-            <div>
+            <div >
                     {
                         service.Professionals?.map((prof, i)=>(
                             <Professionals 
