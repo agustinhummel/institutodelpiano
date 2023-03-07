@@ -5,12 +5,18 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon -L",
+    "deleteDatabase": "npx sequelize db:drop",
+    "createDatabase": "npx sequelize db:create",
+    "migrateDatabase": "npx sequelize db:migrate",
+    "feedDatabase": "npx sequelize db:seed:all",
+    "database": "npm-run-all deleteDatabase createDatabase migrateDatabase feedDatabase",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "axios": "^1.2.0",

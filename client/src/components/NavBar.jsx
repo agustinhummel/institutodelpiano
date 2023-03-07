@@ -5,12 +5,14 @@ import DropdownComponent from './Dropdown';
 import { useSelector, useDispatch } from 'react-redux';
 import { LogOut } from '../redux/actions';
 import {alert} from '../functions'
+import { useJwt } from "react-jwt";
+
 
 const NavBar = () => {
   const dispatch = useDispatch()
   const user = useSelector(state => state.user)
   let [open, setOpen] = useState(false)
-
+  const { decodedToken, isExpired } = useJwt(user);
 
   return (
     <nav className='z-10 shadow-md w-screen  fixed  top-0 left-0 font-serif'>
@@ -45,13 +47,13 @@ const NavBar = () => {
                   Blog
                 </Link>
               </li>
-              {user ?<li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
+              {decodedToken !=null && !isExpired ?<li className='md:ml-8 text-xl md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/admin'>
                     Admin
                   </Link>
                 </li> 
                 :null}
-              {user   
+              {decodedToken !=null && !isExpired   
                 ?<li className='md:ml-8 text-xl md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
                   setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")} }>
                 <Link to='/'>

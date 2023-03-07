@@ -141,7 +141,7 @@ const PostAdmin = () => {
       render: (value) => {
         return (
           <div>
-            <Button onClick={() => {editHandle(value);console.log("post")}} ghost type="primary">
+            <Button onClick={() => {editHandle(value)}} ghost type="primary">
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;

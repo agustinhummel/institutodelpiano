@@ -12,17 +12,14 @@ const verifyUser = async (req, res, next) => {
             where: { id: decoded.id },
         });
         if (!user) {
-            throw new Error("The owner of this token does not exist anymore"
-            );
+            return res.json({error: "el dueño de este token no existe"})
         }
 
         req.user = user;
         next();
 
     } catch (error) {
-        return res.status(500).json(
-            `[Error verify User] - [verifyUser- Middleware]: ${error.message}`
-        );
+        return res.json({error:error.message})
     }
 };
 
