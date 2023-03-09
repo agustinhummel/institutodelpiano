@@ -68,6 +68,7 @@ const Formulario = () => {
           handleBlur,
         }) => (
           <form 
+          className='shadow-xl shadow-gray-400/20'
             action='https://getform.io/f/b4d087b5-7412-49c6-a1e7-c7702265e1e0'
             method='POST'
             >

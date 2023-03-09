@@ -34,11 +34,11 @@ useEffect(() => {
 
 
     return (
-      <div >
-        <div className={styles?.container===undefined ? "w-full h-auto flex overflow-hidden relative" : `${styles.container}`}>
+      <div>
+        <div className={styles?.container===undefined ? "  h-auto flex overflow-hidden relative" : `${styles.container}`}>
           <AiOutlineLeft
             onClick={prevSlide}
-            className="absolute left-0 text-3xl inset-y-1/2 text-white cursor-pointer"
+            className="absolute left-0 text-3xl inset-y-1/2 text-option1-color cursor-pointer"
           />
 
           <Swipe onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
@@ -50,7 +50,7 @@ useEffect(() => {
                   key={index}
                   className={
                     index === state.currentSlide
-                      ? styles?.slice===undefined ? "block w-full h-auto object-cover p-1 bg-light-color border-none rounded" : `${styles.showSlice}`
+                      ? styles?.slice===undefined ? "w-screen block h-auto object-cover p-1 bg-light-color border-none rounded" : `${styles.showSlice}`
                       : "hidden"
                   }
                 />
@@ -64,8 +64,8 @@ useEffect(() => {
                 <div
                   className={
                     index === state.currentSlide
-                      ? "h-2 w-2 bg-blue-700 rounded-full mx-2 mb-2 cursor-pointer"
-                      : "h-2 w-2 bg-white rounded-full mx-2 mb-2 cursor-pointer"
+                      ? "h-2 w-2 bg-option1-color rounded-full mx-2 mb-2 cursor-pointer"
+                      : "h-2 w-2  rounded-full mx-2 mb-2 cursor-pointer"
                   }
                   key={index}
                   onClick={() => {
@@ -78,7 +78,7 @@ useEffect(() => {
 
           <AiOutlineRight
             onClick={nextSlide}
-            className="absolute right-0 text-3xl inset-y-1/2 text-white cursor-pointer"
+            className="absolute right-0 text-3xl inset-y-1/2 text-option1-color cursor-pointer"
           />
         </div>
       </div>
