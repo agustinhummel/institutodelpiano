@@ -7,6 +7,7 @@ const initialState = {
     post:[],
     openings: [],
     opening: [],
+    obraSocials: [],
     user: JSON.parse(localStorage.getItem('user')) ||  "",
     adminList: ""
 
@@ -106,11 +107,6 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         professionals: action.payload,
       };
-    // case "GET_ONE_PROFESSIONAL":
-    //   return {
-    //     ...state,
-    //     professionals: action.payload,
-    //   };
     case "DELETE_PROFESSIONAL":
       return {
         ...state,
@@ -152,6 +148,33 @@ const rootReducer = (state = initialState, action) => {
       return {
           ...state,
           openings: action.payload,
+      };
+
+          //OBRASOCIAL
+    case "GET_ALL_OBRA_SOCIAL":
+      return {
+        ...state,
+        obraSocials: action.payload,
+      };
+    case "GET_ONE_OBRA_SOCIAL":
+      return {
+          ...state, 
+          obraSocials: action.payload
+        };
+    case "DELETE_OBRA_SOCIAL":
+        return {
+          ...state,
+          obraSocials: state.obraSocials.filter(ob => ob.id != action.payload),
+        };
+    case "UPDATE_OBRA_SOCIAL":
+        return{
+          ...state, 
+          obraSocials:action.payload
+        }
+    case "CREATE_OBRA_SOCIAL":
+      return {
+          ...state,
+          obraSocials: action.payload,
       };
 
     //LOGIN

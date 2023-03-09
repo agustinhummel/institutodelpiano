@@ -14,7 +14,6 @@ export function getAllServices() {
   export function getOneService(id) {
     return async function (dispatch) {
       let json = await axios.get(`${VITE_SERVER_BACK}/service/${id}`)
-      console.log(json.data);
       return dispatch({
         type: "GET_ONE_SERVICE",
         payload: json.data
@@ -104,6 +103,7 @@ export function getAllServices() {
 export function getAllUsers() {
     return async function (dispatch) {
       var json = await axios.get(`${VITE_SERVER_BACK}/user`);
+      
       return dispatch({
         type: "GET_ALL_USERS",
         payload: json.data,
@@ -245,6 +245,56 @@ export function createProfessional(payload) {
       });
     };
   }
+
+    //OBRASOCIAL
+    export function getAllObraSocial() {
+      return async function (dispatch) {
+        var json = await axios.get(`${VITE_SERVER_BACK}/obraSocial`);
+        
+        return dispatch({
+          type: "GET_ALL_OBRA_SOCIAL",
+          payload: json.data,
+          
+        });
+      };
+    }
+    export function getOneObraSocial(id) {
+      return async function (dispatch) {
+        let json = await axios.get(`${VITE_SERVER_BACK}/obraSocial/${id}`)
+        return dispatch({
+          type: "GET_ONE_OBRA_SOCIAL",
+          payload: json.data
+        })
+      }
+    }
+    export function deleteObraSocial(payload) {
+      return async function (dispatch) {
+        await axios.delete(`${VITE_SERVER_BACK}/obraSocial/${payload}`);
+        return dispatch({
+          type: "DELETE_OBRA_SOCIAL",
+          payload: payload,
+        });
+      };
+    }
+    export function editObraSocial(payload) {
+      return async function (dispatch) {
+        var json = await axios.put(`${VITE_SERVER_BACK}/obraSocial/${payload.id}`,payload);
+        return dispatch({
+          type: "UPDATE_OBRA_SOCIAL",
+          payload: json.data,
+        });
+      };
+    }
+    export function createObraSocial(payload) {
+      return async function (dispatch) {
+        await axios.post(`${VITE_SERVER_BACK}/obraSocial`, payload);
+        const response  = await axios.get(`${VITE_SERVER_BACK}/obraSocial`);
+        return dispatch({
+          type: "CREATE_OBRA_SOCIAL",
+          payload: response.data,
+        });
+      };
+    }
 
 //LOGIN
  export function loginUser() {

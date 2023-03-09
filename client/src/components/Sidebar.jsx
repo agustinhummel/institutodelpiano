@@ -43,6 +43,10 @@ const items = [
   getItem("Vacantes", "sub5", <ProfileOutlined />, [
     getItem("Lista de Vacantes", "opening"),
     getItem("Crear vacante", "createOpening")
+  ]),
+  getItem("Obras Sociales", "sub6", <ProfileOutlined />, [
+    getItem("Lista de obras sociales", "obrasocial"),
+    getItem("Crear obra social", "createObraSocial")
   ])
 ];
 const Slidebar = () => {
@@ -64,7 +68,10 @@ const Slidebar = () => {
       navigate('/admin/createpost')
     }else if(e.key == 'createOpening'){
       navigate('/admin/createopening')
+    }else if(e.key == 'createObraSocial'){
+      navigate('/admin/createobrasocial')
     }
+    
   
     dispatch(adminList(e.key))
   };

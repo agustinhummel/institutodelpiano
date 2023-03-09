@@ -17,18 +17,24 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   };
-  // const handleServicios = () => {
-  //   const botMessage = createChatBotMessage('Servicios: Kinesiologia, Hidroterapia, Gimnasio');
-  //   setState((prev) => ({
-  //     ...prev,
-  //     messages: [...prev.messages, botMessage],
-  //   }));
-  // };
   const handleServicios = () => {
     const botMessage = createChatBotMessage(
       "Aqui tienes nuestros servicios!",
       {
         widget: 'serviciosChat',
+      }
+    );
+
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
+  const handleObraSocial = () => {
+    const botMessage = createChatBotMessage(
+      "Estas son las Obras Sociales!",
+      {
+        widget: 'obraSocial',
       }
     );
 
@@ -45,7 +51,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   };
   const handleError = () => {
-    const botMessage = createChatBotMessage('Perdón , soy un robot y no logro entender :(');
+    const botMessage = createChatBotMessage('Perdón , soy un robot y no me entrenaron para responderte esa pregunta :(');
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
@@ -61,6 +67,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             handleHello,
             handleHorario,
             handleServicios,
+            handleObraSocial,
             handleSaludo,
             handleError
           },
