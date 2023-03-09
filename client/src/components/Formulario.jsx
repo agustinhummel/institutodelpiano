@@ -68,7 +68,8 @@ const Formulario = () => {
           handleBlur,
         }) => (
           <form 
-            action='https://getform.io/f/75947615-0c95-4d22-a847-95e4a1172e46'
+          className='shadow-xl shadow-gray-400/20'
+            action='https://getform.io/f/b4d087b5-7412-49c6-a1e7-c7702265e1e0'
             method='POST'
             >
             <h1 className="text-green-900 text-lg mb-1 font-medium title-font text-center">
@@ -106,7 +107,7 @@ const Formulario = () => {
                 Dirección E-mail
               </label>
               <input
-                type="text"
+                type="email"
                 id="correo"
                 name="correo"
                 placeholder="correo@correo.com"

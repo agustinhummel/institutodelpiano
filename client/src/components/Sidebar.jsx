@@ -39,6 +39,10 @@ const items = [
   getItem("Posts", "sub4", <ProfileOutlined />, [
     getItem("Lista de Posts", "post"),
     getItem("Crear Post", "createPost")
+  ]),
+  getItem("Vacantes", "sub5", <ProfileOutlined />, [
+    getItem("Lista de Vacantes", "opening"),
+    getItem("Crear vacante", "createOpening")
   ])
 ];
 const Slidebar = () => {
@@ -58,6 +62,8 @@ const Slidebar = () => {
       navigate('/admin/createservice')
     }else if(e.key == 'createPost'){
       navigate('/admin/createpost')
+    }else if(e.key == 'createOpening'){
+      navigate('/admin/createopening')
     }
   
     dispatch(adminList(e.key))

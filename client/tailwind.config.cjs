@@ -13,7 +13,8 @@ module.exports = {
       'dark-color': '#040C16',
     },
     fontFamily: {
-      'serif': 'Noto Serif'
+      'serif': 'Noto Serif', 
+      'cursiva': 'Dancing Script'
     }
   },
   },

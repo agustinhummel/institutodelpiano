@@ -5,8 +5,9 @@ import UserAdmin from '../AdminPage/UserAdmin'
 import ProfessionalAdmin from '../AdminPage/ProfessionalAdmin'
 import ServiceAdmin from '../AdminPage/ServiceAdmin'
 import PostAdmin from './PostAdmin'
+import OpeningAdmin from "./OpeningAdmin";
 import { useEffect } from 'react';
-import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers } from "../redux/actions";
+import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings } from "../redux/actions";
 import { useJwt } from "react-jwt";
 
 export default function AdminPage() {
@@ -21,6 +22,7 @@ export default function AdminPage() {
         dispatch(getAllProfessionals());
         dispatch(getAllServices());
         dispatch(getAllUsers());
+        dispatch(getAllOpenings());
       }, [dispatch]);
 
 
@@ -30,10 +32,12 @@ export default function AdminPage() {
             <Sidebar />
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">
-                     {adminListState === 'user' && decodedToken?.level===2 && !isExpired?  <UserAdmin/> :
-                        adminListState === 'service'  && decodedToken?.level===2 && !isExpired ? <ServiceAdmin /> :
-                            adminListState === 'professional'  && decodedToken?.level===2 && !isExpired ? <ProfessionalAdmin /> :
-                            <PostAdmin />} 
+                     {
+                     adminListState === 'opening' && decodedToken?.level===2 && !isExpired ?  <OpeningAdmin /> :
+                        adminListState === 'user' && decodedToken?.level===2 && !isExpired?  <UserAdmin/> :
+                            adminListState === 'service'  && decodedToken?.level===2 && !isExpired ? <ServiceAdmin /> :
+                                adminListState === 'professional'  && decodedToken?.level===2 && !isExpired ? <ProfessionalAdmin /> :
+                                <PostAdmin />} 
                 </div>
                 <div className="listContainer">
                     <div className="listTitle"></div>
