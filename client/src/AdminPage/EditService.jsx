@@ -77,11 +77,11 @@ const EditService = ({id}) => {
       }) => (
       <div className="flex flex-col justify-center flex-1 px-4 py-6 ">
         <div className="w-full max-w-xl mx-auto sm:w-96">
-          <div>
-            <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">
-              Editar Servicio
-            </h2>
-          </div>
+        <div>
+              <h2 className="mt-24 text-3xl font-bold text-option1-color flex justify-center">
+                Editar servicio
+              </h2>
+            </div>
 
           <div className="mt-8">
             <div className="mt-6">

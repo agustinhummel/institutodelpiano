@@ -23,7 +23,7 @@ export default function Home (){
 
     return (
         
-        <div className='mt-24'>
+        <div className='mt-24 min-h-[calc(100vh-13vh)]'>
             <div>
                 <Carrusel urlsData={imagesCarrusel}  />
             </div>

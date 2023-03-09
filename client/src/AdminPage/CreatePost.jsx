@@ -84,6 +84,11 @@ const CreatePost = () => {
 
   return (
     <div className='mt-20 relative  items-center w-full min-h-[calc(100vh-13vh)] px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl' >
+                  <div>
+              <h2 className="text-3xl font-bold text-option1-color flex justify-center mb-8">
+                Creacion de post
+              </h2>
+            </div>
       <form className='md:grid grid-cols-3 gap-4' onSubmit={(e) => handleSubmit(e)}>
       <div className='md:col-span-2 border border-gray-600 p-2'>
         <div className='md:flex justify-between'>

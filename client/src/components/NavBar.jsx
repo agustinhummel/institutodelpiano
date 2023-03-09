@@ -17,11 +17,11 @@ const NavBar = () => {
   return (
     <nav className='z-10 shadow-md w-screen  fixed  top-0 left-0 font-serif'>
       <div className='md:flex items-center justify-between bg-options-color min-h-[10vh] py-4 md:px-10 px-7'>
-          <div className='text-2xl select-none cursor-default flex items-center gap-3 text-option1-color'>
+          <div className='text-2xl select-none cursor-default flex items-center gap-3 '>
             <img className='h-16 w-16' src={logo} alt='logoEmpresa' />
             <div>
-              <h1 className='hidden lg:flex'>Instituto Delpiano</h1>
-              <p className='text-sm hidden lg:flex'>Un lugar para sentirse bien</p>
+              <h1 className='hidden text-option1-color text-3xl font-bold lg:flex'>Instituto Delpiano</h1>
+              <p className='text-xl text-option1-color font-cursiva italic hidden lg:flex'>"Un lugar para sentirse bien..."</p>
             </div>
 
           </div>

@@ -6,7 +6,6 @@ const Professionals = ({fullName, email, avatar, phone, serviceName}) => {
 
   return (
     <div className="mb-16 order-last w-full max-w-screen-sm m-auto mt-12 lg:w-1/2 lg:order-first">
-        <strong className="font-xl">Profesional: </strong>
     <div className="p-4 transition duration-500 ease-in-out transform bg-white border  overflow-hidden rounded-lg shadow-lg">
         <div className="flex py-2 mb-4">
             <img src={avatar} className="w-16 h-16 rounded-full"/>
