@@ -23,7 +23,7 @@ const Blog = () => {
             Nuestros Publicaciones
         </h1>
       </div>
-      <div className='grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-3 ' >
+      <div className='grid w-full grid-cols-1 md:grid-cols-2 gap-20 mx-auto xl:grid-cols-3' >
         {
           allPosts?.map((post,i)=>(
             <Post key={i}
