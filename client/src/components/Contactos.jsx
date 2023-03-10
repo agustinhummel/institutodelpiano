@@ -26,10 +26,10 @@ const Contactos = () => {
                   TELÉFONO
                 </h2>
                 <p className="mt-1">
-                  +54 0376 442-8578
+                  376 442-8578
                 </p>
                 <p className="mt-1">
-                  +54 0376 4328203
+                  376 432-8203
                 </p>
               </div>
               <div className="lg:w-1/2 px-4 mt-4 lg:mt-0">
@@ -44,7 +44,7 @@ const Contactos = () => {
                 <h2 className="title-font font-semibold text-option1-color tracking-widest text-xs mt-4">
                   WHATSAPP
                 </h2>
-                <p className="leading-relaxed">+54 0376 442-8578</p>
+                <p className="leading-relaxed">376 432-8203</p>
               </div>
             </div>
           </div>

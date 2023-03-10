@@ -39,7 +39,6 @@ const Login = () => {
               "Por favor, ingresa un correo electrónico valido";
           }
 
-
           return errores;
         }}
         onSubmit={ async (valores, { resetForm }) => {
@@ -47,8 +46,7 @@ const Login = () => {
             const response = await axios.post(`${import.meta.env.VITE_SERVER_BACK}/auth/login`, 
            {
                password: valores.password, 
-               email: valores.correo,
-               
+               email: valores.correo, 
            })
            
            if (response.data.accessToken) {
@@ -61,9 +59,6 @@ const Login = () => {
                alert("Error",response.data.error)
            } 
               resetForm();
-    
-            
-
 		  
         }}
       >
@@ -87,10 +82,7 @@ const Login = () => {
               <div className="mt-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label
-                      
-                      className="block text-sm font-medium text-neutral-600"
-                    >
+                    <label className="block text-sm font-medium text-neutral-600">
                       {" "}
                       Correo Electronico{" "}
                     </label>
@@ -107,15 +99,10 @@ const Login = () => {
                       />
                     </div>
                      {touched.correo && errors.correo && (
-                <div className="error text-red-500">{errors.correo}</div>
-              )}
+                        <div className="error text-red-500">{errors.correo}</div>)}
                   </div>
-
                   <div className="space-y-1">
-                    <label
-                      
-                      className="block text-sm font-medium text-neutral-600"
-                    >
+                    <label className="block text-sm font-medium text-neutral-600">
                       {" "}
                       Contraseña{" "}
                     </label>
@@ -132,8 +119,7 @@ const Login = () => {
                       />
                     </div>
                      {touched.password && errors.password && (
-                <div className="error text-red-500">{errors.password}</div>
-              )}
+                        <div className="error text-red-500">{errors.password}</div>)}
                   </div>
                   <div>
                     <button

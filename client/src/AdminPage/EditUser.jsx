@@ -51,7 +51,6 @@ const EditUser = () => {
                userId: userId,
                
            })
-           console.log(response.data)
            if (response.data.error) {
 
             alert("Error",response.data.error) 
@@ -71,7 +70,7 @@ const EditUser = () => {
           handleChange,
           handleBlur,
         }) => (
-        <div className="flex flex-col justify-center flex-1 px-4 py-4 py-6 ">
+        <div className="flex flex-col justify-center flex-1 px-4  py-6 ">
           <div className="w-full max-w-xl mx-auto sm:w-96">
           <div>
               <h2 className="mt-24 text-3xl font-bold text-option1-color flex justify-center">

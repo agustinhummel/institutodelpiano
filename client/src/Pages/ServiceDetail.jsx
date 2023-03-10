@@ -30,13 +30,17 @@ const ServiceDetail = () => {
                 {service.description}
                 </p>
             </div>
-            <div className="mx-auto text-left md:w-3/4 lg:grid grid-cols-2" >
+            <div className="flex justify-center">
+        <h1 className="px-5 pb-2 my-20 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">
+            Nuestros Profesionales
+        </h1>
+      </div>
+            <div className="mx-auto text-left px-5 w-fit sm:w-full sm:grid gap-10 sm:grid-cols-2 lg:grid-cols-3" >
                     {
                         service.Professionals?.map((prof, i)=>(
                             <Professionals 
                             key={i}
                             fullName={prof.fullName}
-                            email={prof.email}
                             avatar={prof.avatar} 
                             phone={prof.phone}
                             serviceName={service.name}
@@ -45,7 +49,6 @@ const ServiceDetail = () => {
                     }
             </div>
         </article>
-
         )
 }
 

@@ -141,7 +141,7 @@ const OpeningAdmin = () => {
       render: (value) => {
         return (
           <div>
-            <Button onClick={() => {editHandle(value);console.log("opening")}} ghost type="primary">
+            <Button onClick={() => {editHandle(value)}} ghost type="primary">
               Editar
             </Button>
             &nbsp;&nbsp;&nbsp;
@@ -157,7 +157,7 @@ const OpeningAdmin = () => {
   return (
     <>
       <div>
-        <Table key="adminPostTables" dataSource={openingSelector} columns={columns} />
+        <Table key="adminOpeningTables" dataSource={openingSelector} columns={columns} />
       </div>
     </>
   );

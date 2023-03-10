@@ -5,7 +5,6 @@ module.exports = {
         const { name, description,image,price } = req.body;
 
         try {
-            console.log(typeof image)
             if (!name || !description || !image || !price ) {
                 return res.json({error:"Faltan parametros"})
             }
@@ -15,7 +14,6 @@ module.exports = {
             return res.status(201).json(newService)
 
         } catch (error) {
-            console.log(error)
             return res.status(500).json(`[Error post service] - [service - POST]: ${error.message}`)
 
         }

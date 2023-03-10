@@ -8,7 +8,7 @@ module.exports = {
         {
         fullName: "Administracion",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -16,7 +16,7 @@ module.exports = {
       {
         fullName: "Da Rocha Deivid",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -24,7 +24,7 @@ module.exports = {
       {
         fullName: "Ribero Marquez Orlando",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -32,7 +32,7 @@ module.exports = {
       {
         fullName: "Ramos Gustavo",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -40,7 +40,7 @@ module.exports = {
       {
         fullName: "Correa Cyntia",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -48,7 +48,7 @@ module.exports = {
       {
         fullName: "Cassoni Franco",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -56,7 +56,7 @@ module.exports = {
       {
         fullName: "Quiroga Paula",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -64,7 +64,7 @@ module.exports = {
       {
         fullName: "Escalante Maria",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -72,7 +72,7 @@ module.exports = {
       {
         fullName: "Stark Magali Alejandra",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -80,7 +80,7 @@ module.exports = {
       {
         fullName: "Triadani Carla Yanina",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -88,7 +88,7 @@ module.exports = {
       {
         fullName: "Mondo Daniel",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -96,7 +96,7 @@ module.exports = {
       {
         fullName: "Bambil Celeste",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -104,7 +104,7 @@ module.exports = {
       {
         fullName: "Catelli Valeria",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -112,7 +112,7 @@ module.exports = {
       {
         fullName: "Miranda Daiana",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -120,7 +120,7 @@ module.exports = {
       {
         fullName: "Cabral Gabriela",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -128,7 +128,7 @@ module.exports = {
       {
         fullName: "Bado Glass Maria",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -136,7 +136,7 @@ module.exports = {
       {
         fullName: "Antunez Agustina",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -144,7 +144,7 @@ module.exports = {
       {
         fullName: "Kaczorowski Isabel",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -152,7 +152,7 @@ module.exports = {
       {
         fullName: "Wdowin Leandra",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -160,7 +160,7 @@ module.exports = {
       {
         fullName: "Barzala Antonela",
         avatar: "https://res.cloudinary.com/dc0rv28n2/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1678194067/Instituto%20Delpiano/logoDelpiano_zx8m9p.jpg",
-        phone: "+57 123467896",
+        phone: "+54 3764328203",
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null

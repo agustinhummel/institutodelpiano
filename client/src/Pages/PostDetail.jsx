@@ -17,7 +17,6 @@ const PostDetail = () => {
   
     const fecha = new Date(`${post.createdAt}`);
 
-
     useEffect(() => {
         dispatch(getOnePost(postId))
         dispatch(getAllPosts)
@@ -25,7 +24,7 @@ const PostDetail = () => {
 
 
     return (
-        <section>
+      <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 ">
           <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
@@ -37,13 +36,12 @@ const PostDetail = () => {
             </div>
             <div className="lg:py-16">
               <article className="space-y-4 text-gray-600">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-              {post.title}
-            </h2>
+                <h2 className="text-3xl font-bold sm:text-4xl">
+                {post.title}
+                </h2>
                 <p>
                   {post.author}
                 </p>
-      
                 <p>
                   {new DOMParser().parseFromString(post.description, "text/html").body.textContent}
                 </p>

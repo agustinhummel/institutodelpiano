@@ -8,9 +8,7 @@ import { getAllServices } from '../redux/actions';
 
 export default function Home (){
 
-
     let imagesCarrusel = [
-        
         '/image6.jpg',
         '/image6.jpg',
     ]
@@ -22,7 +20,6 @@ export default function Home (){
     }, [])
 
     return (
-        
         <div className='mt-28 md:mt-32 min-h-[calc(100vh-13vh)]'>
             <div >
                 <Carrusel urlsData={imagesCarrusel}  />
@@ -30,8 +27,6 @@ export default function Home (){
             <div className='mx-10'> <Pricing/> </div>
             <div className='mx-10' > <Contactos/> </div>
             <div className='mx-10'> <ChatBot /> </div>
-                    
-
         </div>
     )
 }

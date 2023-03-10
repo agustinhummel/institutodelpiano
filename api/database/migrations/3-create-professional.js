@@ -21,7 +21,7 @@ module.exports = {
       phone: {
         type: DataTypes.STRING,
         
-        defaultValue: "0376 442-8578"
+        defaultValue: "+54 3764328203"
        }, 
       createdAt: {
          allowNull: false,

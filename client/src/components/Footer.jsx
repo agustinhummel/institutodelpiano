@@ -15,8 +15,10 @@ const Footer = () => {
         <li>Sa 8:00 a 13:00 hs</li>
       </ul>
       <ul className='mt-4 mb-4 ml-8'>
-        <li>Telefono</li>
-        <li>0376 442-8578</li>
+        <li>Contacto</li>
+        <li>376 442-8578</li>
+        <li>376 432-8203</li>
+        <li>administracion@institutodelpiano.com.ar</li>
       </ul>
       <ul className='mt-4 mb-4 ml-8'>
         <li>Direccion</li>
