@@ -6,6 +6,7 @@ const serviceRoutes = require('./serviceRoutes')
 const professionalRoutes = require('./professionalRoutes')
 const postRoutes = require('./postRoutes')
 const openingRoutes = require('./openingRoutes')
+const obraSocialRoute = require('./obraSocialRoutes') 
 
 const router = express.Router()
 
@@ -16,5 +17,6 @@ router.use('/auth',authRoutes)
 router.use('/email', emailRoutes)
 router.use('/post',postRoutes)
 router.use('/opening',openingRoutes)
+router.use('/obraSocial', obraSocialRoute)
 
 module.exports = router

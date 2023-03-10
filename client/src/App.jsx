@@ -14,11 +14,13 @@ import CreatePost from './AdminPage/CreatePost.jsx';
 import CreateService from './adminPage/CreateService.jsx';
 import CreateUser from './adminPage/CreateUser.jsx';
 import CreateOpening from './AdminPage/CreateOpening.jsx';
+import CreateObraSocial from './AdminPage/CreateObraSocial.jsx';
 import EditProfessional from './adminPage/EditProfessional';
 import EditUser from './adminPage/EditUser.jsx';
 import EditService from './adminPage/EditService.jsx';
 import EditPost from './AdminPage/EditPost';
 import EditOpening from './AdminPage/EditOpening';
+import EditObraSocial from './AdminPage/EditObraSocial.jsx';
 import PostDetail from './Pages/PostDetail.jsx';
 import ServiceDetail from './Pages/ServiceDetail.jsx';
 import Vacante from './Pages/Vacante.jsx';
@@ -45,10 +47,12 @@ function App() {
           <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
           <Route exact path='admin/createservice' element={<ProtectedAdmin><CreateService/></ProtectedAdmin>}/>   
           <Route exact path='admin/createuser' element={<ProtectedAdmin><CreateUser/></ProtectedAdmin>}/>   
+          <Route exact path='admin/createobrasocial' element={<ProtectedAdmin><CreateObraSocial/></ProtectedAdmin>}/>  
           <Route exact path='admin/editprofessional/:professionalId' element={<ProtectedAdmin><EditProfessional/></ProtectedAdmin>}/>   
           <Route exact path='admin/edituser/:userId' element={<ProtectedAdmin><EditUser/></ProtectedAdmin>}/>   
           <Route exact path='admin/editservice/:serviceId' element={<ProtectedAdmin><EditService/></ProtectedAdmin>}/>   
-          <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/>   
+          <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/> 
+          <Route exact path='admin/editobrasocial/:obraSocialId' element={<Protected><EditObraSocial/></Protected>}/>    
           <Route path="*" element={<NotFound/>}/>
         </Routes>
      <Footer/> 
