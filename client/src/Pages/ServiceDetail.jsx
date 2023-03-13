@@ -17,25 +17,37 @@ const ServiceDetail = () => {
     },[serviceId])
 
   return (
-        <article className="min-h-[calc(100vh-13vh)] mt-20 px-4 py-24 mx-auto max-w-7xl" >
-            <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2">
-                <img src={service.image} className="object-cover w-full h-64 bg-center rounded-lg" alt="Kutty" />
-                <h1 className="mt-8 text-3xl font-bold leading-tight text-gray-900 md:text-4xl" >
-                {service.name?.toUpperCase()}
-                </h1>
-                <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
-            </div>
-            <div className="w-full mx-auto prose md:w-3/4 lg:w-1/2">
-                <p>
-                {service.description}
-                </p>
+        <article className="min-h-[calc(100vh-13vh)] mt-20 px-4 py-24 mx-auto max-w-7x" >
+            <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 border-2">
+                <div class="max-w-3xl">
+                    <h2 class="text-3xl font-bold sm:text-4xl text-option1-color">
+                        {service.name?.toUpperCase()}
+                    </h2>
+                    <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
+                </div>
+                <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+                        <img
+                        alt="Party"
+                        src={service.image}
+                        class="absolute inset-0 h-full w-full object-cover"
+                        />
+                    </div>
+                    <div class="lg:py-16">
+                        <article class="space-y-4 text-gray-600">
+                            <p>
+                                {service.description}
+                            </p>
+                        </article>
+                    </div>
+                </div>
             </div>
             <div className="flex justify-center">
-        <h1 className="px-5 pb-2 my-20 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">
-            Nuestros Profesionales
-        </h1>
-      </div>
-            <div className="mx-auto text-left px-5 w-fit sm:w-full sm:grid gap-10 sm:grid-cols-2 lg:grid-cols-3" >
+                <h1 className="px-5 pb-2 my-20 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">
+                    Nuestros Profesionales
+                </h1>
+            </div>
+            <div className="mx-auto  max-w-screen-xl text-left px-5 w-fit sm:w-full sm:grid gap-10 sm:grid-cols-2 lg:grid-cols-3" >
                     {
                         service.Professionals?.map((prof, i)=>(
                             <Professionals 
@@ -45,7 +57,7 @@ const ServiceDetail = () => {
                             phone={prof.phone}
                             serviceName={service.name}
                             />
-                            ))
+                        ))
                     }
             </div>
         </article>
