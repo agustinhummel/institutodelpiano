@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer.jsx';
 import Home from "./Pages/Home.jsx"
@@ -27,6 +28,7 @@ import Vacante from './Pages/Vacante.jsx';
 
 
 function App() {
+
 
 
   return (
