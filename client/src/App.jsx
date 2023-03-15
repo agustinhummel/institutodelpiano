@@ -16,6 +16,7 @@ import CreateService from './adminPage/CreateService.jsx';
 import CreateUser from './adminPage/CreateUser.jsx';
 import CreateOpening from './AdminPage/CreateOpening.jsx';
 import CreateObraSocial from './AdminPage/CreateObraSocial.jsx';
+import CreateEvent from './AdminPage/CreateEvent.jsx';
 import EditProfessional from './adminPage/EditProfessional';
 import EditUser from './adminPage/EditUser.jsx';
 import EditService from './adminPage/EditService.jsx';
@@ -25,6 +26,7 @@ import EditObraSocial from './AdminPage/EditObraSocial.jsx';
 import PostDetail from './Pages/PostDetail.jsx';
 import ServiceDetail from './Pages/ServiceDetail.jsx';
 import Vacante from './Pages/Vacante.jsx';
+import EditEvent from './AdminPage/EditEvent.jsx';
 
 
 function App() {
@@ -50,6 +52,8 @@ function App() {
           <Route exact path='admin/createservice' element={<ProtectedAdmin><CreateService/></ProtectedAdmin>}/>   
           <Route exact path='admin/createuser' element={<ProtectedAdmin><CreateUser/></ProtectedAdmin>}/>   
           <Route exact path='admin/createobrasocial' element={<ProtectedAdmin><CreateObraSocial/></ProtectedAdmin>}/>  
+          <Route exact path='admin/createevent' element={<ProtectedAdmin><CreateEvent/></ProtectedAdmin>}/>  
+          <Route exact path='admin/editevent/:eventId' element={<ProtectedAdmin><EditEvent/></ProtectedAdmin>}/>  
           <Route exact path='admin/editprofessional/:professionalId' element={<ProtectedAdmin><EditProfessional/></ProtectedAdmin>}/>   
           <Route exact path='admin/edituser/:userId' element={<ProtectedAdmin><EditUser/></ProtectedAdmin>}/>   
           <Route exact path='admin/editservice/:serviceId' element={<ProtectedAdmin><EditService/></ProtectedAdmin>}/>   
