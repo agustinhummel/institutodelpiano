@@ -8,6 +8,7 @@ const initialState = {
     openings: [],
     opening: [],
     obraSocials: [],
+    eventos: [],
     user: JSON.parse(localStorage.getItem('user')) ||  "",
     adminList: ""
 
@@ -175,6 +176,33 @@ const rootReducer = (state = initialState, action) => {
       return {
           ...state,
           obraSocials: action.payload,
+      };
+
+        //EVENTO
+    case "GET_ALL_EVENT":
+      return {
+        ...state,
+        eventos: action.payload,
+      };
+    case "GET_ONE_EVENT":
+      return {
+          ...state, 
+          eventos: action.payload
+        };
+    case "DELETE_EVENT":
+        return {
+          ...state,
+          eventos: state.eventos.filter(ev => ev.id != action.payload),
+        };
+    case "UPDATE_EVENT":
+        return{
+          ...state, 
+          eventos:action.payload
+        }
+    case "CREATE_EVENT":
+      return {
+          ...state,
+          eventos: action.payload,
       };
 
     //LOGIN

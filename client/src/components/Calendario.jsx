@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from "react-redux";
+import {getAllEvent} from '../Redux/actions';
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
@@ -6,38 +8,32 @@ import interactionPlugin from '@fullcalendar/interaction'
 
 const Calendario = () => {
 
+    const allEvent = useSelector((state)=> state.eventos.map((e)=> ({id: e.id, title: e.name, start: e.start, end: e.end, description: e.description})))
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+    
+      dispatch(getAllEvent())
+
+    }, [])
+
 
     const [state, setState] = useState({
       currentEvents: []
     })
 
-    const handleDateSelect = (selectInfo) => {
-      let title = prompt('Crea el nombre del evento')
-      let calendarApi = selectInfo.view.calendar
 
-      calendarApi.unselect() 
 
-      if (title) {
-        calendarApi.addEvent({
-        
-          title,
-          start: selectInfo.startStr,
-          end: selectInfo.endStr,
-          allDay: selectInfo.allDay
-        })
-      }
-    }
-
-    const handleEventClick = (clickInfo) => {
-      if (confirm(`Desea eliminar el evento '${clickInfo.event.title}'`)) {
-        clickInfo.event.remove()
+    const handleEventClick = (allEvent) => {
+      if (confirm(`${allEvent.description}`)) {
       }
     }
 
     const handleEvents = (events) => {
       setState({
         currentEvents: events
-      })
+      }) 
     }
   
   function renderEventContent(eventInfo) {
@@ -52,6 +48,7 @@ const Calendario = () => {
 
 
     return (
+
       <div className='demo-app sm:w-auto h-auto  md:mx-20 my-16 w-auto h-auto shadow-xl border-option1-color'>
         <div className='demo-app-sidebar'>
         <h1 className="flex justify-center px-5 pt-8 pb-2 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">
@@ -63,7 +60,9 @@ const Calendario = () => {
 
           </div>
         <div className='demo-app-main'>
-          <FullCalendar
+         { Object.values(allEvent)?.length ? 
+         
+         <FullCalendar
             plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
 
             initialView='dayGridMonth'
@@ -72,12 +71,12 @@ const Calendario = () => {
             selectMirror={true}
             dayMaxEvents={true}
             weekends={state.weekendsVisible}
-            select={handleDateSelect}
+            initialEvents={allEvent}
             eventContent={renderEventContent} 
             eventClick={handleEventClick}
             eventsSet={handleEvents} 
             locale={'Es'}
-          />
+          />: null }
         </div>
 
       </div>
