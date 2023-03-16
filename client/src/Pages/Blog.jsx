@@ -20,7 +20,7 @@ const Blog = () => {
     <div className=' relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl min-h-[calc(100vh-13vh)]' >
       <div className="flex justify-center">
         <h1 className="px-5 pb-2 my-20 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">
-            Nuestros Publicaciones
+            Nuestras Publicaciones
         </h1>
       </div>
       <div className='grid w-full grid-cols-1 md:grid-cols-2 gap-20 mx-auto xl:grid-cols-3' >

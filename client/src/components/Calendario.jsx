@@ -5,11 +5,12 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import {desc} from '../functions'
 
 const Calendario = () => {
 
     const allEvent = useSelector((state)=> state.eventos.map((e)=> ({id: e.id, title: e.name, start: e.start, end: e.end, description: e.description})))
-
+    
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -25,9 +26,10 @@ const Calendario = () => {
 
 
 
-    const handleEventClick = (allEvent) => {
-      if (confirm(`${allEvent.description}`)) {
-      }
+    const handleEventClick = (e) => {
+      let event = allEvent.find((eve)=> e.event.id == eve.id )
+      desc(event.title, event.description)
+      
     }
 
     const handleEvents = (events) => {
