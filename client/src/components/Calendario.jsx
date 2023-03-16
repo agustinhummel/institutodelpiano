@@ -5,6 +5,7 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import {desc} from '../functions'
 
 const Calendario = () => {
 
@@ -19,9 +20,12 @@ const Calendario = () => {
       currentEvents: []
     })
 
-    const handleEventClick = (allEvent) => {
-      if (confirm(`${allEvent.description}`)) {
-      }
+
+
+    const handleEventClick = (e) => {
+      let event = allEvent.find((eve)=> e.event.id == eve.id )
+      desc(event.title, event.description)
+      
     }
 
     const handleEvents = (events) => {

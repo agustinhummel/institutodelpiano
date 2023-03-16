@@ -21,7 +21,7 @@ const Pricing = () => {
           <span className="mx-auto text-2xl font-semibold leading-none tracking-tighter text-neutral-600 lg:text-3xl"> {s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}</span>
           <p className="mx-auto text-base text-gray-500 lading-relaxed">{s.description.charAt(0).toUpperCase() + s.description.toLowerCase().slice(1).slice(0, 100)}</p>
 
-            <Link to={`services/${s.id}`} className="items-end mx-auto flex justify-center w-36 h-8 text-base font-medium text-center text-dark-color transition duration-500 ease-in-out transform bg-secondary-color rounded-xl hover:bg-[#f6ff00c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-100">Mas Info</Link>
+            <Link to={`services/${s.id}`} className="items-end mx-auto flex justify-center w-36 h-8 pb-1 text-base font-medium text-center text-dark-color transition duration-500 ease-in-out transform bg-secondary-color rounded-xl hover:bg-[#f6ff00c9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-100">Mas Info</Link>
 
         </div>
       </div>
