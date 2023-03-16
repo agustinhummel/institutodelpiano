@@ -5,7 +5,7 @@ import Formulario from './Formulario';
 const Contactos = () => {
 
   return (
-    <div className="w-full min-h-screen md:px-8 sm:pt-10 px-4 pb-10 bg-light-color" id="contacto">
+    <div className="w-full max-w-7xl mx-auto min-h-screen md:px-8 sm:pt-10 px-4 lg:px-0 pb-10 bg-light-color" id="contacto">
       <section className="text-dark-color body-font relative">
         <div className="flex justify-center">
           <h1 className="px-5 pt-8 pb-2 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 ">

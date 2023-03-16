@@ -8,10 +8,6 @@ const Carousel= ({urlsData,styles}) => {
          currentSlide: 0,
         paused: false,});
 
-useEffect(() => {
-
-}, []);
-
   let nextSlide = () => {
     let newSlide =
       state.currentSlide === urlsData.length - 1
@@ -35,29 +31,26 @@ useEffect(() => {
 
     return (
       <div>
-        <div className={styles?.container===undefined ? "  h-auto flex overflow-hidden relative" : `${styles.container}`}>
+        <div className={styles?.container===undefined ? "h-auto flex overflow-hidden relative" : `${styles.container}`}>
           <AiOutlineLeft
             onClick={prevSlide}
             className="absolute left-0 text-3xl inset-y-1/2 text-option1-color cursor-pointer"
           />
-
           <Swipe onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
             {urlsData.map((slide, index) => {
               return (
-                <img
-                  src={slide}
-                  alt="This is a carousel slide"
-                  key={index}
-                  className={
-                    index === state.currentSlide
-                      ? styles?.slice===undefined ? "w-screen block h-auto object-cover p-1 bg-light-color border-none rounded" : `${styles.showSlice}`
-                      : "hidden"
-                  }
+                <div
+                key={index}
+                style={{ backgroundImage: `url(${slide})` }} 
+                className={
+                  index === state.currentSlide
+                    ? styles?.slice===undefined ? "w-screen block h-auto object-cover p-1 bg-light-color border-none rounded" : `${styles.slice}`
+                    : "hidden"
+                }
                 />
               );
             })}
           </Swipe>
-
           <div className="absolute w-full flex justify-center bottom-0">
             {urlsData.map((element, index) => {
               return (
@@ -75,7 +68,6 @@ useEffect(() => {
               );
             })}
           </div>
-
           <AiOutlineRight
             onClick={nextSlide}
             className="absolute right-0 text-3xl inset-y-1/2 text-option1-color cursor-pointer"

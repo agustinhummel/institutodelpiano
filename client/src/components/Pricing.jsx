@@ -7,8 +7,8 @@ const Pricing = () => {
     const allService = useSelector((state) => state.services)
 
   return (
-    <section>
-  <div className="relative items-center w-full py-8 mx-auto md:px-8 lg:px-12 max-w-sm lg:max-w-7xl font-serif mb-4 ">
+    <section className='text-center justify-center flex '>
+  <div className="relative items-center  w-full py-8  md:px-8 lg:px-12 max-w-sm lg:max-w-screen-2xl font-serif mb-4 ">
   <div className="flex justify-center">
           <h1 className="px-5 pt-8 pb-2 text-3xl font-bold sm:text-4xl text-option1-color border-option1-color title-font border-b-2 mb-20">
             Nuestros Servicios

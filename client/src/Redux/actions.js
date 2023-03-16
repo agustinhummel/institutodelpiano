@@ -295,6 +295,57 @@ export function createProfessional(payload) {
       };
     }
 
+    //EVENTOS
+    export function getAllEvent() {
+      return async function (dispatch) {
+        var json = await axios.get(`${VITE_SERVER_BACK}/event`);
+        
+        return dispatch({
+          type: "GET_ALL_EVENT",
+          payload: json.data,
+          
+        });
+      };
+    }
+    export function getOneEvent(id) {
+      return async function (dispatch) {
+        let json = await axios.get(`${VITE_SERVER_BACK}/event/${id}`)
+        
+        return dispatch({
+          type: "GET_ONE_EVENT",
+          payload: json.data
+        })
+      }
+    }
+    export function deleteEvent(payload) {
+      return async function (dispatch) {
+        await axios.delete(`${VITE_SERVER_BACK}/event/${payload}`);
+        return dispatch({
+          type: "DELETE_EVENT",
+          payload: payload,
+        });
+      };
+    }
+    export function editEvent(payload) {
+      return async function (dispatch) {
+        var json = await axios.put(`${VITE_SERVER_BACK}/event/${payload.id}`,payload);
+        return dispatch({
+          type: "UPDATE_EVENT",
+          payload: json.data,
+        });
+      };
+    }
+    export function createEvent(payload) {
+      return async function (dispatch) {
+        await axios.post(`${VITE_SERVER_BACK}/event`, payload);
+        const response  = await axios.get(`${VITE_SERVER_BACK}/event`);
+        return dispatch({
+          type: "CREATE_EVENT",
+          payload: response.data,
+        });
+      };
+    }
+
 //LOGIN
  export function loginUser() {
     return {
