@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import {getOneService, getAllServices} from '../Redux/actions';
-import Professionals from '../components/Professionals'
+import Professionals from '../components/Professionals';
+import DropdownService from "../components/DropdownService";
 
 
 const ServiceDetail = () => {
 
     const service = useSelector(state => state.service)
+    let [open, setOpen] = useState(false)
     const dispatch = useDispatch()
     const {serviceId} = useParams()
 
@@ -19,13 +21,21 @@ const ServiceDetail = () => {
   return (
         <article className="min-h-[calc(100vh-13vh)] mt-20 px-4 py-24 mx-auto max-w-7x" >
             <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 border-2">
+            <div class="grid justify-items-end">
+                <article class="space-y-4 text-gray-600">
+                    <DropdownService setOpen={setOpen} open={open}/>
+                </article>
+            </div>
                 <div class="max-w-3xl">
                     <h2 class="text-3xl font-bold sm:text-4xl text-option1-color">
                         {service.name?.toUpperCase()}
                     </h2>
+
                     <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
                 </div>
+                
                 <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    
                     <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
                         <img
                         alt="Party"
@@ -33,13 +43,17 @@ const ServiceDetail = () => {
                         class="absolute inset-0 h-full w-full object-cover"
                         />
                     </div>
+
                     <div class="lg:py-16">
+
                         <article class="space-y-4 text-gray-600">
                             <p>
                                 {service.description}
                             </p>
                         </article>
                     </div>
+                    
+
                 </div>
             </div>
             <div className="flex justify-center">

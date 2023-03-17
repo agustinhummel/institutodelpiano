@@ -13,7 +13,8 @@ const CreateService = () => {
         name:"",
         description:"",
         image:"",
-        price:"1"
+        price:"1",
+        category:""
       }}
       validate={(valores) => {
         let errores = {};
@@ -46,8 +47,8 @@ const CreateService = () => {
           name:valores.name,
           description:valores.description,
           image:[valores.image],
-          price:valores.price
-             
+          price:valores.price,
+          category:valores.category.split(', ')
          })
          
          if (response.data.error) {
@@ -175,6 +176,28 @@ const CreateService = () => {
                    {touched.price && errors.price && (
               <div className="error text-red-500">{errors.price}</div>
             )}
+                </div>
+                <div className="space-y-1">
+                  <label
+                    
+                    className="block text-sm font-medium text-neutral-600"
+                  >
+                    {" "}
+                    Sub Categoria{" "}
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="category"
+                      name="category"
+                      type="text"
+                      value={values.category}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="categoria1, categoria2, categoria3"
+                      className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-dark-color bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                    />
+                  </div>
+
                 </div>
                 <div>
                   <button

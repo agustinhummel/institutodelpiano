@@ -10,6 +10,7 @@ module.exports = {
           description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
           image:["https://img.freepik.com/vector-premium/bandera-conceptos-palabra-kinesiologia-monitoreo-muscular-trastornos-movimiento_106317-1548.jpg"],
           price: 1500,
+          category: ["test"],
           createdAt: new Date(),
           updatedAt: new Date(),
           deletedAt: null
@@ -19,6 +20,7 @@ module.exports = {
         description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
         image:["https://img.freepik.com/vector-premium/bandera-conceptos-palabra-kinesiologia-monitoreo-muscular-trastornos-movimiento_106317-1548.jpg"],
         price: 1500,
+        category: ["Kinesiología deportiva", "Kinesiología pasiva", "Tratamiento kinesiológico activo"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -28,6 +30,7 @@ module.exports = {
         description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
         image:["untest"],
         price: 900,
+        category: ["Masaje deportivo", "Masaje tailandés", "Kobido"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -37,6 +40,7 @@ module.exports = {
         description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
         image:["https://www.chacarilla.com.pe/wp-content/uploads/2017/07/IMG_5188-1537x1024.jpg"],
         price: 2000,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -46,6 +50,7 @@ module.exports = {
         description:"Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. ",
         image:["https://www.feda.net/wp-content/uploads/2016/12/pilates-reformer.jpg"],
         price: 3000,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -55,6 +60,7 @@ module.exports = {
         description:"Gimanasio equipado con equipos para realizar actividades fisicas",
         image:["urltest"],
         price: 0.1,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -64,6 +70,7 @@ module.exports = {
         description:"Orientado a niños de 0 a 4 años",
         image:["urltest"],
         price: 0.1,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -73,6 +80,7 @@ module.exports = {
         description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -82,6 +90,7 @@ module.exports = {
         description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
+        category: ["test"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -91,6 +100,7 @@ module.exports = {
         description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
+        category: [""],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
@@ -100,6 +110,7 @@ module.exports = {
         description:"es una descricion de prueba ",
         image:["urltest"],
         price: 0.1,
+        category: ["Psicología clínica", "Psicología cognitiva"],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
