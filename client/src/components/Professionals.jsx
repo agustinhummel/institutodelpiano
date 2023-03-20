@@ -13,7 +13,7 @@ const Professionals = ({fullName, email, avatar, phone, serviceName}) => {
           </div>
            <div className='flex mx-auto w-border border-current rounded hover:bg-green-700 w-min pb-2 sm:w-fit sm:pr-3  text-white bg-green-500  text-lg'>
                 <a target='_blank' href={`https://api.whatsapp.com/send?phone=${phone}&text=Hola quisiera reservar un turno de ${serviceName}`} className="flex" >
-                <WhatsAppOutlined style={{paddingLeft:"10px",paddingRight:"10px",paddingTop:"8px"}} /><p className='hidden sm:flex'>Turnos Online</p>
+                <WhatsAppOutlined style={{paddingLeft:"10px",paddingRight:"10px",paddingTop:"10px"}} /><p className='pt-1 hidden sm:flex'>Turnos Online</p>
                 </a>
           </div>
         </div>

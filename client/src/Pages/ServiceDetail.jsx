@@ -20,38 +20,41 @@ const ServiceDetail = () => {
 
   return (
         <article className="min-h-[calc(100vh-13vh)] mt-20 px-4 py-24 mx-auto max-w-7x" >
-            <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 border-2">
-            <div class="grid justify-items-end">
-                <article class="space-y-4 text-gray-600">
+            <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 border-2">
+            <div className="grid justify-items-end">
+                {/* <article className="space-y-4 text-gray-600">
                     <DropdownService setOpen={setOpen} open={open}/>
-                </article>
+                </article> */}
             </div>
-                <div class="max-w-3xl">
-                    <h2 class="text-3xl font-bold sm:text-4xl text-option1-color">
+                <div className="max-w-3xl">
+                    <h2 className="text-3xl font-bold sm:text-4xl text-option1-color">
                         {service.name?.toUpperCase()}
                     </h2>
 
                     <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
                 </div>
                 
-                <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
                     
-                    <div class="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+                    <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
                         <img
                         alt="Party"
                         src={service.image}
-                        class="absolute inset-0 h-full w-full object-cover"
+                        className="absolute inset-0 h-full w-full object-cover"
                         />
                     </div>
 
-                    <div class="lg:py-16">
+                    <div className="lg:py-16">
 
-                        <article class="space-y-4 text-gray-600">
+                        <article className="space-y-4 text-gray-600">
                             <p>
                                 {service.description}
                             </p>
                         </article>
                     </div>
+                    <article className="space-y-4 text-gray-600">
+                        <DropdownService setOpen={setOpen} open={open}/>
+                    </article>
                     
 
                 </div>

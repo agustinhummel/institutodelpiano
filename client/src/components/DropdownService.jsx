@@ -10,11 +10,10 @@ function classNames(...classes) {
 export default function DropdownService({setOpen,open}) {
 
     const allService = useSelector(state => state.service)
-    console.log(allService)
 
 
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="lg:relative inline-block text-left">
             <div>
                 <Menu.Button className="flex items-center w-full bg-option1-color p-2 text-white rounded-md hover:text-sky-200 cursor-pointer duration-500">
 
