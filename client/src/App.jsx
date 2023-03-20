@@ -9,7 +9,7 @@ import Blog from './Pages/Blog';
 import AdminPage from './AdminPage/Admin.jsx';
 import Protected from './components/Protected';
 import ProtectedAdmin from './components/ProtectedAdmin';
-import NotFound from './pages/NotFound.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 import CreateProfessional from './adminPage/CreateProfessional.jsx';
 import CreatePost from './AdminPage/CreatePost.jsx';
 import CreateService from './adminPage/CreateService.jsx';
@@ -59,7 +59,7 @@ function App() {
           <Route exact path='admin/editservice/:serviceId' element={<ProtectedAdmin><EditService/></ProtectedAdmin>}/>   
           <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/> 
           <Route exact path='admin/editobrasocial/:obraSocialId' element={<Protected><EditObraSocial/></Protected>}/>    
-          <Route path="*" element={<NotFound/>}/>
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
      <Footer/> 
   </BrowserRouter>

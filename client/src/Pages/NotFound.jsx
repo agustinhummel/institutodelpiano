@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <section className="flex items-center h-screen p-16  dark:text-dark-color">
 		<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
@@ -18,4 +18,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound
+export default NotFoundPage
