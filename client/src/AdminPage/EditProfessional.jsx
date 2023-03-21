@@ -93,6 +93,27 @@ const EditProfessional = () => {
               <form onSubmit={onSubmit} className="space-y-6">
               <div className="space-y-1">
                   <label
+                    
+                    className="block text-sm font-medium text-neutral-600"
+                  >
+                    {" "}
+                    Servicios{" "}
+                  </label>
+                  <div className="mt-1">
+                  <Select
+                  defaultValue={servicios.filter(s => state.services.map( se => se.name).includes(s.value))}
+                    onChange={selectChange}
+                    isMulti
+                    name="services"
+                    options={servicios}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                  />
+                  </div>
+                  {errors.services && <div className="error text-red-500 mx-3">{errors.services}</div>}
+                </div>
+              <div className="space-y-1">
+                  <label
                     className="block text-sm font-medium text-neutral-600"
                   >
                     {" "}
@@ -156,27 +177,6 @@ const EditProfessional = () => {
                   </div>
                   {errors.phone && <div className="error text-red-500 mx-3">{errors.phone}</div>}
 
-                </div>
-                <div className="space-y-1">
-                  <label
-                    
-                    className="block text-sm font-medium text-neutral-600"
-                  >
-                    {" "}
-                    Servicios{" "}
-                  </label>
-                  <div className="mt-1">
-                  <Select
-                  defaultValue={servicios.filter(s => state.services.map( se => se.name).includes(s.value))}
-                    onChange={selectChange}
-                    isMulti
-                    name="services"
-                    options={servicios}
-                    className="basic-multi-select"
-                    classNamePrefix="select"
-                  />
-                  </div>
-                  {errors.services && <div className="error text-red-500 mx-3">{errors.services}</div>}
                 </div>
                 <div>
                   <button
