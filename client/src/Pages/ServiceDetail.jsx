@@ -34,23 +34,26 @@ const ServiceDetail = () => {
                     <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
                 </div>
                 
-                <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                <div className="mt-8">
+                    <div className="h-96 mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+
                     
-                    <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
-                        <img
-                        alt="Party"
-                        src={service.image}
-                        className="absolute inset-0 h-full w-full object-cover"
-                        />
-                    </div>
+                        <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+                            <img
+                            alt="Party"
+                            src={service.image}
+                            className="absolute inset-0 h-full w-full object-cover"
+                            />
+                        </div>
 
-                    <div className="lg:py-16">
+                        <div className="lg:py-16">
 
-                        <article className="space-y-4 text-gray-600">
-                            <p>
-                                {service.description}
-                            </p>
-                        </article>
+                            <article className="space-y-4 text-gray-600">
+                                <p>
+                                    {service.description}
+                                </p>
+                            </article>
+                        </div>
                     </div>
                     <article className="space-y-4 text-gray-600">
                         <DropdownService setOpen={setOpen} open={open}/>

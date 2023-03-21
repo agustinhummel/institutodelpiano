@@ -18,7 +18,7 @@ module.exports = {
       {
         name: "kinesiologia",
         description:"Te brindamos el mejor servicio en Kinesiología y fisioterapia con los mejores profesionales a tu disposición! Fisioterapia, kinesiología. Los profesionales utilizan aparatos como campos magnéticos, onda corta, ultrasonido combinado con técnicas manuales de movilización, estiramientos y masajes.",
-        image:["https://img.freepik.com/vector-premium/bandera-conceptos-palabra-kinesiologia-monitoreo-muscular-trastornos-movimiento_106317-1548.jpg"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679413397/Instituto%20Delpiano/Untitled_design_3_ylkyde.png"],
         price: 1500,
         category: ["Quiropraxia", "Terapias respitatoria", "Terapias manipuladas", "RPG", "Estimulacion temprana"],
         createdAt: new Date(),
@@ -38,7 +38,7 @@ module.exports = {
       {
         name: "hidroterapia",
         description:"La hidroterapia se realiza con profesionales a cargo. Para personas de todas las edades. Dedicado a personas de todas las edades que requieran rehabilitación motriz, reducción de dolores, reeducación de marcha, enfocado en patologías como artritis, artrosis, acv, post quirúrgico, entre otras . Por otro lado, es recomendado también para personas que no tengan patología alguna y lo requieran para hacer actividad física. Te contamos un poco de los beneficios que tiene realizar hidroterapia: Disminuye la ansiedad de separación y establece vínculos de relación e intercambio socio comunicativo (con terapeutas, padres e iguales). Organización de la conducta; Calma los estados de ansiedad y estrés proporcionando seguridad y tranquilidad, pudiendo llegar incluso a mejorar los ciclos de sueño. A nivel muscular; Mejora el tono (relajación) equilibrio y coordinación.",
-        image:["https://www.chacarilla.com.pe/wp-content/uploads/2017/07/IMG_5188-1537x1024.jpg"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679406293/Instituto%20Delpiano/265971032_130047979433769_2266975901967474414_n_uxx1yl.jpg"],
         price: 2500,
         category: ["Hidroterapia en niños con TEA", "Hidroterapoa en niños con SME Down"],
         createdAt: new Date(),
@@ -68,7 +68,7 @@ module.exports = {
       {
         name: "fonoaudiologia",
         description:"La Fonoaudióloga se encarga de tratar a personas con alteraciones de la audición, el lenguaje, la voz, el sistema vestibular, la motricidad orofacial y la deglución. Atienden a personas de distintas edades, ayudan a establecer las habilidades de comunicación o a perfeccionarlas. Se ocupa de evaluar, diagnosticar e intervenir en los trastornos de la comunicación humana, expresados a través de diferentes patologías como puede ser alteración en la voz en el habla, lenguaje, en la audición y en cualquier Otra función que implique tanto al habla como al oído, tanto de adultos como de niños.",
-        image:["https://diariocronica1.cdn.net.ar/252/storage252/images/01/62/35/1623598_d4691bf3f27fcb838dbd29080615fe4850df57ab09c6b0953e6897160f9a87f4/md.webp"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679406788/Instituto%20Delpiano/Untitled_design_ctwbhd.png"],
         price: 3000,
         category: [""],
         createdAt: new Date(),
