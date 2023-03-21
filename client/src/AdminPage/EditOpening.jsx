@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const EditOpening = () => {
+  const navigate = useNavigate()
   const { openingId } = useParams()
   const opening = useSelector(state => state.openings.find(s => s.id==openingId))
   return (
@@ -45,6 +46,7 @@ const EditOpening = () => {
          }else{
           
           alert("Admin","opening editado exitosamente")
+          navigate('/admin')
          } 
             resetForm();
     

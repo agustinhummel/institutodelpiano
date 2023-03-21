@@ -2,10 +2,11 @@ import React from 'react'
 import { Formik} from "formik";
 import {alert} from '../functions'
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const EditService = ({id}) => {
+  const navigate = useNavigate()
   const { serviceId } = useParams()
   const service = useSelector(state => state.services.find(s => s.id==serviceId))
   return (
@@ -62,6 +63,7 @@ const EditService = ({id}) => {
           
          }else{
           alert("Admin","Servicio editado exitosamente")
+          navigate('/admin')
          } 
             resetForm();
     

@@ -4,8 +4,10 @@ import {alert} from '../functions'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import { useNavigate} from 'react-router-dom';
 
 const CreateProfessional = () => {
+  const navigate = useNavigate()
   const servicios = useSelector(state => state.services).map(s => ({value:s.name,label:s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}))
   const [errors, setErrors] = useState({});
   const [state, setState] = useState({ 
@@ -64,6 +66,7 @@ const CreateProfessional = () => {
 
   }else{
     alert("Admin","Profesional creado exitosamente")
+    navigate('/admin')
    } 
 
     }else{

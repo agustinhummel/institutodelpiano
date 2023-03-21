@@ -4,8 +4,10 @@ import {alert} from '../functions'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const EditPost = () => {
+  const navigate = useNavigate()
   const { postId } = useParams()
   const post = useSelector(state => state.posts.find(s => s.id==postId))
   return (
@@ -45,6 +47,7 @@ const EditPost = () => {
           const response = await axios.put(`${import.meta.env.VITE_SERVER_BACK}/post/${postId}`, 
          {
 
+
           postId:postId,
           title:valores.title,
           description:valores.description,
@@ -59,6 +62,7 @@ const EditPost = () => {
          }else{
           
           alert("Admin","Post editado exitosamente")
+          navigate('/admin')
          } 
             resetForm();
     

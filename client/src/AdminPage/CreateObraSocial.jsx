@@ -1,9 +1,12 @@
 import React from 'react'
 import { Formik} from "formik";
 import {alert} from '../functions'
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 const CreateObraSocial = () => {
+
+  const navigate = useNavigate();
   return (
     <section>
       <div className="flex overflow-hidden min-h-[calc(100vh-13vh)]  ">
@@ -35,6 +38,7 @@ const CreateObraSocial = () => {
             
            }else{
             alert("Admin","Obra social creado exitosamente")
+            navigate('/admin')
            } 
               resetForm();
 		  

@@ -4,9 +4,10 @@ import { Formik} from "formik";
 import {alert} from '../functions'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const EditEvent = () => {
-
+  const navigate = useNavigate()
   const { eventId } = useParams()
   const event = useSelector((state) => state.eventos.find(e=>e.id == eventId))
   
@@ -60,6 +61,7 @@ const EditEvent = () => {
             
            }else{
             alert("Admin","Evento editado exitosamente")
+            navigate('/admin')
            } 
               resetForm();
 		  
@@ -73,7 +75,7 @@ const EditEvent = () => {
           handleChange,
           handleBlur,
         }) => (
-        <div className="flex flex-col justify-center flex-1 px-4 py-4 py-6 ">
+        <div className="flex flex-col justify-center flex-1 px-4  py-6 ">
           <div className="w-full max-w-xl mx-auto sm:w-96">
           <div>
               <h2 className="mt-24 text-3xl font-bold text-option1-color flex justify-center">

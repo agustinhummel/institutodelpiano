@@ -2,8 +2,10 @@ import React from 'react'
 import { Formik} from "formik";
 import {alert} from '../functions'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const CreateService = () => {
+  const navigate = useNavigate()
   return (
     <section>
     <div className="flex overflow-hidden min-h-[calc(100vh-13vh)]  ">
@@ -57,6 +59,7 @@ const CreateService = () => {
           
          }else{
           alert("Admin","Servicio creado exitosamente")
+          navigate('/admin')
          } 
             resetForm();
     

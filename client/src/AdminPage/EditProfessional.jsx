@@ -4,9 +4,10 @@ import {alert} from '../functions'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 
 const EditProfessional = () => {
+  const navigate = useNavigate()
   const {professionalId} = useParams()
   const servicios = useSelector(state => state.services).map(s => ({value:s.name,label:s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}))
   const professional = useSelector(state => state.professionals).find(p => p.id ==professionalId )
@@ -68,6 +69,7 @@ const EditProfessional = () => {
 
   }else{
     alert("Admin","Profesional creado exitosamente")
+    navigate('/admin')
    } 
 
     }else{

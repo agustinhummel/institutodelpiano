@@ -1,10 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import { Formik} from "formik";
 import {alert} from '../functions'
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 const EditUser = () => {
+  const navigate = useNavigate()
   const { userId } = useParams()
   const user = useSelector(state => state.users.find(u=>u.id==userId))
   return (
@@ -57,6 +58,7 @@ const EditUser = () => {
             
            }else{
             alert("Admin","Usuario editado exitosamente")
+            navigate('/admin')
            } 
               resetForm();
 		  
