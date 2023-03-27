@@ -11,8 +11,10 @@ import Instagram from '../components/Instagram';
 export default function Home (){
 
     let imagesCarrusel = [
-        '/image6.jpg',
-        '/image6.jpg',
+        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954084/Instituto%20Delpiano/Untitled_design_10_wybzid.png',
+        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954188/Instituto%20Delpiano/Untitled_design_11_udsyag.png',
+        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954350/Instituto%20Delpiano/Untitled_design_12_httjzg.png',
+        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954576/Instituto%20Delpiano/Untitled_design_13_mowno0.png'
     ]
 
     const dispatch = useDispatch();
@@ -26,7 +28,7 @@ export default function Home (){
             <div className='text-center justify-center flex' ><Carrusel urlsData={imagesCarrusel} 
                         styles={{
                             container: "max-w-screen-2xl h-[200px] md:h-full flex overflow-hidden relative rounded-md",
-                            slice: "md:aspect-[1/1] w-screen h-full md:h-[250px] lg:h-[400px] bg-cover bg-no-repeat flex justify-center text-center items-center ",
+                            slice: "md:aspect-[1/1] w-screen h-full md:h-[250px] lg:h-[400px] lg:w-[1250px] bg-cover bg-no-repeat flex justify-center text-center items-center ",
                                 }}/>
             </div>
             <div className='mx-10'><Pricing/></div>

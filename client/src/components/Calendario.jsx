@@ -65,7 +65,19 @@ const Calendario = () => {
             eventClick={handleEventClick}
             eventsSet={handleEvents} 
             locale={'Es'}
-          />: null }
+          />: <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView='dayGridMonth'
+          editable={true}
+          selectable={true}
+          selectMirror={true}
+          dayMaxEvents={true}
+          weekends={state.weekendsVisible}
+          eventContent={renderEventContent} 
+          eventClick={handleEventClick}
+          eventsSet={handleEvents} 
+          locale={'Es'}
+        /> }
         </div>
       </div>
     )

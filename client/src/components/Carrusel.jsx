@@ -58,7 +58,7 @@ const Carousel= ({urlsData,styles}) => {
                   className={
                     index === state.currentSlide
                       ? "h-2 w-2 bg-option1-color rounded-full mx-2 mb-2 cursor-pointer"
-                      : "h-2 w-2  rounded-full mx-2 mb-2 cursor-pointer"
+                      : "h-2 w-2  bg-options-color rounded-full mx-2 mb-2 cursor-pointer"
                   }
                   key={index}
                   onClick={() => {

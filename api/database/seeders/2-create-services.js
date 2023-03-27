@@ -18,7 +18,7 @@ module.exports = {
       {
         name: "kinesiologia",
         description:"Te brindamos el mejor servicio en Kinesiología y fisioterapia con los mejores profesionales a tu disposición! Fisioterapia, kinesiología. Los profesionales utilizan aparatos como campos magnéticos, onda corta, ultrasonido combinado con técnicas manuales de movilización, estiramientos y masajes.",
-        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679413397/Instituto%20Delpiano/Untitled_design_3_ylkyde.png"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679924949/Instituto%20Delpiano/PSICOLOGIA_3_bwaht6.png"],
         price: 1500,
         category: ["Quiropraxia", "Terapias respitatoria", "Terapias manipuladas", "RPG", "Estimulacion temprana"],
         createdAt: new Date(),
@@ -48,7 +48,7 @@ module.exports = {
       {
         name: "pilates",
         description:"Las mejores profesionales para realizar pilates están en nuestro instituto. Reduce el estrés y tonifica tus músculos. Mejora tu concentración. Te ayuda a dormir mejor Aprendes a respirar mejor. Incentiva la pérdida de peso. Aumenta tu capacidad de movimiento. Corrige y mejora la postura corporal",
-        image:["https://www.feda.net/wp-content/uploads/2016/12/pilates-reformer.jpg"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679945372/Instituto%20Delpiano/pilates_de7igz.png"],
         price: 800,
         category: [""],
         createdAt: new Date(),
@@ -58,7 +58,7 @@ module.exports = {
       {
         name: "gimnasio terapeutico",
         description:"Contamos con el mejor equipo de profesores para entrenar. Salones: Para realizar gimnasia Aeróbica, etc. CONSTANCIA = C ONTROLA TU MENTE,  O LVIDA TUS LÍMITES, N UTRE TU CUERPO, S IENTE TU FORTALEZA, T OMA EL RIESGO, A LCANZA TUS METAS, N OQUEA TUS MIEDOS, C ULTIVA HABITOS, I GNORA LO NEGATIVO, A SUMES EL RETO ?. Nuestro equipo de profesionales te acompañará en todo el entrenamiento. Tenemos un amplio gimnasio, equipado para brindarte el mejor servicio. Un completo gimnasio integrado por los siguientes sectores: Equipo: Todas las actividades son supervisadas por profesionales especializados, controlando la presión arterial y la frecuencia cardiaca antes, durante y después de las diferentes actividades físicas que se realizan.",
-        image:["urltest"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679946255/Instituto%20Delpiano/GYM_gjnqwx.png"],
         price: 850,
         category: ["Gimnasia Aerobica", "Gimasio Complemento"],
         createdAt: new Date(),
@@ -68,7 +68,7 @@ module.exports = {
       {
         name: "fonoaudiologia",
         description:"La Fonoaudióloga se encarga de tratar a personas con alteraciones de la audición, el lenguaje, la voz, el sistema vestibular, la motricidad orofacial y la deglución. Atienden a personas de distintas edades, ayudan a establecer las habilidades de comunicación o a perfeccionarlas. Se ocupa de evaluar, diagnosticar e intervenir en los trastornos de la comunicación humana, expresados a través de diferentes patologías como puede ser alteración en la voz en el habla, lenguaje, en la audición y en cualquier Otra función que implique tanto al habla como al oído, tanto de adultos como de niños.",
-        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679406788/Instituto%20Delpiano/Untitled_design_ctwbhd.png"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679947802/Instituto%20Delpiano/FONO_uqxlkz.png"],
         price: 3000,
         category: [""],
         createdAt: new Date(),
@@ -78,7 +78,7 @@ module.exports = {
       {
         name: "psicopedagogia",
         description:"Contamos con un excelente equipo psicopedagógico que ofrece un servicio integral teniendo en cuenta las necesidades del menor y su familia. Evaluación y perfil neurocognitivo. Tratamiento cognitivo conductual -Estimulación y/o rehabilitación de funciones ejecutivas. Tratamiento de dificultades relacionadas al aprendizaje. Atención específica de niños con trastorno del espectroautista. (Tratamiento cognitivo conductual - estimulación cognitiva de alto funcionamiento). Estimulación de habilidades sociales y pensamiento social. Orientación en Ia gestión de emociones",
-        image:["https://iberomty.mx/wp-content/uploads/2022/05/img_6272df5ceb31f.jpg"],
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679948656/Instituto%20Delpiano/PSICOPEDAGOGIA_v3kjw2.png"],
         price: 3500,
         category: [""],
         createdAt: new Date(),
@@ -88,9 +88,19 @@ module.exports = {
       {
         name: "Psicologia",
         description:"es una descricion de prueba ",
-        image:["urltest"],
-        price: 0.1,
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679924298/Instituto%20Delpiano/PSICOLOGIA_2_xylvty.png"],
+        price: 3000,
         category: ["Psicología clínica", "Psicología cognitiva"],
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        deletedAt: null
+      },
+      {
+        name: "yoga",
+        description:"Siempre es bueno dedicarle un tiempo a recuperar las energías y relajar el cuerpo. ¿Conoces los beneficios? Relaja el cuerpo,  reduce el estrés, aumenta la relajación, la energía y el estado de ánimo.",
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679949687/Instituto%20Delpiano/yoga_dnqhsw.png"],
+        price: 900,
+        category: [""],
         createdAt: new Date(),
         updatedAt: new Date(),
         deletedAt: null
