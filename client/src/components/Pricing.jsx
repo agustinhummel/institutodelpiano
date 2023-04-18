@@ -4,7 +4,15 @@ import {useSelector} from 'react-redux';
 
 const Pricing = () => {
 
-    const allService = useSelector((state) => state.services)
+    const allService = useSelector((state) => state.services.sort((a, b) => {
+      if (a.id > b.id) {
+          return 1;
+      }
+      if (b.id > a.id) {
+          return -1;
+      }
+      return 0
+  }))
 
   return (
     <section className='text-center justify-center flex '>

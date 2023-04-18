@@ -1,5 +1,5 @@
 import React from 'react'
-
+import logo from '../assets/logoDelpiano.jpg'
 
 const About = () => {
   return (
@@ -14,8 +14,9 @@ const About = () => {
         <h1 className='font-serif text-4xl text-bold m-3 flex justify-center underline hover:decoration-dashed'>"Rehabilitacion-Entrenamiento-Actividad Fisica Controlada"</h1>
         <br></br>
 <br></br>
-
         <p className='font-serif text-2xl m-3 flex justify-center'>Director: Lic. Carlos Alberto Delpiano MP 073</p>
+        <img className='flex justify-center'  src={logo} />
+        <br></br>
         <p className='font-serif text-xl'> Quisiera compartir esta enseñanza, que me diera esta profesión bendita, con mis colegas, mis pacientes y mis seres queridos, Y llevando mis manos al cielo quiero transmitir en canto esta pequeña y gran verdad ¡Así como dice la canción! Gracias a la vida por haberme dado tanto. transmitirle al más necesitado, que todos, adolecemos de algo, hasta el más encumbrado. Que la incapacidad más desgraciada, ¡es no poder encontrar la felicidad! no pasa por tener piernas, o plata, ¡si así fuera!, todos lo que corrieran o caminaran, los que tuvieran mucha plata, serían felices, y esto no es así, depende de la capacidad de comprender y gozar infinitamente de lo que se tiene. Por eso levanto mis brazos al cielo y digo,gracias a la vida por darme tanto gracias a Dios por mostrarme el camino éste, que tanto amo. </p>
         <br></br>
         <p className='font-serif text-xl'>¿Por qué me gusta tanto esta profesión?</p>

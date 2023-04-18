@@ -18,7 +18,8 @@ const EditService = ({id}) => {
         name:service.name,
         description:service.description,
         image:service.image,
-        price:`${service.price}`
+        price:`${service.price}`,
+        category: service.category.join(', ')
       }}
       validate={(valores) => {
         let errores = {};
@@ -53,7 +54,8 @@ const EditService = ({id}) => {
           name:valores.name,
           description:valores.description,
           image:[valores.image],
-          price:Number(valores.price)
+          price:Number(valores.price),
+          category:valores.category.split(', ')
              
          })
          
@@ -183,6 +185,29 @@ const EditService = ({id}) => {
                    {touched.price && errors.price && (
               <div className="error text-red-500">{errors.price}</div>
             )}
+                </div>
+                
+                <div className="space-y-1">
+                  <label
+                    
+                    className="block text-sm font-medium text-neutral-600"
+                  >
+                    {" "}
+                    Sub Category{" "}
+                  </label>
+                  <div className="mt-1">
+                    <input
+                      id="category"
+                      name="category"
+                      type="text"
+                      value={values.category}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      placeholder="categoria1, categoria2, categoria3"
+                      className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-dark-color bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                    />
+                  </div>
+
                 </div>
                 <div>
                   <button

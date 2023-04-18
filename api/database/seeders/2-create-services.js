@@ -17,8 +17,8 @@ module.exports = {
       },  
       {
         name: "kinesiologia",
-        description:"Te brindamos el mejor servicio en Kinesiología y fisioterapia con los mejores profesionales a tu disposición! Fisioterapia, kinesiología. Los profesionales utilizan aparatos como campos magnéticos, onda corta, ultrasonido combinado con técnicas manuales de movilización, estiramientos y masajes.",
-        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679924949/Instituto%20Delpiano/PSICOLOGIA_3_bwaht6.png"],
+        description:" Kinesiologia (kineesis, movimiento + logia, estudio-tratado-ciencia), Parte de la fisiología que describe y analiza los movimientos y los fenómenos locomotores en cuanto reflejan la acción de fuerzas mecánicas. EL KINESIÓLOGO es un profesional de formación universitaria, integrante del equipo de salud, cuya actuación comprende, a través del estudio y aplicación del movimiento humano en sus aspectos biomecánicas y psicomotor, como también de sus componentes orgánicos, cardiorrespiratorio y neuromuscular, es capaz de establecer normas específicas de prevención, recuperación y/o rehabilitación en individuos sanos o alterados en sus campos de salud, deportes, educación y otros mediante la utilización de técnicas fisiokinesis de evaluación y tratamiento que les son propias.LA POBLACIÓN DEBE CONOCER Y EXIGIR que el único profesional universitario capacitado y autorizado por ley (2166/84) para realizar las prácticas relacionadas con la KInesiología son los KINESIÓLOGOS, FISIOTERAPEUTAS, LICENCIADOS KINESIOLOGOS FISIATRAS, DOCTORES KINESIOLOGOS FISIATRAS.",
+        image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1681760487/Instituto%20Delpiano/Untitled_design_14_k5ldfu.png"],
         price: 1500,
         category: ["Quiropraxia", "Terapias respitatoria", "Terapias manipuladas", "RPG", "Estimulacion temprana"],
         createdAt: new Date(),
@@ -57,7 +57,7 @@ module.exports = {
       },
       {
         name: "gimnasio terapeutico",
-        description:"Contamos con el mejor equipo de profesores para entrenar. Salones: Para realizar gimnasia Aeróbica, etc. CONSTANCIA = C ONTROLA TU MENTE,  O LVIDA TUS LÍMITES, N UTRE TU CUERPO, S IENTE TU FORTALEZA, T OMA EL RIESGO, A LCANZA TUS METAS, N OQUEA TUS MIEDOS, C ULTIVA HABITOS, I GNORA LO NEGATIVO, A SUMES EL RETO ?. Nuestro equipo de profesionales te acompañará en todo el entrenamiento. Tenemos un amplio gimnasio, equipado para brindarte el mejor servicio. Un completo gimnasio integrado por los siguientes sectores: Equipo: Todas las actividades son supervisadas por profesionales especializados, controlando la presión arterial y la frecuencia cardiaca antes, durante y después de las diferentes actividades físicas que se realizan.",
+        description:"Cuando se es joven, hacer actividad física es una buena opción, a partir de los 50 años es una obligación.Contamos con el mejor equipo de profesores para entrenar. Salones: Para realizar gimnasia Aeróbica, etc. . Nuestro equipo de profesionales te acompañará en todo el entrenamiento. Tenemos un amplio gimnasio, equipado para brindarte el mejor servicio. Un completo gimnasio integrado por los siguientes sectores: Equipo: Todas las actividades son supervisadas por profesionales especializados, controlando la presión arterial y la frecuencia cardiaca antes, durante y después de las diferentes actividades físicas que se realizan.",
         image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679946255/Instituto%20Delpiano/GYM_gjnqwx.png"],
         price: 850,
         category: ["Gimnasia Aerobica", "Gimasio Complemento"],
@@ -77,7 +77,7 @@ module.exports = {
       },
       {
         name: "psicopedagogia",
-        description:"Contamos con un excelente equipo psicopedagógico que ofrece un servicio integral teniendo en cuenta las necesidades del menor y su familia. Evaluación y perfil neurocognitivo. Tratamiento cognitivo conductual -Estimulación y/o rehabilitación de funciones ejecutivas. Tratamiento de dificultades relacionadas al aprendizaje. Atención específica de niños con trastorno del espectroautista. (Tratamiento cognitivo conductual - estimulación cognitiva de alto funcionamiento). Estimulación de habilidades sociales y pensamiento social. Orientación en Ia gestión de emociones",
+        description:"Evaluación y perfil neurocognitivo. Tratamiento cognitivo conductual -Estimulación y/o rehabilitación de funciones ejecutivas. Tratamiento de dificultades relacionadas al aprendizaje. Atención específica de niños con trastorno del espectroautista. (Tratamiento cognitivo conductual - estimulación cognitiva de alto funcionamiento). Estimulación de habilidades sociales y pensamiento social. Orientación en Ia gestión de emociones.",
         image:["https://res.cloudinary.com/dc0rv28n2/image/upload/v1679948656/Instituto%20Delpiano/PSICOPEDAGOGIA_v3kjw2.png"],
         price: 3500,
         category: [""],

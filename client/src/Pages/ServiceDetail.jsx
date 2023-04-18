@@ -39,10 +39,11 @@ const ServiceDetail = () => {
 
                     
                         <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+                        
                             <img
                             alt="Party"
                             src={service.image}
-                            className="absolute inset-0 h-full w-full object-cover"
+                            className="absolute inset-0 h-auto w-full object-cover "
                             />
                         </div>
 
