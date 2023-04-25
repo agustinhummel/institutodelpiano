@@ -28,9 +28,6 @@ const Contactos = () => {
                 <p className="mt-1">
                   376 442-8578
                 </p>
-                <p className="mt-1">
-                  376 432-8203
-                </p>
               </div>
               <div className="lg:w-1/2 px-4 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-option1-color tracking-widest text-xs">
@@ -42,9 +39,10 @@ const Contactos = () => {
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 className="title-font font-semibold text-option1-color tracking-widest text-xs mt-4">
-                  WHATSAPP
+                  CELULAR / WHATSAPP
                 </h2>
                 <p className="leading-relaxed">376 432-8203</p>
+                <p className="leading-relaxed">376 436-3773</p>
               </div>
             </div>
           </div>

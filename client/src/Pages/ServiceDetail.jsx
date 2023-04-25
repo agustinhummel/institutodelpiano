@@ -30,8 +30,6 @@ const ServiceDetail = () => {
                     <h2 className="text-3xl font-bold sm:text-4xl text-option1-color">
                         {service.name?.toUpperCase()}
                     </h2>
-
-                    <p className="text-xl font-semibold tracking-wider uppercase text-primary">${service.price}</p>
                 </div>
                 
                 <div className="mt-8">

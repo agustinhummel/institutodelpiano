@@ -89,7 +89,7 @@ En este Instituto, los pacientes son atendidos por profesionales capacitados hum
         <br/>
         <h3 className='font-serif text-2xl  m-2'>Por la calidad de sus servicios, por su equipo de profesionales y por la infraestructura que posee, el Instituto Delpiano ha logrado alcanzar un elevado nivel de satisfacción de sus pacientes.</h3>
         <br/>
-        <p className='font-serif text-xl'>1. Consultorios: 12 amplios consultorios totalmente climatizados y equipados con toda la aparatología de fisioterapia de última generación como ser: Onda corta, Campo Magnético, Rayo Láser, Ultrasonido, Rayo Infrarrojo, Rayo Ultravioleta, Electroevaluación, Baños de Parafina, Electroestimulación, Electroanalgesia, Iontoforesis, Micro-onda, Horno de Bier, Tracción Cervical, etc.</p>
+        <p className='font-serif text-xl'>1. Consultorios: Amplios consultorios totalmente climatizados y equipados con toda la aparatología de fisioterapia de última generación como ser: Onda corta, Campo Magnético, Rayo Láser, Ultrasonido, Rayo Infrarrojo, Rayo Ultravioleta, Electroevaluación, Baños de Parafina, Electroestimulación, Electroanalgesia, Iontoforesis, Micro-onda, Horno de Bier, Tracción Cervical, etc.</p>
         <br/>
 <br/>
         <p className='font-serif text-xl'>2. Gimnasio: Un completo gimnasio integrado por los siguientes sectores:
@@ -99,13 +99,13 @@ Todas las actividades son supervisadas por profesionales especializados, control
 </p>
 <br/>
 <br/>
-        <p className='font-serif text-xl'>3. Pileta climatizada: Utilizada para realizar tratamientos de hidroterapia (único Instituto de la ciudad en prestar este servicio)</p>
+        <p className='font-serif text-xl'>3. Pileta climatizada: Utilizada para realizar tratamientos de hidroterapia (habilitada por el Colegio de Kinesiologos de la Provincia de Mns)</p>
         <br/>
 <br/>
-        <p className='font-serif text-xl'>4. Pilates: cuatro camillas reformer, una dúo y un chair para rehabilitación.</p>
+        <p className='font-serif text-xl'>4. Pilates: Con camillas reformer, una dúo y un chair para rehabilitación.</p>
         <br/>
 <br/>
-        <p className='font-serif text-xl'>5. Salas de espera: 2 amplias salas de espera con música funcional ambientadas y provistas de cómodos sillones, que contribuyen a que la estadía del paciente y los acompañantes en el Instituto sea lo más placentera posible. </p>
+        <p className='font-serif text-xl'>5. Salas de espera: Amplias salas de espera con música funcional ambientadas y provistas de cómodos sillones, que contribuyen a que la estadía del paciente y los acompañantes en el Instituto sea lo más placentera posible. </p>
         <br/>
 <br/>
         <p className='font-serif text-xl'>6. Recepción y Administración: Oficina montada con un sistema informático que permite realizar un seguimiento en tiempo real, sobre el grado de avance en el tratamiento de cada paciente, y su correspondiente estado de cuenta.</p>
