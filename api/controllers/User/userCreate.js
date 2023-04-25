@@ -8,7 +8,7 @@ dotenv.config();
 
 module.exports = {
   createUser: async (req, res, next) => {
-    let { userName, email, password} = req.body;
+    let { userName, email, password, level } = req.body;
  
     try{
        const userEmail = await User.findAll({
@@ -23,7 +23,7 @@ module.exports = {
       const hasedPass = password ? await bcrypt.hash(password,10) : ""
 
       const userCreated = await User.create({
-        userName, email,password:hasedPass
+        userName, email,password:hasedPass, level
       })
       
       const token = jwt.sign( {user:userCreated} , process.env.JWT_SECRETO, {expiresIn: '1h'})

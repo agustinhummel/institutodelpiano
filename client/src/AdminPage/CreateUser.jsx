@@ -15,6 +15,7 @@ const CreateUser = () => {
           password: "",
           correo: "",
           userName: "",
+          level: ""
         }}
         validate={(valores) => {
           let errores = {};
@@ -25,6 +26,9 @@ const CreateUser = () => {
           } 
           if (!valores.password) {
             errores.password = "Por favor, ingresa una contraseña";
+          } 
+          if (!valores.level) {
+            errores.level = "Por favor, el nivel de administrador";
           } 
 
           // Validacion correo
@@ -48,7 +52,8 @@ const CreateUser = () => {
            {
                password: valores.password, 
                email: valores.correo,
-               userName: valores.userName
+               userName: valores.userName,
+               level:valores.level
                
            })
            
@@ -153,6 +158,30 @@ const CreateUser = () => {
                     </div>
                      {touched.password && errors.password && (
                 <div className="error text-red-500">{errors.password}</div>
+              )}
+                  </div>
+                  <div>
+                    <label
+                      
+                      className="block text-sm font-medium text-neutral-600"
+                    >
+                      {" "}
+                      Nivel de Administrador{" "}
+                    </label>
+                    <div className="mt-1">
+                      <input
+                        id="level"
+                        name="level"
+                        type="number"
+                        value={values.level}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        placeholder="Nivel de admin"
+                        className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-dark-color bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
+                      />
+                    </div>
+                     {touched.level && errors.level && (
+                <div className="error text-red-500">{errors.level}</div>
               )}
                   </div>
                   <div>

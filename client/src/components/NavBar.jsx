@@ -60,15 +60,16 @@ const NavBar = () => {
                 </li> 
                 :null}
               {decodedToken !=null && !isExpired   
-                ?<li className='md:ml-8 text-lg md:my-0 my-7    text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
-                  setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")} }>
+                ?<li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>{dispatch(LogOut());
+                  setOpen(!open); alert("Cerrar Sesion","Salida Exitosa")}}
+                  >
                 <Link to='/'>
-                  Cerrar Sesion
+                <svg width="20px" height="20px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#001099"><path d="M12 12h7m0 0l-3 3m3-3l-3-3M19 6V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#001099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                 </Link>
                 </li>
                 :<li className='md:ml-8 text-lg md:my-0 my-7 text-option1-color hover:text-sky-200 cursor-pointer duration-500' onClick={()=>setOpen(!open)}>
                   <Link to='/login'>
-                    Inicio de Sesion
+                  <svg width="20px" height="20px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#001099"><path d="M19 12h-7m0 0l3 3m-3-3l3-3M19 6V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2v-1" stroke="#001099" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   </Link>
                 </li> }
             </ul>

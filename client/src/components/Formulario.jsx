@@ -69,7 +69,7 @@ const Formulario = () => {
         }) => (
           <form 
           className='shadow-xl shadow-gray-400/20'
-            action='https://getform.io/f/b4d087b5-7412-49c6-a1e7-c7702265e1e0'
+            action= 'https://getform.io/f/f6e2b985-8fab-4c52-9552-744a7a1b9e16'
             method='POST'
             >
             <h1 className="text-green-900 text-lg mb-1 font-medium title-font text-center">
