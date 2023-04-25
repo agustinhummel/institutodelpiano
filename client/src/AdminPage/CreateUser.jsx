@@ -169,7 +169,7 @@ const CreateUser = () => {
                       Nivel de Administrador{" "}
                     </label>
                     <div className="mt-1">
-                      <input
+                      <select
                         id="level"
                         name="level"
                         type="number"
@@ -178,7 +178,11 @@ const CreateUser = () => {
                         onBlur={handleBlur}
                         placeholder="Nivel de admin"
                         className="block w-full px-5 py-3 text-base placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg text-dark-color bg-gray-50 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"
-                      />
+                        
+                      >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
                     </div>
                      {touched.level && errors.level && (
                 <div className="error text-red-500">{errors.level}</div>
