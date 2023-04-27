@@ -12,12 +12,12 @@ const EditProfessional = () => {
   const servicios = useSelector(state => state.services).map(s => ({value:s.name,label:s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}))
   const professional = useSelector(state => state.professionals).find(p => p.id ==professionalId )
   const [errors, setErrors] = useState({});
-  
+
   const [state, setState] = useState({
     fullName:professional.fullName,
     avatar:professional.avatar,
     phone:professional.phone,
-    services:professional.Services
+    services:professional.Services.map((s) => s.name)
   });
   
 
@@ -57,11 +57,11 @@ const EditProfessional = () => {
     if (Object.values(validate(state)).length ==0) {
       const response = await axios.put(`${import.meta.env.VITE_SERVER_BACK}/professional`, 
    {
-    //id:professionalId,
-    fullName:state.fullName,
-    avatar:state.avatar,
-    phone:state.phone,
-    services:state.services 
+      id:professionalId,
+      fullName:state.fullName,
+      avatar:state.avatar,
+      phone:state.phone,
+      services:state.services 
    })
    
    if (response.data.error) {
@@ -103,8 +103,9 @@ const EditProfessional = () => {
                     Servicios{" "}
                   </label>
                   <div className="mt-1">
+                    
                   <Select
-                  defaultValue={servicios.filter(s => state.services.map( se => se.name).includes(s.value))}
+                  defaultValue={servicios.filter(s => state.services.includes(s.value))}
                     onChange={selectChange}
                     isMulti
                     name="services"

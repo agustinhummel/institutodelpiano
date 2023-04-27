@@ -7,6 +7,7 @@ module.exports = {
         try {
             
             const { id,fullName, avatar,phone , services} = req.body;
+            
              
             if (!fullName || !avatar || !phone || !services) {
                 throw new Error('missing parameters')
@@ -15,13 +16,14 @@ module.exports = {
            
             if (!professionalFound) throw new Error("Professional not found");
             await professionalFound.update({ fullName, avatar,phone  });
-
+            
             const dbServices = await Service.findAll({
                 where: {
                     name: services
                 }
             });
 
+            
             await professionalFound.removeServices(professionalFound.Services)
             await professionalFound.addServices(dbServices); 
             await professionalFound.save();
