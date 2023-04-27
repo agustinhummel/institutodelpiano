@@ -12,8 +12,9 @@ const EditProfessional = () => {
   const servicios = useSelector(state => state.services).map(s => ({value:s.name,label:s.name.charAt(0).toUpperCase() + s.name.toLowerCase().slice(1)}))
   const professional = useSelector(state => state.professionals).find(p => p.id ==professionalId )
   const [errors, setErrors] = useState({});
+  
   const [state, setState] = useState({
-    fullName:professional.id,
+    fullName:professional.fullName,
     avatar:professional.avatar,
     phone:professional.phone,
     services:professional.Services
@@ -56,7 +57,7 @@ const EditProfessional = () => {
     if (Object.values(validate(state)).length ==0) {
       const response = await axios.put(`${import.meta.env.VITE_SERVER_BACK}/professional`, 
    {
-    id:professionalId,
+    //id:professionalId,
     fullName:state.fullName,
     avatar:state.avatar,
     phone:state.phone,

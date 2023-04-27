@@ -74,7 +74,7 @@ const Login = () => {
           <div className="w-full max-w-xl mx-auto lg:w-96">
             <div>
               <h2 className="mt-6 text-3xl font-extrabold text-neutral-600">
-                Instituto DelPiano
+                INSTITUTO DELPIANO
               </h2>
             </div>
 

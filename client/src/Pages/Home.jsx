@@ -11,7 +11,7 @@ import Instagram from '../components/Instagram';
 export default function Home (){
 
     let imagesCarrusel = [
-        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954084/Instituto%20Delpiano/Untitled_design_10_wybzid.png',
+        'https://res.cloudinary.com/dc0rv28n2/image/upload/v1682552677/Instituto%20Delpiano/CARRUSEL_cchhdz.png',
         'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954188/Instituto%20Delpiano/Untitled_design_11_udsyag.png',
         'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954350/Instituto%20Delpiano/Untitled_design_12_httjzg.png',
         'https://res.cloudinary.com/dc0rv28n2/image/upload/v1679954576/Instituto%20Delpiano/Untitled_design_13_mowno0.png'

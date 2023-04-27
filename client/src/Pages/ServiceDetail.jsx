@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import {getOneService, getAllServices} from '../Redux/actions';
+import { getOneService } from "../Redux/actions.js";
 import Professionals from '../components/Professionals';
 import DropdownService from "../components/DropdownService";
 
@@ -20,12 +20,7 @@ const ServiceDetail = () => {
 
   return (
         <article className="min-h-[calc(100vh-13vh)] mt-20 px-4 py-24 mx-auto max-w-7x" >
-            <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 border-2">
-            <div className="grid justify-items-end">
-                {/* <article className="space-y-4 text-gray-600">
-                    <DropdownService setOpen={setOpen} open={open}/>
-                </article> */}
-            </div>
+            <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 border-2">
                 <div className="max-w-3xl">
                     <h2 className="text-3xl font-bold sm:text-4xl text-option1-color">
                         {service.name?.toUpperCase()}
@@ -33,10 +28,10 @@ const ServiceDetail = () => {
                 </div>
                 
                 <div className="mt-8">
-                    <div className="h-96 mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 ">
+                    <div className="sm:h-auto mb-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 
                     
-                        <div className="relative h-64 overflow-hidden sm:h-80 lg:h-full">
+                        <div className="relative h-64 overflow-hidden sm:h-80 lg:h-96">
                         
                             <img
                             alt="Party"
@@ -45,18 +40,22 @@ const ServiceDetail = () => {
                             />
                         </div>
 
-                        <div className="lg:py-16">
+                        <div className="lg:py-2">
 
-                            <article className="space-y-4 text-gray-600">
+                            <article className="space-y-4 text-gray-600 ">
                                 <p>
                                     {service.description}
                                 </p>
                             </article>
                         </div>
                     </div>
+                    
+                    <div className="lg:py-2">
                     <article className="space-y-4 text-gray-600">
                         <DropdownService setOpen={setOpen} open={open}/>
                     </article>
+                    </div>
+
                     
 
                 </div>
