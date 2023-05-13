@@ -34,7 +34,7 @@ export default function Home (){
             <div className='mx-10'><Pricing/></div>
             <div className='mx-10'><Calendario/></div>
 
-            <div className='mx-10'><ChatBot/></div>
+            {/* <div className='mx-10'><ChatBot/></div> */}
             <div className="mx-10"><Instagram/></div>
             <div className='mx-10'><Contactos/></div>
         </div>

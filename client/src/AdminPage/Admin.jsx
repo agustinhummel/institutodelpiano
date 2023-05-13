@@ -7,6 +7,7 @@ import ServiceAdmin from '../AdminPage/ServiceAdmin'
 import PostAdmin from './PostAdmin'
 import OpeningAdmin from "./OpeningAdmin";
 import EventAdmin from "./EventAdmin";
+import NotFound from "../Pages/NotFound.jsx"
 import { useEffect } from 'react';
 import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings, getAllObraSocial, getAllEvent } from "../redux/actions";
 import { useJwt } from "react-jwt";
@@ -38,13 +39,14 @@ export default function AdminPage() {
             <div className="adminContainer flex-[6]">
                 <div className="selected-component">
                      {
-                        adminListState === 'event' && decodedToken?.level===2 && !isExpired ?  <EventAdmin/> :
-                            adminListState === 'obrasocial' && decodedToken?.level===2 && !isExpired ?  <ObraSocialAdmin/> :
-                                adminListState === 'opening' && decodedToken?.level===2 && !isExpired ?  <OpeningAdmin /> :
+                        adminListState === 'event' && !isExpired ?  <EventAdmin/> :
+                            adminListState === 'obrasocial' && !isExpired ?  <ObraSocialAdmin/> :
+                                adminListState === 'opening' && !isExpired ?  <OpeningAdmin /> :
                                     adminListState === 'user' && decodedToken?.level===2 && !isExpired?  <UserAdmin/> :
-                                        adminListState === 'service'  && decodedToken?.level===2 && !isExpired ? <ServiceAdmin /> :
-                                            adminListState === 'professional'  && decodedToken?.level===2 && !isExpired ? <ProfessionalAdmin /> :
-                                                <PostAdmin />} 
+                                        adminListState === 'service'  && !isExpired ? <ServiceAdmin /> :
+                                            adminListState === 'professional'  && !isExpired ? <ProfessionalAdmin /> :
+                                            !isExpired ? <PostAdmin /> : <NotFound/>
+                                                } 
                 </div>
                 <div className="listContainer">
                     <div className="listTitle"></div>

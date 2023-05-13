@@ -4,6 +4,8 @@ import {alert} from '../functions'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 
 const EditOpening = () => {
   const navigate = useNavigate()
@@ -16,7 +18,7 @@ const EditOpening = () => {
      
       initialValues={{ 
         name:opening.name,
-        description:opening.description
+        description:new DOMParser().parseFromString(opening.description, "text/html").body.textContent
       }}
       validate={(valores) => {
         let errores = {};

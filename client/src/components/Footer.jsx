@@ -26,7 +26,11 @@ const Footer = () => {
         <li>Av. Mitre 1651, Posadas, Misiones</li>
       </ul>
       </div>
-      <div className='flex justify-around w-full bg-secondary-color ' >Copyright - All right reserved © 2023</div>
+      <div className='flex justify-around w-full bg-secondary-color ' >
+        <a href='https://www.linkedin.com/in/agustin-hummel-1aba96213/' >Agustin Hummel</a>
+        <p>Copyright - All right reserved © 2023</p>
+        <a href='https://www.linkedin.com/in/miguelbel00/' >Miguel Beltran</a>
+      </div>
     </footer>
   )
 }

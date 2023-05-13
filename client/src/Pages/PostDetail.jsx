@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import {getOnePost, getAllPosts} from '../Redux/actions';
-
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.bubble.css'
 
 const PostDetail = () => {
 
@@ -42,9 +43,12 @@ const PostDetail = () => {
                 <p>
                   {post.author}
                 </p>
-                <p>
-                  {new DOMParser().parseFromString(post.description, "text/html").body.textContent}
-                </p>
+                <ReactQuill
+                  readOnly={true}
+                  value = {post.description}
+                  theme={"bubble"}
+                />
+                
                 <p className="font-bold">
                     {dias_semana[fecha.getDay()] + ', ' + fecha.getDate() + ' de ' + meses[fecha.getMonth()] + ' de ' + fecha.getUTCFullYear()}
                 </p>

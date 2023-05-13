@@ -9,9 +9,9 @@ const Instagram = () => {
 
 
      async function getInstaFeed() {
-/*       ${import.meta.env.VITE_INSTAGRAM_TOKEN}
+/*       
  */        const { data } = await axios.get(
-          `https://graph.instagram.com/me/media?access_token=&fields=${fields}&limit=6`
+          `https://graph.instagram.com/me/media?access_token=${import.meta.env.VITE_INSTAGRAM_TOKEN}&fields=${fields}&limit=6`
         );
         setPosts(data.data);
       }

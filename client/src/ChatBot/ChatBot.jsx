@@ -7,7 +7,7 @@ import ActionProvider from './ActionProvider.jsx';
 
 const ChatBot = () => {
 
-  const [showBot, toggleBot] = useState(false);
+  const [showBot, toggleBot] = useState(true);
   
 
   return (

@@ -1,4 +1,6 @@
 import React from "react";
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.bubble.css'
 
 const Jobs = ({name, description}) => {
 
@@ -7,7 +9,11 @@ const Jobs = ({name, description}) => {
                 <div className="max-w-5xl mx-auto w-full p-4">
                     <div className="border border-gray-200 p-6 rounded-lg shadow">
                         <h2 className="text-lg text-gray-900 font-medium title-font mb-2">{name.charAt(0).toUpperCase() + name.toLowerCase().slice(1)}</h2>
-                        <p className="leading-relaxed text-base">{new DOMParser().parseFromString(description, "text/html").body.textContent}</p>
+                        <ReactQuill
+                            readOnly={true}
+                            value = {description}
+                            theme={"bubble"}
+                        />
                     </div>
                 </div>
             </div>

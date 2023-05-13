@@ -8,7 +8,7 @@ export default function Protected({children}){
 
     const { decodedToken, isExpired } = useJwt(user);
 
-    if(decodedToken !=null && !isExpired &&decodedToken.level >= 1){
+    if(decodedToken !=null && !isExpired &&decodedToken.level === 2){
         return children
     }else{
         return <NotFoundPage/>

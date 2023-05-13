@@ -62,6 +62,7 @@ const Slidebar = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const onClick = (e) => {
+   
     if (e.key == "createUser") {
       navigate('/admin/createuser')
     }else if(e.key == 'createProfessional'){
@@ -77,6 +78,7 @@ const Slidebar = () => {
     }else if(e.key == 'createEvent'){
       navigate('/admin/createevent')
     }
+    
     dispatch(adminList(e.key))
   };
 

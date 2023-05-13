@@ -27,7 +27,7 @@ import PostDetail from './Pages/PostDetail.jsx';
 import ServiceDetail from './Pages/ServiceDetail.jsx';
 import Vacante from './Pages/Vacante.jsx';
 import EditEvent from './AdminPage/EditEvent.jsx';
-
+import ProtectedSuperAdmin from './components/ProtectedSuperAdmin.jsx'
 
 function App() {
 
@@ -50,12 +50,12 @@ function App() {
           <Route exact path='admin/createprofessional' element={<ProtectedAdmin><CreateProfessional/></ProtectedAdmin>}/>   
           <Route exact path='admin/createpost' element={<Protected><CreatePost/></Protected>}/>   
           <Route exact path='admin/createservice' element={<ProtectedAdmin><CreateService/></ProtectedAdmin>}/>   
-          <Route exact path='admin/createuser' element={<ProtectedAdmin><CreateUser/></ProtectedAdmin>}/>   
+          <Route exact path='admin/createuser' element={<ProtectedSuperAdmin><CreateUser/></ProtectedSuperAdmin>}/>   
           <Route exact path='admin/createobrasocial' element={<ProtectedAdmin><CreateObraSocial/></ProtectedAdmin>}/>  
           <Route exact path='admin/createevent' element={<ProtectedAdmin><CreateEvent/></ProtectedAdmin>}/>  
           <Route exact path='admin/editevent/:eventId' element={<ProtectedAdmin><EditEvent/></ProtectedAdmin>}/>  
           <Route exact path='admin/editprofessional/:professionalId' element={<ProtectedAdmin><EditProfessional/></ProtectedAdmin>}/>   
-          <Route exact path='admin/edituser/:userId' element={<ProtectedAdmin><EditUser/></ProtectedAdmin>}/>   
+          <Route exact path='admin/edituser/:userId' element={<ProtectedSuperAdmin><EditUser/></ProtectedSuperAdmin>}/>   
           <Route exact path='admin/editservice/:serviceId' element={<ProtectedAdmin><EditService/></ProtectedAdmin>}/>   
           <Route exact path='admin/editpost/:postId' element={<Protected><EditPost/></Protected>}/> 
           <Route exact path='admin/editobrasocial/:obraSocialId' element={<Protected><EditObraSocial/></Protected>}/>    
