@@ -5,9 +5,8 @@ import { Formik } from 'formik';
 const Formulario = () => {
 
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-
   return (
-    <div className="lg:w-1/3 md:w-1/2 px-8 border-2 md:min-h-[531px] border-option1-color cursor-default bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 pb-2 pt-4 ">
+    <div className="px-8 border-2 border-option1-color cursor-default bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 pb-2 pt-4 ">
       <Formik
         initialValues={{ 
           nombre: "",
@@ -44,20 +43,38 @@ const Formulario = () => {
           return errores;
         }}
         onSubmit={(valores, { resetForm }) => {
-			axios
-			.post(`${import.meta.env.VITE_URL_FORM}`, 
-			{
-				nombre: valores.nombre, 
-				correo: valores.correo,
-				mensaje: valores.mensaje,
-			}, 
-			{ headers: {'Accept': 'application/json'}})
-			.catch()
-          resetForm();
-          cambiarFormularioEnviado(true);
-          setTimeout(() => cambiarFormularioEnviado(false), 5000);
-		  
-        }}
+      
+          if (valores.opcion == "opcion1") {
+            axios.post(`${import.meta.env.VITE_URL_FORM}`, 
+            {
+              nombre: valores.nombre, 
+              correo: valores.correo,
+              mensaje: valores.mensaje,
+             
+      
+            },{ headers: {'Accept': 'application/json'}})
+            .catch()
+              resetForm();
+              cambiarFormularioEnviado(true);
+              setTimeout(() => cambiarFormularioEnviado(false), 5000);
+
+          } else if (valores.opcion == "opcion2") {
+            axios.post(`${import.meta.env.VITE_URL_FORM}`,
+            {
+              nombre: valores.nombre, 
+              correo: valores.correo,
+              mensaje: valores.mensaje,
+              
+      
+            },{ headers: {'Accept': 'application/json'}})
+            .catch()
+              resetForm();
+              cambiarFormularioEnviado(true);
+              setTimeout(() => cambiarFormularioEnviado(false), 5000);
+          } else {
+            window.alert(valores.opcion);
+          }}}
+
       >
         {({
           values,
@@ -72,12 +89,15 @@ const Formulario = () => {
             action= 'https://getform.io/f/f6e2b985-8fab-4c52-9552-744a7a1b9e16'
             method='POST'
             >
-            <h1 className="text-green-900 text-lg mb-1 font-medium title-font text-center">
+            <h1 className="text-blue-900 text-lg mb-1 font-medium title-font text-center">
             ¡Escribínos!
             </h1>
             <p className="leading-relaxed mb-5  text-gray-600">
-            No dudes en contactarte por cualquier consulta.
+            Consultas sobre alquileres de consultorios/espacios.
             </p>
+            <div className="relative mb-4">
+
+</div>
             <div className="relative mb-4">
               <label
                 htmlFor="nombre"
@@ -151,6 +171,7 @@ const Formulario = () => {
               <p className="exito text-secondary-color">Formulario enviado con éxito!</p>
             )}
           </form>
+          
         )}
       </Formik>
     </div>

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState }  from 'react';
+
 import Formulario from './Formulario';
+import FormularioAdmin from './FormularioAdmin';
 
 
 const Contactos = () => {
 
+  const [opcionElegida, setOpcionElegida] = useState('opcion1');
+  const handleChangeOpcion = (opcion) => {
+    setOpcionElegida(opcion);
+  };
   return (
     <div className="w-full max-w-7xl mx-auto min-h-screen md:px-8 sm:pt-10 px-4 lg:px-0 pb-10 bg-light-color" id="contacto">
       <section className="text-dark-color body-font relative">
@@ -46,7 +52,22 @@ const Contactos = () => {
               </div>
             </div>
           </div>
-          <Formulario></Formulario>
+          <div className="bg-light-color rounded-lg p-6 shadow-md">
+        <h1 className="text-lg font-semibold text-option1-color mb-4">
+          Cual es tu consulta:
+        </h1>
+        <button onClick={() => handleChangeOpcion('opcion1')} className="bg-option1-color text-white hover:bg-main-color py-2 px-4 rounded mb-2 inline-block">
+          Consultas sobre alquileres de consultorios/espacios
+        </button>
+        <button onClick={() => handleChangeOpcion('opcion2')} className="bg-option1-color text-white hover:bg-main-color py-2 px-4 rounded mb-2 inline-block">
+          Consultas sobre turnos para pacientes
+        </button>
+
+        {opcionElegida === 'opcion1' && <Formulario />}
+        {opcionElegida === 'opcion2' && <FormularioAdmin />}
+
+
+      </div>
         </div>
       </section>
     </div>
@@ -54,3 +75,4 @@ const Contactos = () => {
 }
 
 export default Contactos
+

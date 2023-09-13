@@ -39,7 +39,7 @@ const Vacante = () => {
             }
         </div>
         <form 
-            action='https://getform.io/f/f6e2b985-8fab-4c52-9552-744a7a1b9e16'
+            action='https://getform.io/f/03638932-eb98-421e-8ceb-86c08879b002'
             method='POST'
             encType="multipart/form-data"
             >
