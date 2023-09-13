@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteObraSocial, getAllObraSocial } from '../redux/actions';
+import { deleteObraSocial, getAllObraSocial } from '../Redux/actions';
 import {alert} from '../functions'
 
 const UserAdmin = () => {

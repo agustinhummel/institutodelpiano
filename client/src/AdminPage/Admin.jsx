@@ -7,9 +7,9 @@ import ServiceAdmin from '../AdminPage/ServiceAdmin'
 import PostAdmin from './PostAdmin'
 import OpeningAdmin from "./OpeningAdmin";
 import EventAdmin from "./EventAdmin";
-import NotFound from "../Pages/NotFound.jsx"
+import NotFound from "../Pages/NotFound404"
 import { useEffect } from 'react';
-import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings, getAllObraSocial, getAllEvent } from "../redux/actions";
+import { getAllPosts, getAllProfessionals, getAllServices, getAllUsers, getAllOpenings, getAllObraSocial, getAllEvent } from "../Redux/actions";
 import { useJwt } from "react-jwt";
 import ObraSocialAdmin from "./ObraSocialAdmin";
 

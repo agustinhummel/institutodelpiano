@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Post from '../components/Post';
-import { getAllPosts } from '../redux/actions';
+import { getAllPosts } from '../Redux/actions';
 
 
 const Blog = () => {

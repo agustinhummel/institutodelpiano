@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const NotFoundPage = () => {
   return (
     <section className="flex items-center h-screen p-16  dark:text-dark-color">

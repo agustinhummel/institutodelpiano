@@ -4,7 +4,7 @@ import Carrusel from '../components/Carrusel';
 import ChatBot from '../ChatBot/ChatBot';
 import Contactos from '../components/Contactos';
 import Pricing from '../components/Pricing';
-import { getAllServices } from '../redux/actions';
+import { getAllServices } from '../Redux/actions';
 import Calendario from '../components/Calendario';
 import Instagram from '../components/Instagram';
 

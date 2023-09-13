@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SearchOutlined } from "@ant-design/icons";
-import { deleteService, getAllServices } from '../redux/actions';
+import { deleteService, getAllServices } from '../Redux/actions';
 import {alert} from '../functions'
 
 const ServiceAdmin = () =>  {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Formik} from "formik";
-import { loginUser } from "../redux/actions";
+import { loginUser } from "../Redux/actions";
 import { useDispatch } from 'react-redux';  
 import { useNavigate } from "react-router-dom";
 import {alert} from '../functions'

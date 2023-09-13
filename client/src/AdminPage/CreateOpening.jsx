@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import { createOpening } from '../redux/actions';
+import { createOpening } from '../Redux/actions';
 import { useDispatch } from 'react-redux';
 import { useNavigate, redirect } from "react-router-dom";
 import { alert, error } from '../functions';

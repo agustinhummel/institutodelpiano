@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useJwt } from "react-jwt";
-import NotFoundPage from '../Pages/NotFound';
+import NotFoundPage from '../Pages/NotFound404';
 
 export default function Protected({children}){
 

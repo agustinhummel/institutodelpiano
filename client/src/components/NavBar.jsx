@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logoGif.gif'
 import DropdownComponent from './Dropdown';
 import { useSelector, useDispatch } from 'react-redux';
-import { LogOut } from '../redux/actions';
+import { LogOut } from '../Redux/actions';
 import {alert} from '../functions'
 import { useJwt } from "react-jwt";
 import {GiHamburgerMenu} from 'react-icons/gi'

@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getAllOpenings } from '../redux/actions';
+import { getAllOpenings } from '../Redux/actions';
 import Jobs from "../components/Jobs";
 
 const Vacante = () => {

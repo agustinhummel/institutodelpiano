@@ -10,7 +10,7 @@ import { Button, Menu } from 'antd';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate,Link } from 'react-router-dom';
-import { adminList } from '../redux/actions';
+import { adminList } from '../Redux/actions';
 
 
 function getItem(label, key, icon, children, type) {
